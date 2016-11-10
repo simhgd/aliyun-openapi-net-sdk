@@ -6,8 +6,8 @@
 - 使用引用Project方式引入aliyun-net-sdk-core 和相应的产品Project。
 
 ## 已支持的产品列表
-- aliyun-net-sdk-core
-- aliyun-net-sdk-alidns
+- [aliyun-net-sdk-core](https://www.nuget.org/packages/aliyun-net-sdk-core/)
+- [aliyun-net-sdk-alidns](https://www.nuget.org/packages/aliyun-net-sdk-alidns/)
 
 
 ## Example
