@@ -112,7 +112,13 @@ namespace Aliyun.Acs.Core.Http
             HttpWebResponse httpWebResponse = null;
             try
             {
-                httpWebResponse = (HttpWebResponse)httpWebRequest.GetResponseAsync().Result;
+                var task = httpWebRequest.GetResponseAsync();
+                task.Wait();
+                httpWebResponse = (HttpWebResponse)task.Result;
+            }
+            catch (AggregateException ex) when (ex.InnerException is WebException)
+            {
+                httpWebResponse = (HttpWebResponse)((WebException)ex.InnerException).Response;
             }
             catch (WebException ex)
             {

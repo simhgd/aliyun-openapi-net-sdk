@@ -27,7 +27,7 @@ namespace Aliyun.Acs.Core.Regions
     public class InternalEndpointsParser : IEndpointsProvider
     {
 
-        private static String BUNDLED_ENDPOINTS_RESOURCE_PATH = "endpoints.xml";
+        private static String BUNDLED_ENDPOINTS_RESOURCE_PATH = "aliyun-net-sdk-core.Regions.endpoints.xml";
 
         public List<Endpoint> GetEndpoints()
         {
@@ -61,11 +61,8 @@ namespace Aliyun.Acs.Core.Regions
 
         private XmlDocument LoadEndpointDocument()
         {
-            Type type = this.GetType();
-            string _namespace = type.Namespace;
-            Assembly _assembly = type.GetTypeInfo().Assembly;
-            string resourceName = _namespace + "." + BUNDLED_ENDPOINTS_RESOURCE_PATH;
-            Stream stream = _assembly.GetManifestResourceStream(resourceName);
+            Assembly _assembly = this.GetType().GetTypeInfo().Assembly;
+            Stream stream = _assembly.GetManifestResourceStream(BUNDLED_ENDPOINTS_RESOURCE_PATH);
             XmlDocument xmlDoc = new XmlDocument();
             xmlDoc.Load(stream);
             return xmlDoc;
