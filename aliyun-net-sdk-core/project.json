@@ -1,0 +1,20 @@
+﻿{
+  "version": "1.0.0-*",
+
+  "dependencies": {
+    "NETStandard.Library": "1.6.0",
+    "System.Xml.XmlDocument": "4.0.1",
+    "System.Xml.XPath.XmlDocument": "4.0.1",
+    "System.Net.Requests": "4.0.11"
+  },
+
+  "frameworks": {
+    "netstandard1.6": {
+      "imports": "dnxcore50"
+    }
+  },
+
+  "buildOptions": {
+    "copyToOutput": "Regions/endpoints.xml"
+  }
+}

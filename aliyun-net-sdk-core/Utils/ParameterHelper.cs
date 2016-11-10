@@ -29,7 +29,7 @@ namespace Aliyun.Acs.Core.Utils
 
         public static string FormatIso8601Date(DateTime date)
         {
-            return date.ToUniversalTime().ToString(ISO8601_DATE_FORMAT, CultureInfo.CreateSpecificCulture("en-US"));
+            return date.ToUniversalTime().ToString(ISO8601_DATE_FORMAT, new CultureInfo("en-US"));
         }
 
         public static string GetRFC2616Date(DateTime datetime)
@@ -43,7 +43,7 @@ namespace Aliyun.Acs.Core.Utils
 
         public static string Md5Sum(byte[] buff)
         {
-            MD5 md5 = new MD5CryptoServiceProvider();
+            MD5 md5 = MD5.Create();
             byte[] output = md5.ComputeHash(buff);
             return BitConverter.ToString(output).Replace("-", "");
         }

@@ -189,7 +189,7 @@ namespace Aliyun.Acs.Core
             string responseEndpoint = "Error";
             IReader reader = ReaderFactory.CreateInstance(format);
             UnmarshallerContext context = new UnmarshallerContext();
-            string body = System.Text.Encoding.Default.GetString(httpResponse.Content);
+            string body = System.Text.Encoding.UTF8.GetString(httpResponse.Content);
             if (null == reader)
             {
                 context.ResponseDictionary = new Dictionary<string, string>();

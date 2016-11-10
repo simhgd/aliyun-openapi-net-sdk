@@ -35,7 +35,7 @@ namespace Aliyun.Acs.Core.Reader
         private const int CURRENT_POSITION = 1;
         private const int NEXT_POSITION = 2;
 
-        private CharEnumerator ct;
+        private IEnumerator<char> ct;
         private char c;
 
         private Object token;
@@ -55,10 +55,10 @@ namespace Aliyun.Acs.Core.Reader
 
         public Dictionary<String, String> Read(String response, String endpoint)
         {
-            return Read(response.GetEnumerator(), endpoint);
+            return Read(((IEnumerable<char>)response).GetEnumerator(), endpoint);
         }
 
-        public Dictionary<String, String> Read(CharEnumerator ci, String endpoint)
+        public Dictionary<String, String> Read(IEnumerator<char> ci, String endpoint)
         {
             ct = ci;
             NextChar();

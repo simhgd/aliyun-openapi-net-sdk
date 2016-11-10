@@ -43,10 +43,10 @@ namespace Aliyun.Acs.Core.Auth
 
         public override String SignString(String source, String accessSecret)
         {
-            using (var algorithm = KeyedHashAlgorithm.Create("HMACSHA256"))
+            using (var hmacsha256 = new HMACSHA256())
             {
-                algorithm.Key = Encoding.UTF8.GetBytes(accessSecret.ToCharArray());
-                return Convert.ToBase64String(algorithm.ComputeHash(Encoding.UTF8.GetBytes(source.ToCharArray())));
+                hmacsha256.Key = Encoding.UTF8.GetBytes(accessSecret.ToCharArray());
+                return Convert.ToBase64String(hmacsha256.ComputeHash(Encoding.UTF8.GetBytes(source.ToCharArray())));
             }
         }
 

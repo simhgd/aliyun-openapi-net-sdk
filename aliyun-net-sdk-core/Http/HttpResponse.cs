@@ -97,9 +97,9 @@ namespace Aliyun.Acs.Core.Http
             byte[] bytes = new byte[ms.Length];
             ms.Read(bytes, 0, bytes.Length);
 
-            ms.Close();
+            //ms.Close();
             ms.Dispose();
-            stream.Close();
+            //stream.Close();
             stream.Dispose();
             return bytes;
         }
@@ -112,7 +112,7 @@ namespace Aliyun.Acs.Core.Http
             HttpWebResponse httpWebResponse = null;
             try
             {
-                httpWebResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+                httpWebResponse = (HttpWebResponse)httpWebRequest.GetResponseAsync().Result;
             }
             catch (WebException ex)
             {
@@ -128,31 +128,32 @@ namespace Aliyun.Acs.Core.Http
             HttpWebRequest httpWebRequest = null;
             if (request.Url.Contains("https"))
             {
-                ServicePointManager.ServerCertificateValidationCallback = new RemoteCertificateValidationCallback(CheckValidationResult);
-                httpWebRequest = (HttpWebRequest)WebRequest.CreateDefault(new Uri(request.Url));
+                //ServicePointManager.ServerCertificateValidationCallback = new RemoteCertificateValidationCallback(CheckValidationResult);
+                httpWebRequest = (HttpWebRequest)HttpWebRequest.Create(new Uri(request.Url));
             }
             else
             {
                 httpWebRequest = (HttpWebRequest)WebRequest.Create(request.Url);
             }
 
-            httpWebRequest.ServicePoint.Expect100Continue = false;
+            //httpWebRequest.ServicePoint.Expect100Continue = false;
             httpWebRequest.Method = request.Method.ToString();
-            httpWebRequest.KeepAlive = true;
-            httpWebRequest.Timeout = _timeout;
+            //httpWebRequest.KeepAlive = true;
+            //httpWebRequest.Timeout = _timeout;
 
             if (request.Headers.ContainsKey("Accept"))
             {
                 httpWebRequest.Accept = DictionaryUtil.Pop(request.Headers, "Accept");
             }
-            if (request.Headers.ContainsKey("Date"))
-            {
-                httpWebRequest.Date = Convert.ToDateTime(DictionaryUtil.Pop(request.Headers, "Date"));
-            }
+            //if (request.Headers.ContainsKey("Date"))
+            //{
+            //    httpWebRequest.Date = Convert.ToDateTime(DictionaryUtil.Pop(request.Headers, "Date"));
+            //}
 
             foreach (var header in request.Headers)
             {
-                httpWebRequest.Headers.Add(header.Key, header.Value);
+                //httpWebRequest.Headers.Add(header.Key, header.Value);
+                httpWebRequest.Headers[header.Key] = header.Value;
             }
 
             return httpWebRequest;

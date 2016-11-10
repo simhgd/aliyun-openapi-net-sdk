@@ -19,7 +19,7 @@
 using System;
 using System.Globalization;
 using System.Text;
-using System.Web;
+using System.Net;
 
 namespace Aliyun.Acs.Core.Auth
 {
@@ -29,7 +29,7 @@ namespace Aliyun.Acs.Core.Auth
 
         public static string Encode(String value)
         {
-            return HttpUtility.UrlEncode(value, Encoding.UTF8);
+            return WebUtility.UrlEncode(value);
         }
 
         public static string PercentEncode(String value)
