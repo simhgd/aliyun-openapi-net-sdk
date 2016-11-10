@@ -1,9 +1,11 @@
-# Open API SDK for .Net developers
+# Open API SDK for dotnet core developers
+- 本项目宗旨为临时解决Ali官方SDK不支持dotnet core， 尽量减少对原SDK的修改，使用较多曲线方案，并非最优版本。
 
 ## Requirements
 
 - 支持 .Net Standard 1.6 版本；
-- 使用引用Project方式引入aliyun-net-sdk-core 和相应的产品Project。
+- 使用引用Project方式引入aliyun-net-sdk-core 和相应的产品Project；
+- 使用nuget包引用方式；
 
 ## 已支持的产品列表
 - [aliyun-net-sdk-core](https://www.nuget.org/packages/aliyun-net-sdk-core/)
