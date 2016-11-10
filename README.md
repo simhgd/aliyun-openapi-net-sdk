@@ -2,8 +2,13 @@
 
 ## Requirements
 
-- 支持 .Net Freamwork 4.5 及以上版本；
-- 下载SDK 把 aliyun-net-sdk-core.dll 和相应产品的 .dll 文件添加引用到项目中。
+- 支持 .Net Standard 1.6 版本；
+- 使用引用Project方式引入aliyun-net-sdk-core 和相应的产品Project。
+
+## 已支持的产品列表
+- aliyun-net-sdk-core
+- aliyun-net-sdk-alidns
+
 
 ## Example
 
@@ -61,6 +66,7 @@
 ## Authors && Contributors
 
 - [Ma Lijie](https://github.com/malijiefoxmail)
+- [Sim Tsai](https://github.com/simhgd)
 
 ## License
 
