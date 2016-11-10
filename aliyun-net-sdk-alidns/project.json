@@ -1,0 +1,14 @@
+﻿{
+  "version": "1.0.0-V20150109",
+
+  "dependencies": {
+    "aliyun-net-sdk-core": "1.0.0",
+    "NETStandard.Library": "1.6.0"
+  },
+
+  "frameworks": {
+    "netstandard1.6": {
+      "imports": "dnxcore50"
+    }
+  }
+}
