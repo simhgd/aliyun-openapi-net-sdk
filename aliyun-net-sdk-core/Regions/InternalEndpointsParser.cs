@@ -61,13 +61,14 @@ namespace Aliyun.Acs.Core.Regions
 
         private XmlDocument LoadEndpointDocument()
         {
-            var path = Path.Combine(AppContext.BaseDirectory, BUNDLED_ENDPOINTS_RESOURCE_PATH);
-            using (FileStream stream = new FileStream(path, FileMode.Open))
-            {
-                XmlDocument xmlDoc = new XmlDocument();
-                xmlDoc.Load(stream);
-                return xmlDoc;
-            }
+            Type type = this.GetType();
+            string _namespace = type.Namespace;
+            Assembly _assembly = type.GetTypeInfo().Assembly;
+            string resourceName = _namespace + "." + BUNDLED_ENDPOINTS_RESOURCE_PATH;
+            Stream stream = _assembly.GetManifestResourceStream(resourceName);
+            XmlDocument xmlDoc = new XmlDocument();
+            xmlDoc.Load(stream);
+            return xmlDoc;
         }
     }
 }

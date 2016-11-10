@@ -1,5 +1,6 @@
 ﻿{
   "version": "1.0.0",
+  "description": "aliyun-net-sdk-core",
 
   "dependencies": {
     "NETStandard.Library": "1.6.0",
@@ -15,6 +16,18 @@
   },
 
   "buildOptions": {
-    "copyToOutput": "Regions/endpoints.xml"
+    //"copyToOutput": "Regions/endpoints.xml"
+    "embed": {
+      "includeFiles": [
+        "Regions/endpoints.xml"
+      ]
+    }
+  },
+
+  "packOptions": {
+    "tags": [
+      "aliyun",
+      "aliyun core"
+    ]
   }
 }
