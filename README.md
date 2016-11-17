@@ -10,6 +10,19 @@
 ## 已支持的产品列表
 - [aliyun-net-sdk-core](https://www.nuget.org/packages/aliyun-net-sdk-core/)
 - [aliyun-net-sdk-alidns](https://www.nuget.org/packages/aliyun-net-sdk-alidns/)
+- [aliyun-net-sdk-cdn](https://www.nuget.org/packages/aliyun-net-sdk-alidns/)
+- [aliyun-net-sdk-dm]
+- [aliyun-net-sdk-domain](https://www.nuget.org/packages/aliyun-net-sdk-domain/)
+- [aliyun-net-sdk-ecs](https://www.nuget.org/packages/aliyun-net-sdk-ecs/)
+- [aliyun-net-sdk-hpc](https://www.nuget.org/packages/aliyun-net-sdk-hpc/)
+- [aliyun-net-sdk-iot](https://www.nuget.org/packages/aliyun-net-sdk-iot/)
+- [aliyun-net-sdk-kms](https://www.nuget.org/packages/aliyun-net-sdk-kms/)
+- [aliyun-net-sdk-mts](https://www.nuget.org/packages/aliyun-net-sdk-mts/)
+- [aliyun-net-sdk-push](https://www.nuget.org/packages/aliyun-net-sdk-push/)
+- [aliyun-net-sdk-rds](https://www.nuget.org/packages/aliyun-net-sdk-rds/)
+- [aliyun-net-sdk-slb](https://www.nuget.org/packages/aliyun-net-sdk-slb/)
+- [aliyun-net-sdk-sms](https://www.nuget.org/packages/aliyun-net-sdk-sms/)
+- [aliyun-net-sdk-sts](https://www.nuget.org/packages/aliyun-net-sdk-sts/)
 
 
 ## Example
