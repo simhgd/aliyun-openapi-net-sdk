@@ -26,7 +26,7 @@ namespace Aliyun.Acs.Ecs.Model.V20140526
 
 		private string limitation;
 
-		private string value;
+		private string _value;
 
 		public string Limitation
 		{
@@ -44,11 +44,11 @@ namespace Aliyun.Acs.Ecs.Model.V20140526
 		{
 			get
 			{
-				return value;
+				return _value;
 			}
 			set	
 			{
-				value = value;
+                _value = value;
 			}
 		}
 	}

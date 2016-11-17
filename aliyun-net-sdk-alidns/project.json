@@ -1,10 +1,10 @@
 ﻿{
-  "version": "1.0.1-V20150109",
-  "authors": [ "阿里云计算" ],
-  "description": "阿里云.netcore SDK 阿里域名服务",
+  "version": "1.0.3-V20150109",
+  "authors": [ "Sim Tsai" ],
+  "description": "阿里云.netcore SDK Alidns",
 
   "dependencies": {
-    "aliyun-net-sdk-core": "1.0.0",
+    "aliyun-net-sdk-core": "1.0.3",
     "NETStandard.Library": "1.6.0"
   },
 
@@ -15,12 +15,15 @@
   },
 
   "packOptions": {
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/simhgd/aliyun-openapi-net-sdk.git"
+    },
     "owners": [
       "Sim Tsai"
     ],
     "tags": [
-      "aliyun",
-      "aliyun alidns"
+      "aliyun sdk alidns"
     ]
   },
 
