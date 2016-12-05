@@ -23,6 +23,7 @@
 - [aliyun-net-sdk-slb](https://www.nuget.org/packages/aliyun-net-sdk-slb/)
 - [aliyun-net-sdk-sms](https://www.nuget.org/packages/aliyun-net-sdk-sms/)
 - [aliyun-net-sdk-sts](https://www.nuget.org/packages/aliyun-net-sdk-sts/)
+- [aliyun-net-sdk-live](https://www.nuget.org/packages/aliyun-net-sdk-live/)
 
 
 ## Example
