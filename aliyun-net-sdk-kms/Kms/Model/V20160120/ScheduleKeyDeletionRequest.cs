@@ -26,22 +26,18 @@ using System.Collections.Generic;
 
 namespace Aliyun.Acs.Kms.Model.V20160120
 {
-    public class GenerateDataKeyRequest : RpcAcsRequest<GenerateDataKeyResponse>
+    public class ScheduleKeyDeletionRequest : RpcAcsRequest<ScheduleKeyDeletionResponse>
     {
-        public GenerateDataKeyRequest()
-            : base("Kms", "2016-01-20", "GenerateDataKey")
+        public ScheduleKeyDeletionRequest()
+            : base("Kms", "2016-01-20", "ScheduleKeyDeletion")
         {
         }
 
 		private string keyId;
 
-		private string keySpec;
-
-		private int? numberOfBytes;
+		private int? pendingWindowInDays;
 
 		private string sTSToken;
-
-		private string encryptionContext;
 
 		public string KeyId
 		{
@@ -56,29 +52,16 @@ namespace Aliyun.Acs.Kms.Model.V20160120
 			}
 		}
 
-		public string KeySpec
+		public int? PendingWindowInDays
 		{
 			get
 			{
-				return keySpec;
+				return pendingWindowInDays;
 			}
 			set	
 			{
-				keySpec = value;
-				DictionaryUtil.Add(QueryParameters, "KeySpec", value);
-			}
-		}
-
-		public int? NumberOfBytes
-		{
-			get
-			{
-				return numberOfBytes;
-			}
-			set	
-			{
-				numberOfBytes = value;
-				DictionaryUtil.Add(QueryParameters, "NumberOfBytes", value.ToString());
+				pendingWindowInDays = value;
+				DictionaryUtil.Add(QueryParameters, "PendingWindowInDays", value.ToString());
 			}
 		}
 
@@ -95,22 +78,9 @@ namespace Aliyun.Acs.Kms.Model.V20160120
 			}
 		}
 
-		public string EncryptionContext
-		{
-			get
-			{
-				return encryptionContext;
-			}
-			set	
-			{
-				encryptionContext = value;
-				DictionaryUtil.Add(QueryParameters, "EncryptionContext", value);
-			}
-		}
-
-        public override GenerateDataKeyResponse GetResponse(Core.Transform.UnmarshallerContext unmarshallerContext)
+        public override ScheduleKeyDeletionResponse GetResponse(Core.Transform.UnmarshallerContext unmarshallerContext)
         {
-            return GenerateDataKeyResponseUnmarshaller.Unmarshall(unmarshallerContext);
+            return ScheduleKeyDeletionResponseUnmarshaller.Unmarshall(unmarshallerContext);
         }
     }
 }

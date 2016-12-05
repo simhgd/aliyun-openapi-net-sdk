@@ -20,67 +20,68 @@ using Aliyun.Acs.Core;
 using Aliyun.Acs.Core.Http;
 using Aliyun.Acs.Core.Transform;
 using Aliyun.Acs.Core.Utils;
-using Aliyun.Acs.Kms.Transform;
-using Aliyun.Acs.Kms.Transform.V20160120;
+using Aliyun.Acs.live.Model.V20161101;
+using Aliyun.Acs.Live.Transform;
+using Aliyun.Acs.Live.Transform.V20161101;
 using System.Collections.Generic;
 
-namespace Aliyun.Acs.Kms.Model.V20160120
+namespace Aliyun.Acs.Live.Model.V20161101
 {
-    public class DecryptRequest : RpcAcsRequest<DecryptResponse>
+    public class ImagePornDetectionRequest : RpcAcsRequest<ImagePornDetectionResponse>
     {
-        public DecryptRequest()
-            : base("Kms", "2016-01-20", "Decrypt")
+        public ImagePornDetectionRequest()
+            : base("Live", "2016-11-01", "ImagePornDetection")
         {
         }
 
-		private string ciphertextBlob;
+		private string securityToken;
 
-		private string sTSToken;
+		private long? ownerId;
 
-		private string encryptionContext;
+		private string imageUrl;
 
-		public string CiphertextBlob
+		public string SecurityToken
 		{
 			get
 			{
-				return ciphertextBlob;
+				return securityToken;
 			}
 			set	
 			{
-				ciphertextBlob = value;
-				DictionaryUtil.Add(QueryParameters, "CiphertextBlob", value);
+				securityToken = value;
+				DictionaryUtil.Add(QueryParameters, "SecurityToken", value);
 			}
 		}
 
-		public string STSToken
+		public long? OwnerId
 		{
 			get
 			{
-				return sTSToken;
+				return ownerId;
 			}
 			set	
 			{
-				sTSToken = value;
-				DictionaryUtil.Add(QueryParameters, "STSToken", value);
+				ownerId = value;
+				DictionaryUtil.Add(QueryParameters, "OwnerId", value.ToString());
 			}
 		}
 
-		public string EncryptionContext
+		public string ImageUrl
 		{
 			get
 			{
-				return encryptionContext;
+				return imageUrl;
 			}
 			set	
 			{
-				encryptionContext = value;
-				DictionaryUtil.Add(QueryParameters, "EncryptionContext", value);
+				imageUrl = value;
+				DictionaryUtil.Add(QueryParameters, "ImageUrl", value);
 			}
 		}
 
-        public override DecryptResponse GetResponse(Core.Transform.UnmarshallerContext unmarshallerContext)
+        public override ImagePornDetectionResponse GetResponse(Core.Transform.UnmarshallerContext unmarshallerContext)
         {
-            return DecryptResponseUnmarshaller.Unmarshall(unmarshallerContext);
+            return ImagePornDetectionResponseUnmarshaller.Unmarshall(unmarshallerContext);
         }
     }
 }

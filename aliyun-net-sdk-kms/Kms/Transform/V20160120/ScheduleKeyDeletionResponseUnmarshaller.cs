@@ -23,25 +23,16 @@ using System.Collections.Generic;
 
 namespace Aliyun.Acs.Kms.Transform.V20160120
 {
-    public class CreateKeyResponseUnmarshaller
+    public class ScheduleKeyDeletionResponseUnmarshaller
     {
-        public static CreateKeyResponse Unmarshall(UnmarshallerContext context)
+        public static ScheduleKeyDeletionResponse Unmarshall(UnmarshallerContext context)
         {
-			CreateKeyResponse createKeyResponse = new CreateKeyResponse();
+			ScheduleKeyDeletionResponse scheduleKeyDeletionResponse = new ScheduleKeyDeletionResponse();
 
-			createKeyResponse.HttpResponse = context.HttpResponse;
-			createKeyResponse.RequestId = context.StringValue("CreateKey.RequestId");
-
-			CreateKeyResponse.KeyMetadata_ keyMetadata = new CreateKeyResponse.KeyMetadata_();
-			keyMetadata.CreationDate = context.StringValue("CreateKey.KeyMetadata.CreationDate");
-			keyMetadata.Description = context.StringValue("CreateKey.KeyMetadata.Description");
-			keyMetadata.KeyId = context.StringValue("CreateKey.KeyMetadata.KeyId");
-			keyMetadata.KeyState = context.StringValue("CreateKey.KeyMetadata.KeyState");
-			keyMetadata.KeyUsage = context.StringValue("CreateKey.KeyMetadata.KeyUsage");
-			keyMetadata.DeleteDate = context.StringValue("CreateKey.KeyMetadata.DeleteDate");
-			createKeyResponse.KeyMetadata = keyMetadata;
+			scheduleKeyDeletionResponse.HttpResponse = context.HttpResponse;
+			scheduleKeyDeletionResponse.RequestId = context.StringValue("ScheduleKeyDeletion.RequestId");
         
-			return createKeyResponse;
+			return scheduleKeyDeletionResponse;
         }
     }
 }

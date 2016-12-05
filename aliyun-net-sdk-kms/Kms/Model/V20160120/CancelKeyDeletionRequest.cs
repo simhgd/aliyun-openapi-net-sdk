@@ -26,22 +26,16 @@ using System.Collections.Generic;
 
 namespace Aliyun.Acs.Kms.Model.V20160120
 {
-    public class GenerateDataKeyRequest : RpcAcsRequest<GenerateDataKeyResponse>
+    public class CancelKeyDeletionRequest : RpcAcsRequest<CancelKeyDeletionResponse>
     {
-        public GenerateDataKeyRequest()
-            : base("Kms", "2016-01-20", "GenerateDataKey")
+        public CancelKeyDeletionRequest()
+            : base("Kms", "2016-01-20", "CancelKeyDeletion")
         {
         }
 
 		private string keyId;
 
-		private string keySpec;
-
-		private int? numberOfBytes;
-
 		private string sTSToken;
-
-		private string encryptionContext;
 
 		public string KeyId
 		{
@@ -53,32 +47,6 @@ namespace Aliyun.Acs.Kms.Model.V20160120
 			{
 				keyId = value;
 				DictionaryUtil.Add(QueryParameters, "KeyId", value);
-			}
-		}
-
-		public string KeySpec
-		{
-			get
-			{
-				return keySpec;
-			}
-			set	
-			{
-				keySpec = value;
-				DictionaryUtil.Add(QueryParameters, "KeySpec", value);
-			}
-		}
-
-		public int? NumberOfBytes
-		{
-			get
-			{
-				return numberOfBytes;
-			}
-			set	
-			{
-				numberOfBytes = value;
-				DictionaryUtil.Add(QueryParameters, "NumberOfBytes", value.ToString());
 			}
 		}
 
@@ -95,22 +63,9 @@ namespace Aliyun.Acs.Kms.Model.V20160120
 			}
 		}
 
-		public string EncryptionContext
-		{
-			get
-			{
-				return encryptionContext;
-			}
-			set	
-			{
-				encryptionContext = value;
-				DictionaryUtil.Add(QueryParameters, "EncryptionContext", value);
-			}
-		}
-
-        public override GenerateDataKeyResponse GetResponse(Core.Transform.UnmarshallerContext unmarshallerContext)
+        public override CancelKeyDeletionResponse GetResponse(Core.Transform.UnmarshallerContext unmarshallerContext)
         {
-            return GenerateDataKeyResponseUnmarshaller.Unmarshall(unmarshallerContext);
+            return CancelKeyDeletionResponseUnmarshaller.Unmarshall(unmarshallerContext);
         }
     }
 }

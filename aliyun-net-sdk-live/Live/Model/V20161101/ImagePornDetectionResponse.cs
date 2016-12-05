@@ -17,55 +17,39 @@
  * under the License.
  */
 using Aliyun.Acs.Core;
-using Aliyun.Acs.Core.Http;
-using Aliyun.Acs.Core.Transform;
-using Aliyun.Acs.Core.Utils;
-using Aliyun.Acs.Kms.Transform;
-using Aliyun.Acs.Kms.Transform.V20160120;
 using System.Collections.Generic;
 
-namespace Aliyun.Acs.Kms.Model.V20160120
+namespace Aliyun.Acs.live.Model.V20161101
 {
-    public class DisableKeyRequest : RpcAcsRequest<DisableKeyResponse>
-    {
-        public DisableKeyRequest()
-            : base("Kms", "2016-01-20", "DisableKey")
-        {
-        }
+	public class ImagePornDetectionResponse : AcsResponse
+	{
 
-		private string keyId;
+		private string label;
 
-		private string sTSToken;
+		private float? rate;
 
-		public string KeyId
+		public string Label
 		{
 			get
 			{
-				return keyId;
+				return label;
 			}
 			set	
 			{
-				keyId = value;
-				DictionaryUtil.Add(QueryParameters, "KeyId", value);
+				label = value;
 			}
 		}
 
-		public string STSToken
+		public float? Rate
 		{
 			get
 			{
-				return sTSToken;
+				return rate;
 			}
 			set	
 			{
-				sTSToken = value;
-				DictionaryUtil.Add(QueryParameters, "STSToken", value);
+				rate = value;
 			}
 		}
-
-        public override DisableKeyResponse GetResponse(Core.Transform.UnmarshallerContext unmarshallerContext)
-        {
-            return DisableKeyResponseUnmarshaller.Unmarshall(unmarshallerContext);
-        }
-    }
+	}
 }

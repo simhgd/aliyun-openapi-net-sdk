@@ -1,10 +1,10 @@
 ﻿{
-  "version": "1.0.3-V20141111",
+  "version": "1.0.4-V20141111",
   "authors": [ "Sim Tsai" ],
   "description": "阿里云.netcore SDK Cdn",
 
   "dependencies": {
-    "aliyun-net-sdk-core": "1.0.3",
+    "aliyun-net-sdk-core": "1.0.4",
     "NETStandard.Library": "1.6.0"
   },
 
