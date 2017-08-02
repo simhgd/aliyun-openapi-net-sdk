@@ -53,6 +53,16 @@ namespace Aliyun.Acs.Core
             Initialize();
         }
 
+        public RpcAcsRequest(String product, String version, String action, String locationProduct, String locationEndpointType)
+            : base(product)
+        {
+            this.Version = version;
+            this.ActionName = action;
+            this.LocationProduct = locationProduct;
+            this.LocationEndpointType = locationEndpointType;
+            Initialize();
+        }
+
         private void Initialize()
         {
             Method = MethodType.GET;
@@ -112,9 +122,10 @@ namespace Aliyun.Acs.Core
                 String signature = signer.SignString(strToSign, accessSecret + "&");
                 imutableMap.Add("Signature", signature);
             }
-            HttpRequest request = new HttpRequest(ComposeUrl(domain.DomianName, imutableMap));
-            request.Method = this.Method;
-            return request;
+
+            String url = ComposeUrl(domain.DomianName, imutableMap);
+            this.Url = url;
+            return this;
         }
 
         public override String ComposeUrl(String endpoint, Dictionary<String, String> queries)

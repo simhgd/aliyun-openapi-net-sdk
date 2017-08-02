@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <Description>阿里云.netcore SDK Dm</Description>
-    <VersionPrefix>1.0.4-V20151123</VersionPrefix>
+    <VersionPrefix>1.0.5-V20151123</VersionPrefix>
     <Authors>Sim Tsai</Authors>
     <TargetFramework>netstandard1.6</TargetFramework>
     <AssemblyName>aliyun-net-sdk-dm</AssemblyName>
@@ -20,6 +20,7 @@
     <GenerateAssemblyCopyrightAttribute>false</GenerateAssemblyCopyrightAttribute>
     <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
     <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
+    <Version>1.0.5-V20151123</Version>
   </PropertyGroup>
 
   <ItemGroup>

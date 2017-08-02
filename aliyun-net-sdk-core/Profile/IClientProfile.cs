@@ -36,5 +36,9 @@ namespace Aliyun.Acs.Core.Profile
         Credential GetCredential();
 
         List<Endpoint> GetEndpoints();
+
+        List<Endpoint> GetEndpoints(String regionId, String product, Credential credential, String locationProduct, String locationEndpointType);
+
+        void SetLocationConfig(String regionId, String product, String endpoint);
     }
 }

@@ -254,7 +254,7 @@ namespace Aliyun.Acs.Ecs.Model.V20140526
 
 				private string name;
 
-				private string _value;
+				private string value;
 
 				public string Name
 				{
@@ -272,11 +272,11 @@ namespace Aliyun.Acs.Ecs.Model.V20140526
 				{
 					get
 					{
-						return _value;
+						return value;
 					}
 					set	
 					{
-                        _value = value;
+						value = value;
 					}
 				}
 			}

@@ -51,6 +51,16 @@ namespace Aliyun.Acs.Core
             Initialize();
         }
 
+        public RoaAcsRequest(string product, string version, string action, string locationProduct, string locationEndpointType)
+            : base(product)
+        {
+            this.Version = version;
+            this.ActionName = action;
+            this.LocationProduct = locationProduct;
+            this.LocationEndpointType = locationEndpointType;
+            Initialize();
+        }
+
         private void Initialize()
         {
             this.AcceptFormat = FormatType.RAW;

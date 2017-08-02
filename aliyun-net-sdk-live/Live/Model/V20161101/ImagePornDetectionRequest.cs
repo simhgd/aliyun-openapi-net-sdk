@@ -20,25 +20,28 @@ using Aliyun.Acs.Core;
 using Aliyun.Acs.Core.Http;
 using Aliyun.Acs.Core.Transform;
 using Aliyun.Acs.Core.Utils;
-using Aliyun.Acs.live.Model.V20161101;
-using Aliyun.Acs.Live.Transform;
-using Aliyun.Acs.Live.Transform.V20161101;
+using Aliyun.Acs.live.Transform;
+using Aliyun.Acs.live.Transform.V20161101;
 using System.Collections.Generic;
 
-namespace Aliyun.Acs.Live.Model.V20161101
+namespace Aliyun.Acs.live.Model.V20161101
 {
     public class ImagePornDetectionRequest : RpcAcsRequest<ImagePornDetectionResponse>
     {
         public ImagePornDetectionRequest()
-            : base("Live", "2016-11-01", "ImagePornDetection")
+            : base("live", "2016-11-01", "ImagePornDetection")
         {
         }
 
 		private string securityToken;
 
+		private string imageUrl;
+
+		private string action;
+
 		private long? ownerId;
 
-		private string imageUrl;
+		private string accessKeyId;
 
 		public string SecurityToken
 		{
@@ -50,6 +53,32 @@ namespace Aliyun.Acs.Live.Model.V20161101
 			{
 				securityToken = value;
 				DictionaryUtil.Add(QueryParameters, "SecurityToken", value);
+			}
+		}
+
+		public string ImageUrl
+		{
+			get
+			{
+				return imageUrl;
+			}
+			set	
+			{
+				imageUrl = value;
+				DictionaryUtil.Add(QueryParameters, "ImageUrl", value);
+			}
+		}
+
+		public string Action
+		{
+			get
+			{
+				return action;
+			}
+			set	
+			{
+				action = value;
+				DictionaryUtil.Add(QueryParameters, "Action", value);
 			}
 		}
 
@@ -66,16 +95,16 @@ namespace Aliyun.Acs.Live.Model.V20161101
 			}
 		}
 
-		public string ImageUrl
+		public string AccessKeyId
 		{
 			get
 			{
-				return imageUrl;
+				return accessKeyId;
 			}
 			set	
 			{
-				imageUrl = value;
-				DictionaryUtil.Add(QueryParameters, "ImageUrl", value);
+				accessKeyId = value;
+				DictionaryUtil.Add(QueryParameters, "AccessKeyId", value);
 			}
 		}
 

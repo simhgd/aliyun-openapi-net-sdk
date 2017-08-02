@@ -24,6 +24,7 @@ using Aliyun.Acs.Core.Reader;
 using Aliyun.Acs.Core.Regions;
 using Aliyun.Acs.Core.Transform;
 using System.Collections.Generic;
+using System;
 
 namespace Aliyun.Acs.Core
 {
@@ -33,6 +34,7 @@ namespace Aliyun.Acs.Core
         private int maxRetryNumber = 3;
         private bool autoRetry = true;
         private IClientProfile clientProfile = null;
+        private int timeoutInMilliSeconds = 100000; // Default 100 Seconds
 
         public DefaultAcsClient()
         {
@@ -124,7 +126,7 @@ namespace Aliyun.Acs.Core
             {
                 signer = clientProfile.GetSigner();
                 format = clientProfile.GetFormat();
-                endpoints = clientProfile.GetEndpoints();
+                endpoints = clientProfile.GetEndpoints(regionId, request.Product, credential, request.LocationProduct, request.LocationEndpointType); ;
             }
             return DoAction(request, autoRetry, this.maxRetryNumber, regionId, credential, signer, format, endpoints);
         }
@@ -137,10 +139,14 @@ namespace Aliyun.Acs.Core
                 throw new ClientException("SDK.InvalidProfile", "No active profile found.");
             }
             string regionId = profile.GetRegionId();
+            if (null != request.RegionId)
+            {
+                regionId = request.RegionId;
+            }
             Credential credential = profile.GetCredential();
             ISigner signer = profile.GetSigner();
             FormatType? format = profile.GetFormat();
-            List<Endpoint> endpoints = profile.GetEndpoints();
+            List<Endpoint> endpoints = profile.GetEndpoints(regionId, request.Product, credential, request.LocationProduct, request.LocationEndpointType);
 
             return DoAction(request, autoRetry, maxRetryNumber, regionId, credential, signer, format, endpoints);
         }
@@ -164,11 +170,11 @@ namespace Aliyun.Acs.Core
             }
             HttpRequest httpRequest = request.SignRequest(signer, credential, format, domain);
             int retryTimes = 1;
-            HttpResponse response = HttpResponse.GetResponse(httpRequest);
+            HttpResponse response = HttpResponse.GetResponse(httpRequest, timeoutInMilliSeconds);
             while (500 <= response.Status && autoRetry && retryTimes < maxRetryNumber)
             {
                 httpRequest = request.SignRequest(signer, credential, format, domain);
-                response = HttpResponse.GetResponse(httpRequest);
+                response = HttpResponse.GetResponse(httpRequest, timeoutInMilliSeconds);
                 retryTimes++;
             }
             return response;
@@ -180,7 +186,7 @@ namespace Aliyun.Acs.Core
             UnmarshallerContext context = new UnmarshallerContext();
             string body = System.Text.Encoding.UTF8.GetString(httpResponse.Content);
             context.ResponseDictionary = reader.Read(body, request.ActionName);
-            context.HttpResponse = httpResponse; ;
+            context.HttpResponse = httpResponse;
             return request.GetResponse(context);
         }
 
@@ -211,6 +217,12 @@ namespace Aliyun.Acs.Core
         {
             get { return autoRetry; }
             set { autoRetry = value; }
+        }
+
+        public int TimeoutInMilliSeconds
+        {
+            get { return timeoutInMilliSeconds; }
+            set { timeoutInMilliSeconds = value; }
         }
 
     }

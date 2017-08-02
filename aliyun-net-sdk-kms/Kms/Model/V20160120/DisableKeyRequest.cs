@@ -31,6 +31,7 @@ namespace Aliyun.Acs.Kms.Model.V20160120
         public DisableKeyRequest()
             : base("Kms", "2016-01-20", "DisableKey")
         {
+			Protocol = ProtocolType.HTTPS;
         }
 
 		private string keyId;

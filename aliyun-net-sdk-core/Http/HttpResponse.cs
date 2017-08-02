@@ -104,7 +104,7 @@ namespace Aliyun.Acs.Core.Http
             return bytes;
         }
 
-        public static HttpResponse GetResponse(HttpRequest request)
+        public static HttpResponse GetResponse(HttpRequest request, int? timeout = null)
         {
             HttpWebRequest httpWebRequest = GetWebRequest(request);
 
@@ -113,7 +113,14 @@ namespace Aliyun.Acs.Core.Http
             try
             {
                 var task = httpWebRequest.GetResponseAsync();
-                task.Wait();
+                if (timeout.HasValue)
+                {
+                    task.Wait(timeout.Value);
+                }
+                else
+                {
+                    task.Wait();
+                }
                 httpWebResponse = (HttpWebResponse)task.Result;
             }
             catch (AggregateException ex) when (ex.InnerException is WebException)
@@ -122,7 +129,14 @@ namespace Aliyun.Acs.Core.Http
             }
             catch (WebException ex)
             {
-                httpWebResponse = (HttpWebResponse)ex.Response;
+                if (ex.Response != null)
+                {
+                    httpWebResponse = (HttpWebResponse)ex.Response;
+                }
+                else
+                {
+                    throw ex;
+                }
             }
 
             PasrseHttpResponse(httpResponse, httpWebResponse);
@@ -154,12 +168,11 @@ namespace Aliyun.Acs.Core.Http
             }
             //if (request.Headers.ContainsKey("Date"))
             //{
-            //    httpWebRequest.Date = Convert.ToDateTime(DictionaryUtil.Pop(request.Headers, "Date"));
+            //    httpWebRequest.Headers["Date"] = Convert.ToDateTime(DictionaryUtil.Pop(request.Headers, "Date")).ToString();
             //}
 
             foreach (var header in request.Headers)
             {
-                //httpWebRequest.Headers.Add(header.Key, header.Value);
                 httpWebRequest.Headers[header.Key] = header.Value;
             }
 
