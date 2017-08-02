@@ -1,39 +1,39 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "aliyun-net-sdk-core", "aliyun-net-sdk-core\aliyun-net-sdk-core.xproj", "{6E821DA9-18AF-40C4-9798-DD1854D1252E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aliyun-net-sdk-core", "aliyun-net-sdk-core\aliyun-net-sdk-core.csproj", "{6E821DA9-18AF-40C4-9798-DD1854D1252E}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "aliyun-net-sdk-alidns", "aliyun-net-sdk-alidns\aliyun-net-sdk-alidns.xproj", "{9D60DDE3-3A7B-4B01-8E73-B1258A703213}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aliyun-net-sdk-alidns", "aliyun-net-sdk-alidns\aliyun-net-sdk-alidns.csproj", "{9D60DDE3-3A7B-4B01-8E73-B1258A703213}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "aliyun-net-sdk-cdn", "aliyun-net-sdk-cdn\aliyun-net-sdk-cdn.xproj", "{1C8DEFCF-E322-483B-BD46-085EF47A42A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aliyun-net-sdk-cdn", "aliyun-net-sdk-cdn\aliyun-net-sdk-cdn.csproj", "{1C8DEFCF-E322-483B-BD46-085EF47A42A7}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "aliyun-net-sdk-dm", "aliyun-net-sdk-dm\aliyun-net-sdk-dm.xproj", "{A88D7C7C-9917-4102-8BA3-7B5F658FD244}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aliyun-net-sdk-dm", "aliyun-net-sdk-dm\aliyun-net-sdk-dm.csproj", "{A88D7C7C-9917-4102-8BA3-7B5F658FD244}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "aliyun-net-sdk-domain", "aliyun-net-sdk-domain\aliyun-net-sdk-domain.xproj", "{8BBAB827-1E7E-428C-BA4E-B0296883D2C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aliyun-net-sdk-domain", "aliyun-net-sdk-domain\aliyun-net-sdk-domain.csproj", "{8BBAB827-1E7E-428C-BA4E-B0296883D2C7}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "aliyun-net-sdk-ecs", "aliyun-net-sdk-ecs\aliyun-net-sdk-ecs.xproj", "{57AA4D0A-4163-4C2D-82AF-2AF24776C569}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aliyun-net-sdk-ecs", "aliyun-net-sdk-ecs\aliyun-net-sdk-ecs.csproj", "{57AA4D0A-4163-4C2D-82AF-2AF24776C569}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "aliyun-net-sdk-hpc", "aliyun-net-sdk-hpc\aliyun-net-sdk-hpc.xproj", "{8EB58997-322D-409B-9D20-91B5FB55ECAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aliyun-net-sdk-hpc", "aliyun-net-sdk-hpc\aliyun-net-sdk-hpc.csproj", "{8EB58997-322D-409B-9D20-91B5FB55ECAC}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "aliyun-net-sdk-iot", "aliyun-net-sdk-iot\aliyun-net-sdk-iot.xproj", "{766CA8C6-361A-498B-A556-0A8C7D083702}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aliyun-net-sdk-iot", "aliyun-net-sdk-iot\aliyun-net-sdk-iot.csproj", "{766CA8C6-361A-498B-A556-0A8C7D083702}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "aliyun-net-sdk-kms", "aliyun-net-sdk-kms\aliyun-net-sdk-kms.xproj", "{C6A73CDF-44FB-411B-8313-386C10ABB92E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aliyun-net-sdk-kms", "aliyun-net-sdk-kms\aliyun-net-sdk-kms.csproj", "{C6A73CDF-44FB-411B-8313-386C10ABB92E}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "aliyun-net-sdk-mts", "aliyun-net-sdk-mts\aliyun-net-sdk-mts.xproj", "{FA1E8D75-81F6-4C43-B4C5-363428F4E516}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aliyun-net-sdk-mts", "aliyun-net-sdk-mts\aliyun-net-sdk-mts.csproj", "{FA1E8D75-81F6-4C43-B4C5-363428F4E516}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "aliyun-net-sdk-push", "aliyun-net-sdk-push\aliyun-net-sdk-push.xproj", "{A04F9023-919A-43AF-9DF5-31B16AD9282A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aliyun-net-sdk-push", "aliyun-net-sdk-push\aliyun-net-sdk-push.csproj", "{A04F9023-919A-43AF-9DF5-31B16AD9282A}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "aliyun-net-sdk-rds", "aliyun-net-sdk-rds\aliyun-net-sdk-rds.xproj", "{146A982B-8110-42E0-961B-1E5649060A3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aliyun-net-sdk-rds", "aliyun-net-sdk-rds\aliyun-net-sdk-rds.csproj", "{146A982B-8110-42E0-961B-1E5649060A3D}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "aliyun-net-sdk-slb", "aliyun-net-sdk-slb\aliyun-net-sdk-slb.xproj", "{3F40D212-FE02-44AB-B90A-CB1A3BC18912}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aliyun-net-sdk-slb", "aliyun-net-sdk-slb\aliyun-net-sdk-slb.csproj", "{3F40D212-FE02-44AB-B90A-CB1A3BC18912}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "aliyun-net-sdk-sms", "aliyun-net-sdk-sms\aliyun-net-sdk-sms.xproj", "{4CD7ED97-7489-4723-8E4A-16813B9B1076}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aliyun-net-sdk-sms", "aliyun-net-sdk-sms\aliyun-net-sdk-sms.csproj", "{4CD7ED97-7489-4723-8E4A-16813B9B1076}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "aliyun-net-sdk-sts", "aliyun-net-sdk-sts\aliyun-net-sdk-sts.xproj", "{AAFBC8CD-800A-4C87-97E0-EB136F2DD9BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aliyun-net-sdk-sts", "aliyun-net-sdk-sts\aliyun-net-sdk-sts.csproj", "{AAFBC8CD-800A-4C87-97E0-EB136F2DD9BC}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "aliyun-net-sdk-live", "aliyun-net-sdk-live\aliyun-net-sdk-live.xproj", "{DF0BBD3A-0F82-48C7-B1C9-7A8D4951027C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aliyun-net-sdk-live", "aliyun-net-sdk-live\aliyun-net-sdk-live.csproj", "{DF0BBD3A-0F82-48C7-B1C9-7A8D4951027C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
