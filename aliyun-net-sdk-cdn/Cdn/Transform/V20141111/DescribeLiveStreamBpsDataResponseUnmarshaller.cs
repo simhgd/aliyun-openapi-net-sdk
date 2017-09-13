@@ -32,15 +32,15 @@ namespace Aliyun.Acs.Cdn.Transform.V20141111
 			describeLiveStreamBpsDataResponse.HttpResponse = context.HttpResponse;
 			describeLiveStreamBpsDataResponse.RequestId = context.StringValue("DescribeLiveStreamBpsData.RequestId");
 
-			List<DescribeLiveStreamBpsDataResponse.DomainBpsModel> bpsDatas = new List<DescribeLiveStreamBpsDataResponse.DomainBpsModel>();
+			List<DescribeLiveStreamBpsDataResponse.DescribeLiveStreamBpsData_DomainBpsModel> describeLiveStreamBpsDataResponse_bpsDatas = new List<DescribeLiveStreamBpsDataResponse.DescribeLiveStreamBpsData_DomainBpsModel>();
 			for (int i = 0; i < context.Length("DescribeLiveStreamBpsData.BpsDatas.Length"); i++) {
-				DescribeLiveStreamBpsDataResponse.DomainBpsModel domainBpsModel = new DescribeLiveStreamBpsDataResponse.DomainBpsModel();
+				DescribeLiveStreamBpsDataResponse.DescribeLiveStreamBpsData_DomainBpsModel domainBpsModel = new DescribeLiveStreamBpsDataResponse.DescribeLiveStreamBpsData_DomainBpsModel();
 				domainBpsModel.Time = context.StringValue("DescribeLiveStreamBpsData.BpsDatas["+ i +"].Time");
 				domainBpsModel.Bps = context.FloatValue("DescribeLiveStreamBpsData.BpsDatas["+ i +"].Bps");
 
-				bpsDatas.Add(domainBpsModel);
+				describeLiveStreamBpsDataResponse_bpsDatas.Add(domainBpsModel);
 			}
-			describeLiveStreamBpsDataResponse.BpsDatas = bpsDatas;
+			describeLiveStreamBpsDataResponse.BpsDatas = describeLiveStreamBpsDataResponse_bpsDatas;
         
 			return describeLiveStreamBpsDataResponse;
         }

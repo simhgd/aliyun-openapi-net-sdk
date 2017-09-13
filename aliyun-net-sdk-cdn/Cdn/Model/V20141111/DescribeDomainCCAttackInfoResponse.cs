@@ -24,15 +24,29 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 	public class DescribeDomainCCAttackInfoResponse : AcsResponse
 	{
 
+		private string requestId;
+
 		private string domainName;
 
 		private string startTime;
 
 		private string endTime;
 
-		private List<AttackIpDatas> attackIpDataList;
+		private List<DescribeDomainCCAttackInfo_AttackIpDatas> attackIpDataList;
 
-		private List<AttackedUrlDatas> attackedUrlDataList;
+		private List<DescribeDomainCCAttackInfo_AttackedUrlDatas> attackedUrlDataList;
+
+		public string RequestId
+		{
+			get
+			{
+				return requestId;
+			}
+			set	
+			{
+				requestId = value;
+			}
+		}
 
 		public string DomainName
 		{
@@ -70,7 +84,7 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 			}
 		}
 
-		public List<AttackIpDatas> AttackIpDataList
+		public List<DescribeDomainCCAttackInfo_AttackIpDatas> AttackIpDataList
 		{
 			get
 			{
@@ -82,7 +96,7 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 			}
 		}
 
-		public List<AttackedUrlDatas> AttackedUrlDataList
+		public List<DescribeDomainCCAttackInfo_AttackedUrlDatas> AttackedUrlDataList
 		{
 			get
 			{
@@ -94,7 +108,8 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 			}
 		}
 
-		public class AttackIpDatas{
+		public class DescribeDomainCCAttackInfo_AttackIpDatas
+		{
 
 			private string ip;
 
@@ -139,7 +154,8 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 			}
 		}
 
-		public class AttackedUrlDatas{
+		public class DescribeDomainCCAttackInfo_AttackedUrlDatas
+		{
 
 			private string url;
 

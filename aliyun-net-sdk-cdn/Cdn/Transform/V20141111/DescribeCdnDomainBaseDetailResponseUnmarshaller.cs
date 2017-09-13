@@ -32,21 +32,22 @@ namespace Aliyun.Acs.Cdn.Transform.V20141111
 			describeCdnDomainBaseDetailResponse.HttpResponse = context.HttpResponse;
 			describeCdnDomainBaseDetailResponse.RequestId = context.StringValue("DescribeCdnDomainBaseDetail.RequestId");
 
-			DescribeCdnDomainBaseDetailResponse.DomainBaseDetailModel_ domainBaseDetailModel = new DescribeCdnDomainBaseDetailResponse.DomainBaseDetailModel_();
+			DescribeCdnDomainBaseDetailResponse.DescribeCdnDomainBaseDetail_DomainBaseDetailModel domainBaseDetailModel = new DescribeCdnDomainBaseDetailResponse.DescribeCdnDomainBaseDetail_DomainBaseDetailModel();
 			domainBaseDetailModel.Cname = context.StringValue("DescribeCdnDomainBaseDetail.DomainBaseDetailModel.Cname");
 			domainBaseDetailModel.CdnType = context.StringValue("DescribeCdnDomainBaseDetail.DomainBaseDetailModel.CdnType");
 			domainBaseDetailModel.DomainStatus = context.StringValue("DescribeCdnDomainBaseDetail.DomainBaseDetailModel.DomainStatus");
 			domainBaseDetailModel.SourceType = context.StringValue("DescribeCdnDomainBaseDetail.DomainBaseDetailModel.SourceType");
+			domainBaseDetailModel.Region = context.StringValue("DescribeCdnDomainBaseDetail.DomainBaseDetailModel.Region");
 			domainBaseDetailModel.DomainName = context.StringValue("DescribeCdnDomainBaseDetail.DomainBaseDetailModel.DomainName");
 			domainBaseDetailModel.Remark = context.StringValue("DescribeCdnDomainBaseDetail.DomainBaseDetailModel.Remark");
 			domainBaseDetailModel.GmtModified = context.StringValue("DescribeCdnDomainBaseDetail.DomainBaseDetailModel.GmtModified");
 			domainBaseDetailModel.GmtCreated = context.StringValue("DescribeCdnDomainBaseDetail.DomainBaseDetailModel.GmtCreated");
 
-			List<string> sources = new List<string>();
+			List<string> domainBaseDetailModel_sources = new List<string>();
 			for (int i = 0; i < context.Length("DescribeCdnDomainBaseDetail.DomainBaseDetailModel.Sources.Length"); i++) {
-				sources.Add(context.StringValue("DescribeCdnDomainBaseDetail.DomainBaseDetailModel.Sources["+ i +"]"));
+				domainBaseDetailModel_sources.Add(context.StringValue("DescribeCdnDomainBaseDetail.DomainBaseDetailModel.Sources["+ i +"]"));
 			}
-			domainBaseDetailModel.Sources = sources;
+			domainBaseDetailModel.Sources = domainBaseDetailModel_sources;
 			describeCdnDomainBaseDetailResponse.DomainBaseDetailModel = domainBaseDetailModel;
         
 			return describeCdnDomainBaseDetailResponse;

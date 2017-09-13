@@ -36,9 +36,9 @@ namespace Aliyun.Acs.Cdn.Transform.V20141111
 			describeDomainRegionDataResponse.StartTime = context.StringValue("DescribeDomainRegionData.StartTime");
 			describeDomainRegionDataResponse.EndTime = context.StringValue("DescribeDomainRegionData.EndTime");
 
-			List<DescribeDomainRegionDataResponse.RegionProportionData> value = new List<DescribeDomainRegionDataResponse.RegionProportionData>();
+			List<DescribeDomainRegionDataResponse.DescribeDomainRegionData_RegionProportionData> describeDomainRegionDataResponse_value = new List<DescribeDomainRegionDataResponse.DescribeDomainRegionData_RegionProportionData>();
 			for (int i = 0; i < context.Length("DescribeDomainRegionData.Value.Length"); i++) {
-				DescribeDomainRegionDataResponse.RegionProportionData regionProportionData = new DescribeDomainRegionDataResponse.RegionProportionData();
+				DescribeDomainRegionDataResponse.DescribeDomainRegionData_RegionProportionData regionProportionData = new DescribeDomainRegionDataResponse.DescribeDomainRegionData_RegionProportionData();
 				regionProportionData.Region = context.StringValue("DescribeDomainRegionData.Value["+ i +"].Region");
 				regionProportionData.Proportion = context.StringValue("DescribeDomainRegionData.Value["+ i +"].Proportion");
 				regionProportionData.RegionEname = context.StringValue("DescribeDomainRegionData.Value["+ i +"].RegionEname");
@@ -54,9 +54,9 @@ namespace Aliyun.Acs.Cdn.Transform.V20141111
 				regionProportionData.BytesProportion = context.StringValue("DescribeDomainRegionData.Value["+ i +"].BytesProportion");
 				regionProportionData.TotalQuery = context.StringValue("DescribeDomainRegionData.Value["+ i +"].TotalQuery");
 
-				value.Add(regionProportionData);
+				describeDomainRegionDataResponse_value.Add(regionProportionData);
 			}
-			describeDomainRegionDataResponse.Value = value;
+			describeDomainRegionDataResponse._Value = describeDomainRegionDataResponse_value;
         
 			return describeDomainRegionDataResponse;
         }

@@ -24,7 +24,21 @@ namespace Aliyun.Acs.Domain.Model.V20160511
 	public class WhoisProtectionResponse : AcsResponse
 	{
 
+		private string requestId;
+
 		private int? result;
+
+		public string RequestId
+		{
+			get
+			{
+				return requestId;
+			}
+			set	
+			{
+				requestId = value;
+			}
+		}
 
 		public int? Result
 		{

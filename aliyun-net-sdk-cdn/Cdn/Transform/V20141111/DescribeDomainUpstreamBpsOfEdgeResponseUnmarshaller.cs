@@ -32,15 +32,15 @@ namespace Aliyun.Acs.Cdn.Transform.V20141111
 			describeDomainUpstreamBpsOfEdgeResponse.HttpResponse = context.HttpResponse;
 			describeDomainUpstreamBpsOfEdgeResponse.RequestId = context.StringValue("DescribeDomainUpstreamBpsOfEdge.RequestId");
 
-			List<DescribeDomainUpstreamBpsOfEdgeResponse.DomainBpsModel> bpsDatas = new List<DescribeDomainUpstreamBpsOfEdgeResponse.DomainBpsModel>();
+			List<DescribeDomainUpstreamBpsOfEdgeResponse.DescribeDomainUpstreamBpsOfEdge_DomainBpsModel> describeDomainUpstreamBpsOfEdgeResponse_bpsDatas = new List<DescribeDomainUpstreamBpsOfEdgeResponse.DescribeDomainUpstreamBpsOfEdge_DomainBpsModel>();
 			for (int i = 0; i < context.Length("DescribeDomainUpstreamBpsOfEdge.BpsDatas.Length"); i++) {
-				DescribeDomainUpstreamBpsOfEdgeResponse.DomainBpsModel domainBpsModel = new DescribeDomainUpstreamBpsOfEdgeResponse.DomainBpsModel();
+				DescribeDomainUpstreamBpsOfEdgeResponse.DescribeDomainUpstreamBpsOfEdge_DomainBpsModel domainBpsModel = new DescribeDomainUpstreamBpsOfEdgeResponse.DescribeDomainUpstreamBpsOfEdge_DomainBpsModel();
 				domainBpsModel.Time = context.StringValue("DescribeDomainUpstreamBpsOfEdge.BpsDatas["+ i +"].Time");
 				domainBpsModel.Bps = context.FloatValue("DescribeDomainUpstreamBpsOfEdge.BpsDatas["+ i +"].Bps");
 
-				bpsDatas.Add(domainBpsModel);
+				describeDomainUpstreamBpsOfEdgeResponse_bpsDatas.Add(domainBpsModel);
 			}
-			describeDomainUpstreamBpsOfEdgeResponse.BpsDatas = bpsDatas;
+			describeDomainUpstreamBpsOfEdgeResponse.BpsDatas = describeDomainUpstreamBpsOfEdgeResponse_bpsDatas;
         
 			return describeDomainUpstreamBpsOfEdgeResponse;
         }

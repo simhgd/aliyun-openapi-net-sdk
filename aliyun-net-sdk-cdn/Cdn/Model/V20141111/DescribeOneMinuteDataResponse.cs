@@ -24,9 +24,23 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 	public class DescribeOneMinuteDataResponse : AcsResponse
 	{
 
+		private string requestId;
+
 		private string bps;
 
 		private string qps;
+
+		public string RequestId
+		{
+			get
+			{
+				return requestId;
+			}
+			set	
+			{
+				requestId = value;
+			}
+		}
 
 		public string Bps
 		{

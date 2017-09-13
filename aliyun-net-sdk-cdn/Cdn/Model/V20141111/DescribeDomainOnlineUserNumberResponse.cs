@@ -24,9 +24,23 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 	public class DescribeDomainOnlineUserNumberResponse : AcsResponse
 	{
 
-		private List<LiveStreamOnlineUserNumInfo> liveStreamOnlineUserNumInfos;
+		private string requestId;
 
-		public List<LiveStreamOnlineUserNumInfo> LiveStreamOnlineUserNumInfos
+		private List<DescribeDomainOnlineUserNumber_LiveStreamOnlineUserNumInfo> liveStreamOnlineUserNumInfos;
+
+		public string RequestId
+		{
+			get
+			{
+				return requestId;
+			}
+			set	
+			{
+				requestId = value;
+			}
+		}
+
+		public List<DescribeDomainOnlineUserNumber_LiveStreamOnlineUserNumInfo> LiveStreamOnlineUserNumInfos
 		{
 			get
 			{
@@ -38,7 +52,8 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 			}
 		}
 
-		public class LiveStreamOnlineUserNumInfo{
+		public class DescribeDomainOnlineUserNumber_LiveStreamOnlineUserNumInfo
+		{
 
 			private string time;
 

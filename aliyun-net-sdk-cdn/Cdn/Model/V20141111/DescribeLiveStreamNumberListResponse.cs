@@ -24,9 +24,23 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 	public class DescribeLiveStreamNumberListResponse : AcsResponse
 	{
 
+		private string requestId;
+
 		private string domainName;
 
-		private List<StreamNumberInfo> streamNumberInfos;
+		private List<DescribeLiveStreamNumberList_StreamNumberInfo> streamNumberInfos;
+
+		public string RequestId
+		{
+			get
+			{
+				return requestId;
+			}
+			set	
+			{
+				requestId = value;
+			}
+		}
 
 		public string DomainName
 		{
@@ -40,7 +54,7 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 			}
 		}
 
-		public List<StreamNumberInfo> StreamNumberInfos
+		public List<DescribeLiveStreamNumberList_StreamNumberInfo> StreamNumberInfos
 		{
 			get
 			{
@@ -52,7 +66,8 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 			}
 		}
 
-		public class StreamNumberInfo{
+		public class DescribeLiveStreamNumberList_StreamNumberInfo
+		{
 
 			private int? number;
 

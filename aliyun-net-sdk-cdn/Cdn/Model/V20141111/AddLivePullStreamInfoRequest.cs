@@ -33,34 +33,49 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
         {
         }
 
-		private long? ownerId;
+		private string sourceUrl;
+
+		private string appName;
 
 		private string securityToken;
 
 		private string domainName;
 
-		private string appName;
-
-		private string streamName;
-
-		private string sourceUrl;
-
-		private string always;
-
-		private string startTime;
+		private string action;
 
 		private string endTime;
 
-		public long? OwnerId
+		private string startTime;
+
+		private long? ownerId;
+
+		private string streamName;
+
+		private string accessKeyId;
+
+		public string SourceUrl
 		{
 			get
 			{
-				return ownerId;
+				return sourceUrl;
 			}
 			set	
 			{
-				ownerId = value;
-				DictionaryUtil.Add(QueryParameters, "OwnerId", value.ToString());
+				sourceUrl = value;
+				DictionaryUtil.Add(QueryParameters, "SourceUrl", value);
+			}
+		}
+
+		public string AppName
+		{
+			get
+			{
+				return appName;
+			}
+			set	
+			{
+				appName = value;
+				DictionaryUtil.Add(QueryParameters, "AppName", value);
 			}
 		}
 
@@ -90,55 +105,29 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 			}
 		}
 
-		public string AppName
+		public string Action
 		{
 			get
 			{
-				return appName;
+				return action;
 			}
 			set	
 			{
-				appName = value;
-				DictionaryUtil.Add(QueryParameters, "AppName", value);
+				action = value;
+				DictionaryUtil.Add(QueryParameters, "Action", value);
 			}
 		}
 
-		public string StreamName
+		public string EndTime
 		{
 			get
 			{
-				return streamName;
+				return endTime;
 			}
 			set	
 			{
-				streamName = value;
-				DictionaryUtil.Add(QueryParameters, "StreamName", value);
-			}
-		}
-
-		public string SourceUrl
-		{
-			get
-			{
-				return sourceUrl;
-			}
-			set	
-			{
-				sourceUrl = value;
-				DictionaryUtil.Add(QueryParameters, "SourceUrl", value);
-			}
-		}
-
-		public string Always
-		{
-			get
-			{
-				return always;
-			}
-			set	
-			{
-				always = value;
-				DictionaryUtil.Add(QueryParameters, "Always", value);
+				endTime = value;
+				DictionaryUtil.Add(QueryParameters, "EndTime", value);
 			}
 		}
 
@@ -155,16 +144,42 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 			}
 		}
 
-		public string EndTime
+		public long? OwnerId
 		{
 			get
 			{
-				return endTime;
+				return ownerId;
 			}
 			set	
 			{
-				endTime = value;
-				DictionaryUtil.Add(QueryParameters, "EndTime", value);
+				ownerId = value;
+				DictionaryUtil.Add(QueryParameters, "OwnerId", value.ToString());
+			}
+		}
+
+		public string StreamName
+		{
+			get
+			{
+				return streamName;
+			}
+			set	
+			{
+				streamName = value;
+				DictionaryUtil.Add(QueryParameters, "StreamName", value);
+			}
+		}
+
+		public string AccessKeyId
+		{
+			get
+			{
+				return accessKeyId;
+			}
+			set	
+			{
+				accessKeyId = value;
+				DictionaryUtil.Add(QueryParameters, "AccessKeyId", value);
 			}
 		}
 

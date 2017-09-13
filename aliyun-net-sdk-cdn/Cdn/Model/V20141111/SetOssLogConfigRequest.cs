@@ -33,26 +33,30 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
         {
         }
 
-		private long? ownerId;
+		private string bucket;
 
 		private string securityToken;
 
 		private string enable;
 
-		private string bucket;
-
 		private string prefix;
 
-		public long? OwnerId
+		private string action;
+
+		private long? ownerId;
+
+		private string accessKeyId;
+
+		public string Bucket
 		{
 			get
 			{
-				return ownerId;
+				return bucket;
 			}
 			set	
 			{
-				ownerId = value;
-				DictionaryUtil.Add(QueryParameters, "OwnerId", value.ToString());
+				bucket = value;
+				DictionaryUtil.Add(QueryParameters, "Bucket", value);
 			}
 		}
 
@@ -82,19 +86,6 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 			}
 		}
 
-		public string Bucket
-		{
-			get
-			{
-				return bucket;
-			}
-			set	
-			{
-				bucket = value;
-				DictionaryUtil.Add(QueryParameters, "Bucket", value);
-			}
-		}
-
 		public string Prefix
 		{
 			get
@@ -105,6 +96,45 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 			{
 				prefix = value;
 				DictionaryUtil.Add(QueryParameters, "Prefix", value);
+			}
+		}
+
+		public string Action
+		{
+			get
+			{
+				return action;
+			}
+			set	
+			{
+				action = value;
+				DictionaryUtil.Add(QueryParameters, "Action", value);
+			}
+		}
+
+		public long? OwnerId
+		{
+			get
+			{
+				return ownerId;
+			}
+			set	
+			{
+				ownerId = value;
+				DictionaryUtil.Add(QueryParameters, "OwnerId", value.ToString());
+			}
+		}
+
+		public string AccessKeyId
+		{
+			get
+			{
+				return accessKeyId;
+			}
+			set	
+			{
+				accessKeyId = value;
+				DictionaryUtil.Add(QueryParameters, "AccessKeyId", value);
 			}
 		}
 

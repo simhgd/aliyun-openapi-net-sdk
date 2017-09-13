@@ -24,6 +24,8 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 	public class DescribeDomainRegionDataResponse : AcsResponse
 	{
 
+		private string requestId;
+
 		private string domainName;
 
 		private string dataInterval;
@@ -32,7 +34,19 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 
 		private string endTime;
 
-		private List<RegionProportionData> value_;
+		private List<DescribeDomainRegionData_RegionProportionData> _value;
+
+		public string RequestId
+		{
+			get
+			{
+				return requestId;
+			}
+			set	
+			{
+				requestId = value;
+			}
+		}
 
 		public string DomainName
 		{
@@ -82,19 +96,20 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 			}
 		}
 
-		public List<RegionProportionData> Value
+		public List<DescribeDomainRegionData_RegionProportionData> _Value
 		{
 			get
 			{
-				return value_;
+				return _value;
 			}
 			set	
 			{
-				value_ = value;
+				_value = value;
 			}
 		}
 
-		public class RegionProportionData{
+		public class DescribeDomainRegionData_RegionProportionData
+		{
 
 			private string region;
 

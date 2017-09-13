@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+VisualStudioVersion = 15.0.26730.15
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aliyun-net-sdk-core", "aliyun-net-sdk-core\aliyun-net-sdk-core.csproj", "{6E821DA9-18AF-40C4-9798-DD1854D1252E}"
 EndProject
@@ -33,13 +33,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aliyun-net-sdk-sts", "aliyu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aliyun-net-sdk-live", "aliyun-net-sdk-live\aliyun-net-sdk-live.csproj", "{DF0BBD3A-0F82-48C7-B1C9-7A8D4951027C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aliyun-net-sdk-cloudapi", "aliyun-net-sdk-cloudapi\aliyun-net-sdk-cloudapi.csproj", "{F8486BD0-B68C-444D-B8BA-227117011BED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aliyun-net-sdk-cloudapi", "aliyun-net-sdk-cloudapi\aliyun-net-sdk-cloudapi.csproj", "{F8486BD0-B68C-444D-B8BA-227117011BED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aliyun-net-sdk-push(OpenApi1.0)", "aliyun-net-sdk-push\OpenApi1.0\aliyun-net-sdk-push\aliyun-net-sdk-push(OpenApi1.0).csproj", "{B3D55149-7690-4943-8C4A-C30D6B439813}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aliyun-net-sdk-vod", "aliyun-net-sdk-vod\aliyun-net-sdk-vod.csproj", "{A3DD099B-4ACE-43B5-B783-C9424B17DD37}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aliyun-net-sdk-push(OpenApi2.0)", "aliyun-net-sdk-push\OpenApi2.0\aliyun-net-sdk-push\aliyun-net-sdk-push(OpenApi2.0).csproj", "{D857A2BE-D799-4515-BAF2-9C26F19ECF47}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aliyun-net-sdk-cloudphoto", "aliyun-net-sdk-cloudphoto\aliyun-net-sdk-cloudphoto.csproj", "{73BDF48F-CDE9-483A-A13F-3797AB6B6DD9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aliyun-net-sdk-vod", "aliyun-net-sdk-vod\aliyun-net-sdk-vod.csproj", "{A3DD099B-4ACE-43B5-B783-C9424B17DD37}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aliyun-net-sdk-sas-api", "aliyun-net-sdk-sas-api\aliyun-net-sdk-sas-api.csproj", "{1DABA138-02B4-410A-B2B3-609C595D67C6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aliyun-net-sdk-push", "aliyun-net-sdk-push\aliyun-net-sdk-push.csproj", "{AF4790A3-F96A-4B72-B909-E367734D5654}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -111,20 +113,27 @@ Global
 		{F8486BD0-B68C-444D-B8BA-227117011BED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8486BD0-B68C-444D-B8BA-227117011BED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8486BD0-B68C-444D-B8BA-227117011BED}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B3D55149-7690-4943-8C4A-C30D6B439813}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B3D55149-7690-4943-8C4A-C30D6B439813}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B3D55149-7690-4943-8C4A-C30D6B439813}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B3D55149-7690-4943-8C4A-C30D6B439813}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D857A2BE-D799-4515-BAF2-9C26F19ECF47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D857A2BE-D799-4515-BAF2-9C26F19ECF47}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D857A2BE-D799-4515-BAF2-9C26F19ECF47}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D857A2BE-D799-4515-BAF2-9C26F19ECF47}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A3DD099B-4ACE-43B5-B783-C9424B17DD37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A3DD099B-4ACE-43B5-B783-C9424B17DD37}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3DD099B-4ACE-43B5-B783-C9424B17DD37}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3DD099B-4ACE-43B5-B783-C9424B17DD37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73BDF48F-CDE9-483A-A13F-3797AB6B6DD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73BDF48F-CDE9-483A-A13F-3797AB6B6DD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73BDF48F-CDE9-483A-A13F-3797AB6B6DD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73BDF48F-CDE9-483A-A13F-3797AB6B6DD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DABA138-02B4-410A-B2B3-609C595D67C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DABA138-02B4-410A-B2B3-609C595D67C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DABA138-02B4-410A-B2B3-609C595D67C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DABA138-02B4-410A-B2B3-609C595D67C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF4790A3-F96A-4B72-B909-E367734D5654}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF4790A3-F96A-4B72-B909-E367734D5654}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF4790A3-F96A-4B72-B909-E367734D5654}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF4790A3-F96A-4B72-B909-E367734D5654}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F124C9BA-34B0-43C4-8D8C-FF76A7115087}
 	EndGlobalSection
 EndGlobal

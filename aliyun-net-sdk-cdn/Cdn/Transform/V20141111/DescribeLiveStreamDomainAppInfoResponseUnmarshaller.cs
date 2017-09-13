@@ -32,9 +32,9 @@ namespace Aliyun.Acs.Cdn.Transform.V20141111
 			describeLiveStreamDomainAppInfoResponse.HttpResponse = context.HttpResponse;
 			describeLiveStreamDomainAppInfoResponse.RequestId = context.StringValue("DescribeLiveStreamDomainAppInfo.RequestId");
 
-			List<DescribeLiveStreamDomainAppInfoResponse.DomainAppInfo> domainAppList = new List<DescribeLiveStreamDomainAppInfoResponse.DomainAppInfo>();
+			List<DescribeLiveStreamDomainAppInfoResponse.DescribeLiveStreamDomainAppInfo_DomainAppInfo> describeLiveStreamDomainAppInfoResponse_domainAppList = new List<DescribeLiveStreamDomainAppInfoResponse.DescribeLiveStreamDomainAppInfo_DomainAppInfo>();
 			for (int i = 0; i < context.Length("DescribeLiveStreamDomainAppInfo.DomainAppList.Length"); i++) {
-				DescribeLiveStreamDomainAppInfoResponse.DomainAppInfo domainAppInfo = new DescribeLiveStreamDomainAppInfoResponse.DomainAppInfo();
+				DescribeLiveStreamDomainAppInfoResponse.DescribeLiveStreamDomainAppInfo_DomainAppInfo domainAppInfo = new DescribeLiveStreamDomainAppInfoResponse.DescribeLiveStreamDomainAppInfo_DomainAppInfo();
 				domainAppInfo.AppDomain = context.StringValue("DescribeLiveStreamDomainAppInfo.DomainAppList["+ i +"].AppDomain");
 				domainAppInfo.AppId = context.StringValue("DescribeLiveStreamDomainAppInfo.DomainAppList["+ i +"].AppId");
 				domainAppInfo.AppKey = context.StringValue("DescribeLiveStreamDomainAppInfo.DomainAppList["+ i +"].AppKey");
@@ -44,9 +44,9 @@ namespace Aliyun.Acs.Cdn.Transform.V20141111
 				domainAppInfo.AppSecret = context.StringValue("DescribeLiveStreamDomainAppInfo.DomainAppList["+ i +"].AppSecret");
 				domainAppInfo.UpdateTime = context.StringValue("DescribeLiveStreamDomainAppInfo.DomainAppList["+ i +"].UpdateTime");
 
-				domainAppList.Add(domainAppInfo);
+				describeLiveStreamDomainAppInfoResponse_domainAppList.Add(domainAppInfo);
 			}
-			describeLiveStreamDomainAppInfoResponse.DomainAppList = domainAppList;
+			describeLiveStreamDomainAppInfoResponse.DomainAppList = describeLiveStreamDomainAppInfoResponse_domainAppList;
         
 			return describeLiveStreamDomainAppInfoResponse;
         }

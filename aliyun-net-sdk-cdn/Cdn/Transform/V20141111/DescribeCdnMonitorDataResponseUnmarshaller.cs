@@ -36,9 +36,9 @@ namespace Aliyun.Acs.Cdn.Transform.V20141111
 			describeCdnMonitorDataResponse.StartTime = context.StringValue("DescribeCdnMonitorData.StartTime");
 			describeCdnMonitorDataResponse.EndTime = context.StringValue("DescribeCdnMonitorData.EndTime");
 
-			List<DescribeCdnMonitorDataResponse.CDNMonitorData> monitorDatas = new List<DescribeCdnMonitorDataResponse.CDNMonitorData>();
+			List<DescribeCdnMonitorDataResponse.DescribeCdnMonitorData_CDNMonitorData> describeCdnMonitorDataResponse_monitorDatas = new List<DescribeCdnMonitorDataResponse.DescribeCdnMonitorData_CDNMonitorData>();
 			for (int i = 0; i < context.Length("DescribeCdnMonitorData.MonitorDatas.Length"); i++) {
-				DescribeCdnMonitorDataResponse.CDNMonitorData cDNMonitorData = new DescribeCdnMonitorDataResponse.CDNMonitorData();
+				DescribeCdnMonitorDataResponse.DescribeCdnMonitorData_CDNMonitorData cDNMonitorData = new DescribeCdnMonitorDataResponse.DescribeCdnMonitorData_CDNMonitorData();
 				cDNMonitorData.TimeStamp = context.StringValue("DescribeCdnMonitorData.MonitorDatas["+ i +"].TimeStamp");
 				cDNMonitorData.QueryPerSecond = context.StringValue("DescribeCdnMonitorData.MonitorDatas["+ i +"].QueryPerSecond");
 				cDNMonitorData.BytesPerSecond = context.StringValue("DescribeCdnMonitorData.MonitorDatas["+ i +"].BytesPerSecond");
@@ -46,9 +46,9 @@ namespace Aliyun.Acs.Cdn.Transform.V20141111
 				cDNMonitorData.RequestHitRate = context.StringValue("DescribeCdnMonitorData.MonitorDatas["+ i +"].RequestHitRate");
 				cDNMonitorData.AverageObjectSize = context.StringValue("DescribeCdnMonitorData.MonitorDatas["+ i +"].AverageObjectSize");
 
-				monitorDatas.Add(cDNMonitorData);
+				describeCdnMonitorDataResponse_monitorDatas.Add(cDNMonitorData);
 			}
-			describeCdnMonitorDataResponse.MonitorDatas = monitorDatas;
+			describeCdnMonitorDataResponse.MonitorDatas = describeCdnMonitorDataResponse_monitorDatas;
         
 			return describeCdnMonitorDataResponse;
         }

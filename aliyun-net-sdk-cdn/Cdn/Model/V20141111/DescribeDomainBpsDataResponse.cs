@@ -24,6 +24,8 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 	public class DescribeDomainBpsDataResponse : AcsResponse
 	{
 
+		private string requestId;
+
 		private string domainName;
 
 		private string dataInterval;
@@ -40,9 +42,21 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 
 		private string ispName;
 
-		private List<DataModule> bpsDataPerInterval;
+		private List<DescribeDomainBpsData_DataModule> bpsDataPerInterval;
 
-		private List<DataModule> supplyBpsDatas;
+		private List<DescribeDomainBpsData_DataModule1> supplyBpsDatas;
+
+		public string RequestId
+		{
+			get
+			{
+				return requestId;
+			}
+			set	
+			{
+				requestId = value;
+			}
+		}
 
 		public string DomainName
 		{
@@ -140,7 +154,7 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 			}
 		}
 
-		public List<DataModule> BpsDataPerInterval
+		public List<DescribeDomainBpsData_DataModule> BpsDataPerInterval
 		{
 			get
 			{
@@ -152,7 +166,7 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 			}
 		}
 
-		public List<DataModule> SupplyBpsDatas
+		public List<DescribeDomainBpsData_DataModule1> SupplyBpsDatas
 		{
 			get
 			{
@@ -164,15 +178,34 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 			}
 		}
 
-		public class DataModule{
+		public class DescribeDomainBpsData_DataModule
+		{
 
 			private string timeStamp;
 
-			private string value_;
+			private string _value;
 
 			private string domesticValue;
 
 			private string overseasValue;
+
+			private string dynamicValue;
+
+			private string dynamicDomesticValue;
+
+			private string dynamicOverseasValue;
+
+			private string staticValue;
+
+			private string staticDomesticValue;
+
+			private string staticOverseasValue;
+
+			private string l2Value;
+
+			private string domesticL2Value;
+
+			private string overseasL2Value;
 
 			public string TimeStamp
 			{
@@ -186,15 +219,15 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 				}
 			}
 
-			public string Value
+			public string _Value
 			{
 				get
 				{
-					return value_;
+					return _value;
 				}
 				set	
 				{
-					value_ = value;
+					_value = value;
 				}
 			}
 
@@ -219,6 +252,146 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 				set	
 				{
 					overseasValue = value;
+				}
+			}
+
+			public string DynamicValue
+			{
+				get
+				{
+					return dynamicValue;
+				}
+				set	
+				{
+					dynamicValue = value;
+				}
+			}
+
+			public string DynamicDomesticValue
+			{
+				get
+				{
+					return dynamicDomesticValue;
+				}
+				set	
+				{
+					dynamicDomesticValue = value;
+				}
+			}
+
+			public string DynamicOverseasValue
+			{
+				get
+				{
+					return dynamicOverseasValue;
+				}
+				set	
+				{
+					dynamicOverseasValue = value;
+				}
+			}
+
+			public string StaticValue
+			{
+				get
+				{
+					return staticValue;
+				}
+				set	
+				{
+					staticValue = value;
+				}
+			}
+
+			public string StaticDomesticValue
+			{
+				get
+				{
+					return staticDomesticValue;
+				}
+				set	
+				{
+					staticDomesticValue = value;
+				}
+			}
+
+			public string StaticOverseasValue
+			{
+				get
+				{
+					return staticOverseasValue;
+				}
+				set	
+				{
+					staticOverseasValue = value;
+				}
+			}
+
+			public string L2Value
+			{
+				get
+				{
+					return l2Value;
+				}
+				set	
+				{
+					l2Value = value;
+				}
+			}
+
+			public string DomesticL2Value
+			{
+				get
+				{
+					return domesticL2Value;
+				}
+				set	
+				{
+					domesticL2Value = value;
+				}
+			}
+
+			public string OverseasL2Value
+			{
+				get
+				{
+					return overseasL2Value;
+				}
+				set	
+				{
+					overseasL2Value = value;
+				}
+			}
+		}
+
+		public class DescribeDomainBpsData_DataModule1
+		{
+
+			private string timeStamp;
+
+			private string _value;
+
+			public string TimeStamp
+			{
+				get
+				{
+					return timeStamp;
+				}
+				set	
+				{
+					timeStamp = value;
+				}
+			}
+
+			public string _Value
+			{
+				get
+				{
+					return _value;
+				}
+				set	
+				{
+					_value = value;
 				}
 			}
 		}

@@ -10,7 +10,7 @@
 ## 已支持的产品列表
 - [aliyun-net-sdk-core](https://www.nuget.org/packages/aliyun-net-sdk-core/)
 - [aliyun-net-sdk-alidns](https://www.nuget.org/packages/aliyun-net-sdk-alidns/)
-- [aliyun-net-sdk-cdn](https://www.nuget.org/packages/aliyun-net-sdk-alidns/)	ORGIN REMOVED
+- [aliyun-net-sdk-cdn](https://www.nuget.org/packages/aliyun-net-sdk-cdn/)
 - [aliyun-net-sdk-dm] PACKAGE ID WHO USED?
 - [aliyun-net-sdk-domain](https://www.nuget.org/packages/aliyun-net-sdk-domain/)
 - [aliyun-net-sdk-ecs](https://www.nuget.org/packages/aliyun-net-sdk-ecs/)
@@ -18,8 +18,9 @@
 - [aliyun-net-sdk-iot](https://www.nuget.org/packages/aliyun-net-sdk-iot/)
 - [aliyun-net-sdk-kms](https://www.nuget.org/packages/aliyun-net-sdk-kms/)
 - [aliyun-net-sdk-mts](https://www.nuget.org/packages/aliyun-net-sdk-mts/)	  ORGIN REMOVED
-- [aliyun-net-sdk-push-openapi1](https://www.nuget.org/packages/aliyun-net-sdk-push-openapi1/)
-- [aliyun-net-sdk-push-openapi2](https://www.nuget.org/packages/aliyun-net-sdk-push-openapi2/)
+- [aliyun-net-sdk-push-openapi1](https://www.nuget.org/packages/aliyun-net-sdk-push-openapi1/) REMOVED
+- [aliyun-net-sdk-push-openapi2](https://www.nuget.org/packages/aliyun-net-sdk-push-openapi2/) REMOVED
+- [aliyun-net-sdk-push](https://www.nuget.org/packages/aliyun-net-sdk-push/)
 - [aliyun-net-sdk-rds](https://www.nuget.org/packages/aliyun-net-sdk-rds/)
 - [aliyun-net-sdk-slb](https://www.nuget.org/packages/aliyun-net-sdk-slb/)
 - [aliyun-net-sdk-sms](https://www.nuget.org/packages/aliyun-net-sdk-sms/)
@@ -27,12 +28,15 @@
 - [aliyun-net-sdk-live](https://www.nuget.org/packages/aliyun-net-sdk-live/)
 - [aliyun-net-sdk-cloudapi](https://www.nuget.org/packages/aliyun-net-sdk-cloudapi/)
 - [aliyun-net-sdk-vod](https://www.nuget.org/packages/aliyun-net-sdk-vod/)
+- [aliyun-net-sdk-cloudphoto](https://www.nuget.org/packages/aliyun-net-sdk-cloudphoto/)
+- [aliyun-net-sdk-sas-api](https://www.nuget.org/packages/aliyun-net-sdk-sas-api/)
 
 ### 当前版本
-#### 1.0.5
+#### 1.0.6(原Repo未表明版本号)
+#### 其余版本号使用原Repo中ChangeLog中的版本
 
 ## Example
-
+   ```CSharp
     using Aliyun.Acs.Core;
     using Aliyun.Acs.Core.Exceptions;
     using Aliyun.Acs.Core.Profile;
@@ -41,36 +45,36 @@
      
     class Sample
     {
-    static void Main(string[] args)
-    {
-    TestDescribeInstanceAttribute();
+        static void Main(string[] args)
+        {
+            TestDescribeInstanceAttribute();
+        }
+        
+        private static void TestDescribeInstanceAttribute()
+        {
+            IClientProfile clientProfile = DefaultProfile.GetProfile("cn-hangzhou", "<your access key id>", "<your access key secret>");
+            DefaultAcsClient client = new DefaultAcsClient(clientProfile);
+            
+            DescribeInstanceAttributeRequest request = new DescribeInstanceAttributeRequest();
+            request.InstanceId = "<your instances id>";
+            try
+            {
+            DescribeInstanceAttributeResponse response = client.GetAcsResponse(request);
+            Console.Write(response.InstanceId);
+            }
+            catch (ServerException e)
+            {
+            Console.WriteLine(e.ErrorCode);
+            Console.WriteLine(e.ErrorMessage);
+            }
+            catch (ClientException e)
+            {
+            Console.WriteLine(e.ErrorCode);
+            Console.WriteLine(e.ErrorMessage);
+            }
+        }
     }
-     
-    private static void TestDescribeInstanceAttribute()
-    {
-     
-    IClientProfile clientProfile = DefaultProfile.GetProfile("cn-hangzhou", "<your access key id>", "<your access key secret>");
-    DefaultAcsClient client = new DefaultAcsClient(clientProfile);
-     
-    DescribeInstanceAttributeRequest request = new DescribeInstanceAttributeRequest();
-    request.InstanceId = "<your instances id>";
-    try
-    {
-    DescribeInstanceAttributeResponse response = client.GetAcsResponse(request);
-    Console.Write(response.InstanceId);
-    }
-    catch (ServerException e)
-    {
-    Console.WriteLine(e.ErrorCode);
-    Console.WriteLine(e.ErrorMessage);
-    }
-    catch (ClientException e)
-    {
-    Console.WriteLine(e.ErrorCode);
-    Console.WriteLine(e.ErrorMessage);
-    }
-    }
-    }
+   ```
 
 ## Questions
 

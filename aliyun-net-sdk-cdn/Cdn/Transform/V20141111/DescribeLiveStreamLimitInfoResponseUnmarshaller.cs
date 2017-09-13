@@ -32,16 +32,16 @@ namespace Aliyun.Acs.Cdn.Transform.V20141111
 			describeLiveStreamLimitInfoResponse.HttpResponse = context.HttpResponse;
 			describeLiveStreamLimitInfoResponse.RequestId = context.StringValue("DescribeLiveStreamLimitInfo.RequestId");
 
-			List<DescribeLiveStreamLimitInfoResponse.UserLimitMode> userLimitLists = new List<DescribeLiveStreamLimitInfoResponse.UserLimitMode>();
+			List<DescribeLiveStreamLimitInfoResponse.DescribeLiveStreamLimitInfo_UserLimitMode> describeLiveStreamLimitInfoResponse_userLimitLists = new List<DescribeLiveStreamLimitInfoResponse.DescribeLiveStreamLimitInfo_UserLimitMode>();
 			for (int i = 0; i < context.Length("DescribeLiveStreamLimitInfo.UserLimitLists.Length"); i++) {
-				DescribeLiveStreamLimitInfoResponse.UserLimitMode userLimitMode = new DescribeLiveStreamLimitInfoResponse.UserLimitMode();
+				DescribeLiveStreamLimitInfoResponse.DescribeLiveStreamLimitInfo_UserLimitMode userLimitMode = new DescribeLiveStreamLimitInfoResponse.DescribeLiveStreamLimitInfo_UserLimitMode();
 				userLimitMode.LimitDomain = context.StringValue("DescribeLiveStreamLimitInfo.UserLimitLists["+ i +"].LimitDomain");
 				userLimitMode.LimitNum = context.StringValue("DescribeLiveStreamLimitInfo.UserLimitLists["+ i +"].LimitNum");
 				userLimitMode.LimitTranscodeNum = context.StringValue("DescribeLiveStreamLimitInfo.UserLimitLists["+ i +"].LimitTranscodeNum");
 
-				userLimitLists.Add(userLimitMode);
+				describeLiveStreamLimitInfoResponse_userLimitLists.Add(userLimitMode);
 			}
-			describeLiveStreamLimitInfoResponse.UserLimitLists = userLimitLists;
+			describeLiveStreamLimitInfoResponse.UserLimitLists = describeLiveStreamLimitInfoResponse_userLimitLists;
         
 			return describeLiveStreamLimitInfoResponse;
         }

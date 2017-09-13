@@ -1,20 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <Description>阿里云.netcore SDK Cloudapi</Description>
+    <Authors>Sim Tsai</Authors>
     <TargetFramework>netstandard1.6</TargetFramework>
     <AssemblyName>aliyun-net-sdk-cloudapi</AssemblyName>
     <PackageId>aliyun-net-sdk-cloudapi</PackageId>
     <PackageTags>aliyun sdk cloudapi</PackageTags>
-    <VersionPrefix>1.0.5-V20160714</VersionPrefix>
-    <Version>1.0.5-V20160714</Version>
-    <Authors>Sim Tsai</Authors>
-    <Company>Aliyun</Company>
-    <Product>Cloudapi</Product>
-    <Description>阿里云.netcore SDK Cloudapi</Description>
-    <Copyright>Copyright (C) Alibaba Cloud Computing</Copyright>
-    <RepositoryUrl>https://github.com/simhgd/aliyun-openapi-net-sdk.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageTags>aliyun sdk cloudapi</PackageTags>
+    <RepositoryUrl>https://github.com/simhgd/aliyun-openapi-net-sdk.git</RepositoryUrl>
     <NetStandardImplicitPackageVersion>1.6.0</NetStandardImplicitPackageVersion>
     <PackageTargetFallback>$(PackageTargetFallback);dnxcore50</PackageTargetFallback>
     <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
@@ -25,6 +19,9 @@
     <GenerateAssemblyCopyrightAttribute>false</GenerateAssemblyCopyrightAttribute>
     <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
     <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
+    <Version>4.3.0</Version>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/simhgd/aliyun-openapi-net-sdk.git</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>

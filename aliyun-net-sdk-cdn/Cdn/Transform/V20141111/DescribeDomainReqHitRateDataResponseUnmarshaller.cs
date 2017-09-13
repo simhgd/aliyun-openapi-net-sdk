@@ -36,15 +36,15 @@ namespace Aliyun.Acs.Cdn.Transform.V20141111
 			describeDomainReqHitRateDataResponse.StartTime = context.StringValue("DescribeDomainReqHitRateData.StartTime");
 			describeDomainReqHitRateDataResponse.EndTime = context.StringValue("DescribeDomainReqHitRateData.EndTime");
 
-			List<DescribeDomainReqHitRateDataResponse.DataModule> reqHitRateInterval = new List<DescribeDomainReqHitRateDataResponse.DataModule>();
+			List<DescribeDomainReqHitRateDataResponse.DescribeDomainReqHitRateData_DataModule> describeDomainReqHitRateDataResponse_reqHitRateInterval = new List<DescribeDomainReqHitRateDataResponse.DescribeDomainReqHitRateData_DataModule>();
 			for (int i = 0; i < context.Length("DescribeDomainReqHitRateData.ReqHitRateInterval.Length"); i++) {
-				DescribeDomainReqHitRateDataResponse.DataModule dataModule = new DescribeDomainReqHitRateDataResponse.DataModule();
+				DescribeDomainReqHitRateDataResponse.DescribeDomainReqHitRateData_DataModule dataModule = new DescribeDomainReqHitRateDataResponse.DescribeDomainReqHitRateData_DataModule();
 				dataModule.TimeStamp = context.StringValue("DescribeDomainReqHitRateData.ReqHitRateInterval["+ i +"].TimeStamp");
-				dataModule.Value = context.StringValue("DescribeDomainReqHitRateData.ReqHitRateInterval["+ i +"].Value");
+				dataModule._Value = context.StringValue("DescribeDomainReqHitRateData.ReqHitRateInterval["+ i +"].Value");
 
-				reqHitRateInterval.Add(dataModule);
+				describeDomainReqHitRateDataResponse_reqHitRateInterval.Add(dataModule);
 			}
-			describeDomainReqHitRateDataResponse.ReqHitRateInterval = reqHitRateInterval;
+			describeDomainReqHitRateDataResponse.ReqHitRateInterval = describeDomainReqHitRateDataResponse_reqHitRateInterval;
         
 			return describeDomainReqHitRateDataResponse;
         }

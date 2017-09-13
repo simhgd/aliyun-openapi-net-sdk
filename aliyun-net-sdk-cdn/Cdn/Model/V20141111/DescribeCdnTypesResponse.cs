@@ -24,9 +24,23 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 	public class DescribeCdnTypesResponse : AcsResponse
 	{
 
-		private List<CdnType> cdnTypes;
+		private string requestId;
 
-		public List<CdnType> CdnTypes
+		private List<DescribeCdnTypes_CdnType> cdnTypes;
+
+		public string RequestId
+		{
+			get
+			{
+				return requestId;
+			}
+			set	
+			{
+				requestId = value;
+			}
+		}
+
+		public List<DescribeCdnTypes_CdnType> CdnTypes
 		{
 			get
 			{
@@ -38,7 +52,8 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 			}
 		}
 
-		public class CdnType{
+		public class DescribeCdnTypes_CdnType
+		{
 
 			private string type;
 

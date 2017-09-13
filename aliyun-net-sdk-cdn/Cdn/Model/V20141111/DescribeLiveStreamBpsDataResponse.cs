@@ -24,9 +24,23 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 	public class DescribeLiveStreamBpsDataResponse : AcsResponse
 	{
 
-		private List<DomainBpsModel> bpsDatas;
+		private string requestId;
 
-		public List<DomainBpsModel> BpsDatas
+		private List<DescribeLiveStreamBpsData_DomainBpsModel> bpsDatas;
+
+		public string RequestId
+		{
+			get
+			{
+				return requestId;
+			}
+			set	
+			{
+				requestId = value;
+			}
+		}
+
+		public List<DescribeLiveStreamBpsData_DomainBpsModel> BpsDatas
 		{
 			get
 			{
@@ -38,7 +52,8 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 			}
 		}
 
-		public class DomainBpsModel{
+		public class DescribeLiveStreamBpsData_DomainBpsModel
+		{
 
 			private string time;
 

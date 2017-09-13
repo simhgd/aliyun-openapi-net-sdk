@@ -32,15 +32,15 @@ namespace Aliyun.Acs.Cdn.Transform.V20141111
 			describeDomainOnlineUserNumberResponse.HttpResponse = context.HttpResponse;
 			describeDomainOnlineUserNumberResponse.RequestId = context.StringValue("DescribeDomainOnlineUserNumber.RequestId");
 
-			List<DescribeDomainOnlineUserNumberResponse.LiveStreamOnlineUserNumInfo> liveStreamOnlineUserNumInfos = new List<DescribeDomainOnlineUserNumberResponse.LiveStreamOnlineUserNumInfo>();
+			List<DescribeDomainOnlineUserNumberResponse.DescribeDomainOnlineUserNumber_LiveStreamOnlineUserNumInfo> describeDomainOnlineUserNumberResponse_liveStreamOnlineUserNumInfos = new List<DescribeDomainOnlineUserNumberResponse.DescribeDomainOnlineUserNumber_LiveStreamOnlineUserNumInfo>();
 			for (int i = 0; i < context.Length("DescribeDomainOnlineUserNumber.LiveStreamOnlineUserNumInfos.Length"); i++) {
-				DescribeDomainOnlineUserNumberResponse.LiveStreamOnlineUserNumInfo liveStreamOnlineUserNumInfo = new DescribeDomainOnlineUserNumberResponse.LiveStreamOnlineUserNumInfo();
+				DescribeDomainOnlineUserNumberResponse.DescribeDomainOnlineUserNumber_LiveStreamOnlineUserNumInfo liveStreamOnlineUserNumInfo = new DescribeDomainOnlineUserNumberResponse.DescribeDomainOnlineUserNumber_LiveStreamOnlineUserNumInfo();
 				liveStreamOnlineUserNumInfo.Time = context.StringValue("DescribeDomainOnlineUserNumber.LiveStreamOnlineUserNumInfos["+ i +"].Time");
 				liveStreamOnlineUserNumInfo.UserNumber = context.LongValue("DescribeDomainOnlineUserNumber.LiveStreamOnlineUserNumInfos["+ i +"].UserNumber");
 
-				liveStreamOnlineUserNumInfos.Add(liveStreamOnlineUserNumInfo);
+				describeDomainOnlineUserNumberResponse_liveStreamOnlineUserNumInfos.Add(liveStreamOnlineUserNumInfo);
 			}
-			describeDomainOnlineUserNumberResponse.LiveStreamOnlineUserNumInfos = liveStreamOnlineUserNumInfos;
+			describeDomainOnlineUserNumberResponse.LiveStreamOnlineUserNumInfos = describeDomainOnlineUserNumberResponse_liveStreamOnlineUserNumInfos;
         
 			return describeDomainOnlineUserNumberResponse;
         }

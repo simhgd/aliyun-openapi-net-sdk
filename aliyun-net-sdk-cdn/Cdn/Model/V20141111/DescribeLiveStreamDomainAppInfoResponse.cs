@@ -24,9 +24,23 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 	public class DescribeLiveStreamDomainAppInfoResponse : AcsResponse
 	{
 
-		private List<DomainAppInfo> domainAppList;
+		private string requestId;
 
-		public List<DomainAppInfo> DomainAppList
+		private List<DescribeLiveStreamDomainAppInfo_DomainAppInfo> domainAppList;
+
+		public string RequestId
+		{
+			get
+			{
+				return requestId;
+			}
+			set	
+			{
+				requestId = value;
+			}
+		}
+
+		public List<DescribeLiveStreamDomainAppInfo_DomainAppInfo> DomainAppList
 		{
 			get
 			{
@@ -38,7 +52,8 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 			}
 		}
 
-		public class DomainAppInfo{
+		public class DescribeLiveStreamDomainAppInfo_DomainAppInfo
+		{
 
 			private string appDomain;
 

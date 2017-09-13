@@ -33,15 +33,15 @@ namespace Aliyun.Acs.Cdn.Transform.V20141111
 			describeLiveStreamNumberListResponse.RequestId = context.StringValue("DescribeLiveStreamNumberList.RequestId");
 			describeLiveStreamNumberListResponse.DomainName = context.StringValue("DescribeLiveStreamNumberList.DomainName");
 
-			List<DescribeLiveStreamNumberListResponse.StreamNumberInfo> streamNumberInfos = new List<DescribeLiveStreamNumberListResponse.StreamNumberInfo>();
+			List<DescribeLiveStreamNumberListResponse.DescribeLiveStreamNumberList_StreamNumberInfo> describeLiveStreamNumberListResponse_streamNumberInfos = new List<DescribeLiveStreamNumberListResponse.DescribeLiveStreamNumberList_StreamNumberInfo>();
 			for (int i = 0; i < context.Length("DescribeLiveStreamNumberList.StreamNumberInfos.Length"); i++) {
-				DescribeLiveStreamNumberListResponse.StreamNumberInfo streamNumberInfo = new DescribeLiveStreamNumberListResponse.StreamNumberInfo();
+				DescribeLiveStreamNumberListResponse.DescribeLiveStreamNumberList_StreamNumberInfo streamNumberInfo = new DescribeLiveStreamNumberListResponse.DescribeLiveStreamNumberList_StreamNumberInfo();
 				streamNumberInfo.Number = context.IntegerValue("DescribeLiveStreamNumberList.StreamNumberInfos["+ i +"].Number");
 				streamNumberInfo.Time = context.StringValue("DescribeLiveStreamNumberList.StreamNumberInfos["+ i +"].Time");
 
-				streamNumberInfos.Add(streamNumberInfo);
+				describeLiveStreamNumberListResponse_streamNumberInfos.Add(streamNumberInfo);
 			}
-			describeLiveStreamNumberListResponse.StreamNumberInfos = streamNumberInfos;
+			describeLiveStreamNumberListResponse.StreamNumberInfos = describeLiveStreamNumberListResponse_streamNumberInfos;
         
 			return describeLiveStreamNumberListResponse;
         }

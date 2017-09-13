@@ -36,9 +36,9 @@ namespace Aliyun.Acs.Cdn.Transform.V20141111
 			describeDomainISPDataResponse.StartTime = context.StringValue("DescribeDomainISPData.StartTime");
 			describeDomainISPDataResponse.EndTime = context.StringValue("DescribeDomainISPData.EndTime");
 
-			List<DescribeDomainISPDataResponse.ISPProportionData> value = new List<DescribeDomainISPDataResponse.ISPProportionData>();
+			List<DescribeDomainISPDataResponse.DescribeDomainISPData_ISPProportionData> describeDomainISPDataResponse_value = new List<DescribeDomainISPDataResponse.DescribeDomainISPData_ISPProportionData>();
 			for (int i = 0; i < context.Length("DescribeDomainISPData.Value.Length"); i++) {
-				DescribeDomainISPDataResponse.ISPProportionData iSPProportionData = new DescribeDomainISPDataResponse.ISPProportionData();
+				DescribeDomainISPDataResponse.DescribeDomainISPData_ISPProportionData iSPProportionData = new DescribeDomainISPDataResponse.DescribeDomainISPData_ISPProportionData();
 				iSPProportionData.ISP = context.StringValue("DescribeDomainISPData.Value["+ i +"].ISP");
 				iSPProportionData.Proportion = context.StringValue("DescribeDomainISPData.Value["+ i +"].Proportion");
 				iSPProportionData.IspEname = context.StringValue("DescribeDomainISPData.Value["+ i +"].IspEname");
@@ -54,9 +54,9 @@ namespace Aliyun.Acs.Cdn.Transform.V20141111
 				iSPProportionData.BytesProportion = context.StringValue("DescribeDomainISPData.Value["+ i +"].BytesProportion");
 				iSPProportionData.TotalQuery = context.StringValue("DescribeDomainISPData.Value["+ i +"].TotalQuery");
 
-				value.Add(iSPProportionData);
+				describeDomainISPDataResponse_value.Add(iSPProportionData);
 			}
-			describeDomainISPDataResponse.Value = value;
+			describeDomainISPDataResponse._Value = describeDomainISPDataResponse_value;
         
 			return describeDomainISPDataResponse;
         }

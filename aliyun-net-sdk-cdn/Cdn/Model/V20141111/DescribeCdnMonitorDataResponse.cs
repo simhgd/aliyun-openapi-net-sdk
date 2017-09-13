@@ -24,6 +24,8 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 	public class DescribeCdnMonitorDataResponse : AcsResponse
 	{
 
+		private string requestId;
+
 		private string domainName;
 
 		private long? monitorInterval;
@@ -32,7 +34,19 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 
 		private string endTime;
 
-		private List<CDNMonitorData> monitorDatas;
+		private List<DescribeCdnMonitorData_CDNMonitorData> monitorDatas;
+
+		public string RequestId
+		{
+			get
+			{
+				return requestId;
+			}
+			set	
+			{
+				requestId = value;
+			}
+		}
 
 		public string DomainName
 		{
@@ -82,7 +96,7 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 			}
 		}
 
-		public List<CDNMonitorData> MonitorDatas
+		public List<DescribeCdnMonitorData_CDNMonitorData> MonitorDatas
 		{
 			get
 			{
@@ -94,7 +108,8 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 			}
 		}
 
-		public class CDNMonitorData{
+		public class DescribeCdnMonitorData_CDNMonitorData
+		{
 
 			private string timeStamp;
 

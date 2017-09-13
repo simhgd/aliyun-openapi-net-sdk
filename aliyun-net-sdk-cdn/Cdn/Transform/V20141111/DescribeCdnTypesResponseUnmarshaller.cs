@@ -32,15 +32,15 @@ namespace Aliyun.Acs.Cdn.Transform.V20141111
 			describeCdnTypesResponse.HttpResponse = context.HttpResponse;
 			describeCdnTypesResponse.RequestId = context.StringValue("DescribeCdnTypes.RequestId");
 
-			List<DescribeCdnTypesResponse.CdnType> cdnTypes = new List<DescribeCdnTypesResponse.CdnType>();
+			List<DescribeCdnTypesResponse.DescribeCdnTypes_CdnType> describeCdnTypesResponse_cdnTypes = new List<DescribeCdnTypesResponse.DescribeCdnTypes_CdnType>();
 			for (int i = 0; i < context.Length("DescribeCdnTypes.CdnTypes.Length"); i++) {
-				DescribeCdnTypesResponse.CdnType cdnType = new DescribeCdnTypesResponse.CdnType();
+				DescribeCdnTypesResponse.DescribeCdnTypes_CdnType cdnType = new DescribeCdnTypesResponse.DescribeCdnTypes_CdnType();
 				cdnType.Type = context.StringValue("DescribeCdnTypes.CdnTypes["+ i +"].Type");
 				cdnType.Desc = context.StringValue("DescribeCdnTypes.CdnTypes["+ i +"].Desc");
 
-				cdnTypes.Add(cdnType);
+				describeCdnTypesResponse_cdnTypes.Add(cdnType);
 			}
-			describeCdnTypesResponse.CdnTypes = cdnTypes;
+			describeCdnTypesResponse.CdnTypes = describeCdnTypesResponse_cdnTypes;
         
 			return describeCdnTypesResponse;
         }

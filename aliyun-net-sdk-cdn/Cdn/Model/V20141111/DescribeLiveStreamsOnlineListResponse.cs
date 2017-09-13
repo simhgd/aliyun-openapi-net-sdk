@@ -24,9 +24,23 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 	public class DescribeLiveStreamsOnlineListResponse : AcsResponse
 	{
 
-		private List<LiveStreamOnlineInfo> onlineInfo;
+		private string requestId;
 
-		public List<LiveStreamOnlineInfo> OnlineInfo
+		private List<DescribeLiveStreamsOnlineList_LiveStreamOnlineInfo> onlineInfo;
+
+		public string RequestId
+		{
+			get
+			{
+				return requestId;
+			}
+			set	
+			{
+				requestId = value;
+			}
+		}
+
+		public List<DescribeLiveStreamsOnlineList_LiveStreamOnlineInfo> OnlineInfo
 		{
 			get
 			{
@@ -38,7 +52,8 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 			}
 		}
 
-		public class LiveStreamOnlineInfo{
+		public class DescribeLiveStreamsOnlineList_LiveStreamOnlineInfo
+		{
 
 			private string domainName;
 

@@ -33,30 +33,47 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
         {
         }
 
-		private long? ownerId;
+		private string key1;
+
+		private string key2;
 
 		private string securityToken;
 
 		private string domainName;
 
-		private string authType;
+		private string action;
 
-		private string key1;
-
-		private string key2;
+		private long? ownerId;
 
 		private string timeOut;
 
-		public long? OwnerId
+		private string accessKeyId;
+
+		private string authType;
+
+		public string Key1
 		{
 			get
 			{
-				return ownerId;
+				return key1;
 			}
 			set	
 			{
-				ownerId = value;
-				DictionaryUtil.Add(QueryParameters, "OwnerId", value.ToString());
+				key1 = value;
+				DictionaryUtil.Add(QueryParameters, "Key1", value);
+			}
+		}
+
+		public string Key2
+		{
+			get
+			{
+				return key2;
+			}
+			set	
+			{
+				key2 = value;
+				DictionaryUtil.Add(QueryParameters, "Key2", value);
 			}
 		}
 
@@ -86,42 +103,29 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 			}
 		}
 
-		public string AuthType
+		public string Action
 		{
 			get
 			{
-				return authType;
+				return action;
 			}
 			set	
 			{
-				authType = value;
-				DictionaryUtil.Add(QueryParameters, "AuthType", value);
+				action = value;
+				DictionaryUtil.Add(QueryParameters, "Action", value);
 			}
 		}
 
-		public string Key1
+		public long? OwnerId
 		{
 			get
 			{
-				return key1;
+				return ownerId;
 			}
 			set	
 			{
-				key1 = value;
-				DictionaryUtil.Add(QueryParameters, "Key1", value);
-			}
-		}
-
-		public string Key2
-		{
-			get
-			{
-				return key2;
-			}
-			set	
-			{
-				key2 = value;
-				DictionaryUtil.Add(QueryParameters, "Key2", value);
+				ownerId = value;
+				DictionaryUtil.Add(QueryParameters, "OwnerId", value.ToString());
 			}
 		}
 
@@ -135,6 +139,32 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 			{
 				timeOut = value;
 				DictionaryUtil.Add(QueryParameters, "TimeOut", value);
+			}
+		}
+
+		public string AccessKeyId
+		{
+			get
+			{
+				return accessKeyId;
+			}
+			set	
+			{
+				accessKeyId = value;
+				DictionaryUtil.Add(QueryParameters, "AccessKeyId", value);
+			}
+		}
+
+		public string AuthType
+		{
+			get
+			{
+				return authType;
+			}
+			set	
+			{
+				authType = value;
+				DictionaryUtil.Add(QueryParameters, "AuthType", value);
 			}
 		}
 

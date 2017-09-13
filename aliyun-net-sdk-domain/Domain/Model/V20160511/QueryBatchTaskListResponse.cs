@@ -24,6 +24,8 @@ namespace Aliyun.Acs.Domain.Model.V20160511
 	public class QueryBatchTaskListResponse : AcsResponse
 	{
 
+		private string requestId;
+
 		private int? totalItemNum;
 
 		private int? currentPageNum;
@@ -36,7 +38,19 @@ namespace Aliyun.Acs.Domain.Model.V20160511
 
 		private bool? nextPage;
 
-		private List<TaskInfo> data;
+		private List<QueryBatchTaskList_TaskInfo> data;
+
+		public string RequestId
+		{
+			get
+			{
+				return requestId;
+			}
+			set	
+			{
+				requestId = value;
+			}
+		}
 
 		public int? TotalItemNum
 		{
@@ -110,7 +124,7 @@ namespace Aliyun.Acs.Domain.Model.V20160511
 			}
 		}
 
-		public List<TaskInfo> Data
+		public List<QueryBatchTaskList_TaskInfo> Data
 		{
 			get
 			{
@@ -122,7 +136,8 @@ namespace Aliyun.Acs.Domain.Model.V20160511
 			}
 		}
 
-		public class TaskInfo{
+		public class QueryBatchTaskList_TaskInfo
+		{
 
 			private string taskType;
 

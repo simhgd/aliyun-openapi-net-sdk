@@ -33,101 +33,48 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
         {
         }
 
-		private long? ownerId;
-
-		private string ownerAccount;
-
-		private string securityToken;
-
-		private string domainName;
-
-		private string cdnType;
-
-		private string sourceType;
+		private string topLevelDomain;
 
 		private string sources;
 
+		private string ownerAccount;
+
+		private string domainName;
+
+		private long? ownerId;
+
+		private string accessKeyId;
+
+		private string resourceGroupId;
+
 		private int? sourcePort;
 
-		private string serverCertificate;
+		private string priorities;
 
-		private string privateKey;
+		private string securityToken;
 
-		public long? OwnerId
+		private string cdnType;
+
+		private string scope;
+
+		private string action;
+
+		private string sourceType;
+
+		private string checkUrl;
+
+		private string region;
+
+		public string TopLevelDomain
 		{
 			get
 			{
-				return ownerId;
+				return topLevelDomain;
 			}
 			set	
 			{
-				ownerId = value;
-				DictionaryUtil.Add(QueryParameters, "OwnerId", value.ToString());
-			}
-		}
-
-		public string OwnerAccount
-		{
-			get
-			{
-				return ownerAccount;
-			}
-			set	
-			{
-				ownerAccount = value;
-				DictionaryUtil.Add(QueryParameters, "OwnerAccount", value);
-			}
-		}
-
-		public string SecurityToken
-		{
-			get
-			{
-				return securityToken;
-			}
-			set	
-			{
-				securityToken = value;
-				DictionaryUtil.Add(QueryParameters, "SecurityToken", value);
-			}
-		}
-
-		public string DomainName
-		{
-			get
-			{
-				return domainName;
-			}
-			set	
-			{
-				domainName = value;
-				DictionaryUtil.Add(QueryParameters, "DomainName", value);
-			}
-		}
-
-		public string CdnType
-		{
-			get
-			{
-				return cdnType;
-			}
-			set	
-			{
-				cdnType = value;
-				DictionaryUtil.Add(QueryParameters, "CdnType", value);
-			}
-		}
-
-		public string SourceType
-		{
-			get
-			{
-				return sourceType;
-			}
-			set	
-			{
-				sourceType = value;
-				DictionaryUtil.Add(QueryParameters, "SourceType", value);
+				topLevelDomain = value;
+				DictionaryUtil.Add(QueryParameters, "TopLevelDomain", value);
 			}
 		}
 
@@ -144,6 +91,71 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 			}
 		}
 
+		public string OwnerAccount
+		{
+			get
+			{
+				return ownerAccount;
+			}
+			set	
+			{
+				ownerAccount = value;
+				DictionaryUtil.Add(QueryParameters, "OwnerAccount", value);
+			}
+		}
+
+		public string DomainName
+		{
+			get
+			{
+				return domainName;
+			}
+			set	
+			{
+				domainName = value;
+				DictionaryUtil.Add(QueryParameters, "DomainName", value);
+			}
+		}
+
+		public long? OwnerId
+		{
+			get
+			{
+				return ownerId;
+			}
+			set	
+			{
+				ownerId = value;
+				DictionaryUtil.Add(QueryParameters, "OwnerId", value.ToString());
+			}
+		}
+
+		public string AccessKeyId
+		{
+			get
+			{
+				return accessKeyId;
+			}
+			set	
+			{
+				accessKeyId = value;
+				DictionaryUtil.Add(QueryParameters, "AccessKeyId", value);
+			}
+		}
+
+		public string ResourceGroupId
+		{
+			get
+			{
+				return resourceGroupId;
+			}
+			set	
+			{
+				resourceGroupId = value;
+				DictionaryUtil.Add(QueryParameters, "ResourceGroupId", value);
+			}
+		}
+
 		public int? SourcePort
 		{
 			get
@@ -157,29 +169,107 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 			}
 		}
 
-		public string ServerCertificate
+		public string Priorities
 		{
 			get
 			{
-				return serverCertificate;
+				return priorities;
 			}
 			set	
 			{
-				serverCertificate = value;
-				DictionaryUtil.Add(QueryParameters, "ServerCertificate", value);
+				priorities = value;
+				DictionaryUtil.Add(QueryParameters, "Priorities", value);
 			}
 		}
 
-		public string PrivateKey
+		public string SecurityToken
 		{
 			get
 			{
-				return privateKey;
+				return securityToken;
 			}
 			set	
 			{
-				privateKey = value;
-				DictionaryUtil.Add(QueryParameters, "PrivateKey", value);
+				securityToken = value;
+				DictionaryUtil.Add(QueryParameters, "SecurityToken", value);
+			}
+		}
+
+		public string CdnType
+		{
+			get
+			{
+				return cdnType;
+			}
+			set	
+			{
+				cdnType = value;
+				DictionaryUtil.Add(QueryParameters, "CdnType", value);
+			}
+		}
+
+		public string Scope
+		{
+			get
+			{
+				return scope;
+			}
+			set	
+			{
+				scope = value;
+				DictionaryUtil.Add(QueryParameters, "Scope", value);
+			}
+		}
+
+		public string Action
+		{
+			get
+			{
+				return action;
+			}
+			set	
+			{
+				action = value;
+				DictionaryUtil.Add(QueryParameters, "Action", value);
+			}
+		}
+
+		public string SourceType
+		{
+			get
+			{
+				return sourceType;
+			}
+			set	
+			{
+				sourceType = value;
+				DictionaryUtil.Add(QueryParameters, "SourceType", value);
+			}
+		}
+
+		public string CheckUrl
+		{
+			get
+			{
+				return checkUrl;
+			}
+			set	
+			{
+				checkUrl = value;
+				DictionaryUtil.Add(QueryParameters, "CheckUrl", value);
+			}
+		}
+
+		public string Region
+		{
+			get
+			{
+				return region;
+			}
+			set	
+			{
+				region = value;
+				DictionaryUtil.Add(QueryParameters, "Region", value);
 			}
 		}
 

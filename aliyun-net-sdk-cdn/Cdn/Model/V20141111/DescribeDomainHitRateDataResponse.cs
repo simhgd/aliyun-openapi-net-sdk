@@ -24,6 +24,8 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 	public class DescribeDomainHitRateDataResponse : AcsResponse
 	{
 
+		private string requestId;
+
 		private string domainName;
 
 		private string dataInterval;
@@ -32,7 +34,19 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 
 		private string endTime;
 
-		private List<DataModule> hitRateInterval;
+		private List<DescribeDomainHitRateData_DataModule> hitRateInterval;
+
+		public string RequestId
+		{
+			get
+			{
+				return requestId;
+			}
+			set	
+			{
+				requestId = value;
+			}
+		}
 
 		public string DomainName
 		{
@@ -82,7 +96,7 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 			}
 		}
 
-		public List<DataModule> HitRateInterval
+		public List<DescribeDomainHitRateData_DataModule> HitRateInterval
 		{
 			get
 			{
@@ -94,11 +108,12 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 			}
 		}
 
-		public class DataModule{
+		public class DescribeDomainHitRateData_DataModule
+		{
 
 			private string timeStamp;
 
-			private string value_;
+			private string _value;
 
 			public string TimeStamp
 			{
@@ -112,15 +127,15 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 				}
 			}
 
-			public string Value
+			public string _Value
 			{
 				get
 				{
-					return value_;
+					return _value;
 				}
 				set	
 				{
-					value_ = value;
+					_value = value;
 				}
 			}
 		}

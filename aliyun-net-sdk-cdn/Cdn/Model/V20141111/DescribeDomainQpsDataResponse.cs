@@ -24,6 +24,8 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 	public class DescribeDomainQpsDataResponse : AcsResponse
 	{
 
+		private string requestId;
+
 		private string domainName;
 
 		private string dataInterval;
@@ -32,7 +34,19 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 
 		private string endTime;
 
-		private List<DataModule> qpsDataInterval;
+		private List<DescribeDomainQpsData_DataModule> qpsDataInterval;
+
+		public string RequestId
+		{
+			get
+			{
+				return requestId;
+			}
+			set	
+			{
+				requestId = value;
+			}
+		}
 
 		public string DomainName
 		{
@@ -82,7 +96,7 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 			}
 		}
 
-		public List<DataModule> QpsDataInterval
+		public List<DescribeDomainQpsData_DataModule> QpsDataInterval
 		{
 			get
 			{
@@ -94,11 +108,12 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 			}
 		}
 
-		public class DataModule{
+		public class DescribeDomainQpsData_DataModule
+		{
 
 			private string timeStamp;
 
-			private string value_;
+			private string _value;
 
 			private string domesticValue;
 
@@ -109,6 +124,18 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 			private string accDomesticValue;
 
 			private string accOverseasValue;
+
+			private string dynamicValue;
+
+			private string dynamicDomesticValue;
+
+			private string dynamicOverseasValue;
+
+			private string staticValue;
+
+			private string staticDomesticValue;
+
+			private string staticOverseasValue;
 
 			public string TimeStamp
 			{
@@ -122,15 +149,15 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 				}
 			}
 
-			public string Value
+			public string _Value
 			{
 				get
 				{
-					return value_;
+					return _value;
 				}
 				set	
 				{
-					value_ = value;
+					_value = value;
 				}
 			}
 
@@ -191,6 +218,78 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 				set	
 				{
 					accOverseasValue = value;
+				}
+			}
+
+			public string DynamicValue
+			{
+				get
+				{
+					return dynamicValue;
+				}
+				set	
+				{
+					dynamicValue = value;
+				}
+			}
+
+			public string DynamicDomesticValue
+			{
+				get
+				{
+					return dynamicDomesticValue;
+				}
+				set	
+				{
+					dynamicDomesticValue = value;
+				}
+			}
+
+			public string DynamicOverseasValue
+			{
+				get
+				{
+					return dynamicOverseasValue;
+				}
+				set	
+				{
+					dynamicOverseasValue = value;
+				}
+			}
+
+			public string StaticValue
+			{
+				get
+				{
+					return staticValue;
+				}
+				set	
+				{
+					staticValue = value;
+				}
+			}
+
+			public string StaticDomesticValue
+			{
+				get
+				{
+					return staticDomesticValue;
+				}
+				set	
+				{
+					staticDomesticValue = value;
+				}
+			}
+
+			public string StaticOverseasValue
+			{
+				get
+				{
+					return staticOverseasValue;
+				}
+				set	
+				{
+					staticOverseasValue = value;
 				}
 			}
 		}

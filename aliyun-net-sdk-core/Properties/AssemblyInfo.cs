@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // 有关程序集的常规信息通过以下
 // 特性集控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle(".NET Aliyun Open API SDK.")]
-[assembly: AssemblyDescription(".NET Aliyun Open API SDK.")]
+[assembly: AssemblyTitle("aliyun-net-sdk-core")]
+[assembly: AssemblyProduct("Core")]
+[assembly: AssemblyDescription("Aliyun Open API SDK Core")]
+[assembly: AssemblyCompany("Aliyun")]
+[assembly: AssemblyCopyright("Copyright (C) Alibaba Cloud Computing")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Aliyun Corporation")]
-[assembly: AssemblyProduct("aliyun-net-sdk-core")]
-[assembly: AssemblyCopyright("Copyright ©  2015 Aliyun Corporation")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // 可以指定所有这些值，也可以使用“生成号”和“修订号”的默认值，
 // 方法是按如下所示使用“*”:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("2.0.0.0")]
-[assembly: AssemblyFileVersion("2.0.0.0")]
+[assembly: AssemblyVersion("1.1.6.0")]
+[assembly: AssemblyFileVersion("1.1.6.0")]

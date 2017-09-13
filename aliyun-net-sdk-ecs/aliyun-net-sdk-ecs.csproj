@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <Description>阿里云.netcore SDK Ecs</Description>
-    <VersionPrefix>1.0.5-V20140526</VersionPrefix>
     <Authors>Sim Tsai</Authors>
     <TargetFramework>netstandard1.6</TargetFramework>
     <AssemblyName>aliyun-net-sdk-ecs</AssemblyName>
@@ -20,7 +19,9 @@
     <GenerateAssemblyCopyrightAttribute>false</GenerateAssemblyCopyrightAttribute>
     <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
     <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
-    <Version>1.0.5-V20140526</Version>
+    <Version>4.0.0</Version>
+    <PackageProjectUrl>https://github.com/simhgd/aliyun-openapi-net-sdk.git</PackageProjectUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>

@@ -32,7 +32,7 @@ namespace Aliyun.Acs.Cdn.Transform.V20141111
 			describeLiveAppRecordConfigResponse.HttpResponse = context.HttpResponse;
 			describeLiveAppRecordConfigResponse.RequestId = context.StringValue("DescribeLiveAppRecordConfig.RequestId");
 
-			DescribeLiveAppRecordConfigResponse.LiveAppRecord_ liveAppRecord = new DescribeLiveAppRecordConfigResponse.LiveAppRecord_();
+			DescribeLiveAppRecordConfigResponse.DescribeLiveAppRecordConfig_LiveAppRecord liveAppRecord = new DescribeLiveAppRecordConfigResponse.DescribeLiveAppRecordConfig_LiveAppRecord();
 			liveAppRecord.DomainName = context.StringValue("DescribeLiveAppRecordConfig.LiveAppRecord.DomainName");
 			liveAppRecord.AppName = context.StringValue("DescribeLiveAppRecordConfig.LiveAppRecord.AppName");
 			liveAppRecord.OssEndpoint = context.StringValue("DescribeLiveAppRecordConfig.LiveAppRecord.OssEndpoint");

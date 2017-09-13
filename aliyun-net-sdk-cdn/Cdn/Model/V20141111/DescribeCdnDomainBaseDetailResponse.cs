@@ -24,9 +24,23 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 	public class DescribeCdnDomainBaseDetailResponse : AcsResponse
 	{
 
-		private DomainBaseDetailModel_ domainBaseDetailModel;
+		private string requestId;
 
-		public DomainBaseDetailModel_ DomainBaseDetailModel
+		private DescribeCdnDomainBaseDetail_DomainBaseDetailModel domainBaseDetailModel;
+
+		public string RequestId
+		{
+			get
+			{
+				return requestId;
+			}
+			set	
+			{
+				requestId = value;
+			}
+		}
+
+		public DescribeCdnDomainBaseDetail_DomainBaseDetailModel DomainBaseDetailModel
 		{
 			get
 			{
@@ -38,7 +52,8 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 			}
 		}
 
-		public class DomainBaseDetailModel_{
+		public class DescribeCdnDomainBaseDetail_DomainBaseDetailModel
+		{
 
 			private string cname;
 
@@ -47,6 +62,8 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 			private string domainStatus;
 
 			private string sourceType;
+
+			private string region;
 
 			private string domainName;
 
@@ -103,6 +120,18 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 				set	
 				{
 					sourceType = value;
+				}
+			}
+
+			public string Region
+			{
+				get
+				{
+					return region;
+				}
+				set	
+				{
+					region = value;
 				}
 			}
 

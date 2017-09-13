@@ -24,9 +24,23 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 	public class DescribeLiveStreamLimitInfoResponse : AcsResponse
 	{
 
-		private List<UserLimitMode> userLimitLists;
+		private string requestId;
 
-		public List<UserLimitMode> UserLimitLists
+		private List<DescribeLiveStreamLimitInfo_UserLimitMode> userLimitLists;
+
+		public string RequestId
+		{
+			get
+			{
+				return requestId;
+			}
+			set	
+			{
+				requestId = value;
+			}
+		}
+
+		public List<DescribeLiveStreamLimitInfo_UserLimitMode> UserLimitLists
 		{
 			get
 			{
@@ -38,7 +52,8 @@ namespace Aliyun.Acs.Cdn.Model.V20141111
 			}
 		}
 
-		public class UserLimitMode{
+		public class DescribeLiveStreamLimitInfo_UserLimitMode
+		{
 
 			private string limitDomain;
 

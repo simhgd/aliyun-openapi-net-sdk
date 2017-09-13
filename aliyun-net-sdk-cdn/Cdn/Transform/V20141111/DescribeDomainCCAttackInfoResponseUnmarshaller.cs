@@ -35,27 +35,27 @@ namespace Aliyun.Acs.Cdn.Transform.V20141111
 			describeDomainCCAttackInfoResponse.StartTime = context.StringValue("DescribeDomainCCAttackInfo.StartTime");
 			describeDomainCCAttackInfoResponse.EndTime = context.StringValue("DescribeDomainCCAttackInfo.EndTime");
 
-			List<DescribeDomainCCAttackInfoResponse.AttackIpDatas> attackIpDataList = new List<DescribeDomainCCAttackInfoResponse.AttackIpDatas>();
+			List<DescribeDomainCCAttackInfoResponse.DescribeDomainCCAttackInfo_AttackIpDatas> describeDomainCCAttackInfoResponse_attackIpDataList = new List<DescribeDomainCCAttackInfoResponse.DescribeDomainCCAttackInfo_AttackIpDatas>();
 			for (int i = 0; i < context.Length("DescribeDomainCCAttackInfo.AttackIpDataList.Length"); i++) {
-				DescribeDomainCCAttackInfoResponse.AttackIpDatas attackIpDatas = new DescribeDomainCCAttackInfoResponse.AttackIpDatas();
+				DescribeDomainCCAttackInfoResponse.DescribeDomainCCAttackInfo_AttackIpDatas attackIpDatas = new DescribeDomainCCAttackInfoResponse.DescribeDomainCCAttackInfo_AttackIpDatas();
 				attackIpDatas.Ip = context.StringValue("DescribeDomainCCAttackInfo.AttackIpDataList["+ i +"].Ip");
 				attackIpDatas.AttackCount = context.StringValue("DescribeDomainCCAttackInfo.AttackIpDataList["+ i +"].AttackCount");
 				attackIpDatas.Result = context.StringValue("DescribeDomainCCAttackInfo.AttackIpDataList["+ i +"].Result");
 
-				attackIpDataList.Add(attackIpDatas);
+				describeDomainCCAttackInfoResponse_attackIpDataList.Add(attackIpDatas);
 			}
-			describeDomainCCAttackInfoResponse.AttackIpDataList = attackIpDataList;
+			describeDomainCCAttackInfoResponse.AttackIpDataList = describeDomainCCAttackInfoResponse_attackIpDataList;
 
-			List<DescribeDomainCCAttackInfoResponse.AttackedUrlDatas> attackedUrlDataList = new List<DescribeDomainCCAttackInfoResponse.AttackedUrlDatas>();
+			List<DescribeDomainCCAttackInfoResponse.DescribeDomainCCAttackInfo_AttackedUrlDatas> describeDomainCCAttackInfoResponse_attackedUrlDataList = new List<DescribeDomainCCAttackInfoResponse.DescribeDomainCCAttackInfo_AttackedUrlDatas>();
 			for (int i = 0; i < context.Length("DescribeDomainCCAttackInfo.AttackedUrlDataList.Length"); i++) {
-				DescribeDomainCCAttackInfoResponse.AttackedUrlDatas attackedUrlDatas = new DescribeDomainCCAttackInfoResponse.AttackedUrlDatas();
+				DescribeDomainCCAttackInfoResponse.DescribeDomainCCAttackInfo_AttackedUrlDatas attackedUrlDatas = new DescribeDomainCCAttackInfoResponse.DescribeDomainCCAttackInfo_AttackedUrlDatas();
 				attackedUrlDatas.Url = context.StringValue("DescribeDomainCCAttackInfo.AttackedUrlDataList["+ i +"].Url");
 				attackedUrlDatas.AttackCount = context.StringValue("DescribeDomainCCAttackInfo.AttackedUrlDataList["+ i +"].AttackCount");
 				attackedUrlDatas.Result = context.StringValue("DescribeDomainCCAttackInfo.AttackedUrlDataList["+ i +"].Result");
 
-				attackedUrlDataList.Add(attackedUrlDatas);
+				describeDomainCCAttackInfoResponse_attackedUrlDataList.Add(attackedUrlDatas);
 			}
-			describeDomainCCAttackInfoResponse.AttackedUrlDataList = attackedUrlDataList;
+			describeDomainCCAttackInfoResponse.AttackedUrlDataList = describeDomainCCAttackInfoResponse_attackedUrlDataList;
         
 			return describeDomainCCAttackInfoResponse;
         }
