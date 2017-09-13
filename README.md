@@ -59,18 +59,18 @@
             request.InstanceId = "<your instances id>";
             try
             {
-            DescribeInstanceAttributeResponse response = client.GetAcsResponse(request);
-            Console.Write(response.InstanceId);
+                DescribeInstanceAttributeResponse response = client.GetAcsResponse(request);
+                Console.Write(response.InstanceId);
             }
             catch (ServerException e)
             {
-            Console.WriteLine(e.ErrorCode);
-            Console.WriteLine(e.ErrorMessage);
+                Console.WriteLine(e.ErrorCode);
+                Console.WriteLine(e.ErrorMessage);
             }
             catch (ClientException e)
             {
-            Console.WriteLine(e.ErrorCode);
-            Console.WriteLine(e.ErrorMessage);
+                Console.WriteLine(e.ErrorCode);
+                Console.WriteLine(e.ErrorMessage);
             }
         }
     }
