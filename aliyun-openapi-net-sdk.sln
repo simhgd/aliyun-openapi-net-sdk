@@ -43,6 +43,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aliyun-net-sdk-sas-api", "a
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aliyun-net-sdk-push", "aliyun-net-sdk-push\aliyun-net-sdk-push.csproj", "{AF4790A3-F96A-4B72-B909-E367734D5654}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aliyun-net-sdk-dysms", "aliyun-net-sdk-dysms\aliyun-net-sdk-dysms.csproj", "{1388B633-E187-48F3-8B34-9899CB2B8F26}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -129,6 +131,10 @@ Global
 		{AF4790A3-F96A-4B72-B909-E367734D5654}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF4790A3-F96A-4B72-B909-E367734D5654}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF4790A3-F96A-4B72-B909-E367734D5654}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1388B633-E187-48F3-8B34-9899CB2B8F26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1388B633-E187-48F3-8B34-9899CB2B8F26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1388B633-E187-48F3-8B34-9899CB2B8F26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1388B633-E187-48F3-8B34-9899CB2B8F26}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

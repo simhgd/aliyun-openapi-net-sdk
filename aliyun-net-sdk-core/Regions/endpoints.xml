@@ -30,6 +30,7 @@
             <Product><ProductName>Dds</ProductName><DomainName>mongodb.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Emr</ProductName><DomainName>emr.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Sms</ProductName><DomainName>sms.aliyuncs.com</DomainName></Product>
+            <Product><ProductName>Dysmsapi</ProductName><DomainName>dysmsapi.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Jaq</ProductName><DomainName>jaq.aliyuncs.com</DomainName></Product>
             <Product><ProductName>HPC</ProductName><DomainName>hpc.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Location</ProductName><DomainName>location.aliyuncs.com</DomainName></Product>
@@ -122,6 +123,7 @@
             <Product><ProductName>Dds</ProductName><DomainName>mongodb.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Emr</ProductName><DomainName>emr.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Sms</ProductName><DomainName>sms.aliyuncs.com</DomainName></Product>
+            <Product><ProductName>Dysmsapi</ProductName><DomainName>dysmsapi.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Jaq</ProductName><DomainName>jaq.aliyuncs.com</DomainName></Product>
             <Product><ProductName>CS</ProductName><DomainName>cs.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Kms</ProductName><DomainName>kms.cn-hongkong.aliyuncs.com</DomainName></Product>
@@ -230,6 +232,7 @@
             <Product><ProductName>Dds</ProductName><DomainName>mongodb.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Alidns</ProductName><DomainName>alidns.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Sms</ProductName><DomainName>sms.aliyuncs.com</DomainName></Product>
+            <Product><ProductName>Dysmsapi</ProductName><DomainName>dysmsapi.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Drds</ProductName><DomainName>drds.aliyuncs.com</DomainName></Product>
             <Product><ProductName>HPC</ProductName><DomainName>hpc.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Location</ProductName><DomainName>location.aliyuncs.com</DomainName></Product>
@@ -334,6 +337,7 @@
             <Product><ProductName>Drc</ProductName><DomainName>drc.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Alidns</ProductName><DomainName>alidns.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Sms</ProductName><DomainName>sms.aliyuncs.com</DomainName></Product>
+            <Product><ProductName>Dysmsapi</ProductName><DomainName>dysmsapi.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Drds</ProductName><DomainName>drds.aliyuncs.com</DomainName></Product>
             <Product><ProductName>CS</ProductName><DomainName>cs.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Kms</ProductName><DomainName>kms.cn-shanghai.aliyuncs.com</DomainName></Product>
@@ -414,6 +418,7 @@
             <Product><ProductName>Dds</ProductName><DomainName>mongodb.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Alidns</ProductName><DomainName>alidns.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Sms</ProductName><DomainName>sms.aliyuncs.com</DomainName></Product>
+            <Product><ProductName>Dysmsapi</ProductName><DomainName>dysmsapi.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Sales</ProductName><DomainName>sales.cn-hangzhou.aliyuncs.com</DomainName></Product>
             <Product><ProductName>HPC</ProductName><DomainName>hpc.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Location</ProductName><DomainName>location.aliyuncs.com</DomainName></Product>
@@ -496,6 +501,7 @@
             <Product><ProductName>Dds</ProductName><DomainName>mongodb.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Sts</ProductName><DomainName>sts.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Sms</ProductName><DomainName>sms.aliyuncs.com</DomainName></Product>
+            <Product><ProductName>Dysmsapi</ProductName><DomainName>dysmsapi.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Jaq</ProductName><DomainName>jaq.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Push</ProductName><DomainName>cloudpush.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Alidns</ProductName><DomainName>alidns.aliyuncs.com</DomainName></Product>
@@ -570,6 +576,7 @@
             <Product><ProductName>Dds</ProductName><DomainName>mongodb.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Emr</ProductName><DomainName>emr.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Sms</ProductName><DomainName>sms.aliyuncs.com</DomainName></Product>
+            <Product><ProductName>Dysmsapi</ProductName><DomainName>dysmsapi.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Drds</ProductName><DomainName>drds.aliyuncs.com</DomainName></Product>
             <Product><ProductName>HPC</ProductName><DomainName>hpc.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Location</ProductName><DomainName>location.aliyuncs.com</DomainName></Product>
@@ -653,6 +660,7 @@
             <Product><ProductName>Dds</ProductName><DomainName>mongodb.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Sts</ProductName><DomainName>sts.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Sms</ProductName><DomainName>sms.aliyuncs.com</DomainName></Product>
+            <Product><ProductName>Dysmsapi</ProductName><DomainName>dysmsapi.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Msg</ProductName><DomainName>msg-inner.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Jaq</ProductName><DomainName>jaq.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Push</ProductName><DomainName>cloudpush.aliyuncs.com</DomainName></Product>
@@ -733,6 +741,7 @@
             <Product><ProductName>Dds</ProductName><DomainName>mongodb.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Emr</ProductName><DomainName>emr.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Sms</ProductName><DomainName>sms.aliyuncs.com</DomainName></Product>
+            <Product><ProductName>Dysmsapi</ProductName><DomainName>dysmsapi.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Drds</ProductName><DomainName>drds.aliyuncs.com</DomainName></Product>
             <Product><ProductName>CS</ProductName><DomainName>cs.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Location</ProductName><DomainName>location.aliyuncs.com</DomainName></Product>
@@ -818,6 +827,7 @@
             <Product><ProductName>Dds</ProductName><DomainName>mongodb.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Alidns</ProductName><DomainName>alidns.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Sms</ProductName><DomainName>sms.aliyuncs.com</DomainName></Product>
+            <Product><ProductName>Dysmsapi</ProductName><DomainName>dysmsapi.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Jaq</ProductName><DomainName>jaq.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Push</ProductName><DomainName>cloudpush.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Kms</ProductName><DomainName>kms.cn-shenzhen.aliyuncs.com</DomainName></Product>
@@ -897,6 +907,7 @@
             <Product><ProductName>Dds</ProductName><DomainName>mongodb.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Emr</ProductName><DomainName>emr.cn-qingdao.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Sms</ProductName><DomainName>sms.aliyuncs.com</DomainName></Product>
+            <Product><ProductName>Dysmsapi</ProductName><DomainName>dysmsapi.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Jaq</ProductName><DomainName>jaq.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Dts</ProductName><DomainName>dts.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Location</ProductName><DomainName>location.aliyuncs.com</DomainName></Product>
@@ -1003,6 +1014,7 @@
             <Product><ProductName>Dds</ProductName><DomainName>mongodb.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Sts</ProductName><DomainName>sts.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Sms</ProductName><DomainName>sms.aliyuncs.com</DomainName></Product>
+            <Product><ProductName>Dysmsapi</ProductName><DomainName>dysmsapi.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Msg</ProductName><DomainName>msg-inner.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Sales</ProductName><DomainName>sales.cn-hangzhou.aliyuncs.com</DomainName></Product>
             <Product><ProductName>HPC</ProductName><DomainName>hpc.aliyuncs.com</DomainName></Product>
@@ -1082,6 +1094,7 @@
             <Product><ProductName>Dds</ProductName><DomainName>mongodb.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Emr</ProductName><DomainName>emr.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Sms</ProductName><DomainName>sms.aliyuncs.com</DomainName></Product>
+            <Product><ProductName>Dysmsapi</ProductName><DomainName>dysmsapi.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Sales</ProductName><DomainName>sales.cn-hangzhou.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Dts</ProductName><DomainName>dts.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Location</ProductName><DomainName>location.aliyuncs.com</DomainName></Product>
@@ -1168,6 +1181,7 @@
             <Product><ProductName>Dds</ProductName><DomainName>mongodb.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Alidns</ProductName><DomainName>alidns.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Sms</ProductName><DomainName>sms.aliyuncs.com</DomainName></Product>
+            <Product><ProductName>Dysmsapi</ProductName><DomainName>dysmsapi.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Jaq</ProductName><DomainName>jaq.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Dts</ProductName><DomainName>dts.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Location</ProductName><DomainName>location.aliyuncs.com</DomainName></Product>
@@ -1257,6 +1271,7 @@
             <Product><ProductName>Dds</ProductName><DomainName>mongodb.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Alidns</ProductName><DomainName>alidns.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Sms</ProductName><DomainName>sms.aliyuncs.com</DomainName></Product>
+            <Product><ProductName>Dysmsapi</ProductName><DomainName>dysmsapi.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Drds</ProductName><DomainName>drds.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Dts</ProductName><DomainName>dts.aliyuncs.com</DomainName></Product>
             <Product><ProductName>Kms</ProductName><DomainName>kms.ap-southeast-1.aliyuncs.com</DomainName></Product>
