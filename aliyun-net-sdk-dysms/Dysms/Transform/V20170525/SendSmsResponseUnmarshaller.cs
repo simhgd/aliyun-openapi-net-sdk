@@ -17,11 +17,11 @@
  * under the License.
  */
 using Aliyun.Acs.Core.Transform;
-using Aliyun.Acs.Sms.Model.V20170525;
+using Aliyun.Acs.Dysms.Model.V20170525;
 using System;
 using System.Collections.Generic;
 
-namespace Aliyun.Acs.Sms.Transform.V20170525
+namespace Aliyun.Acs.Dysms.Transform.V20170525
 {
     public class SendSmsResponseUnmarshaller
     {

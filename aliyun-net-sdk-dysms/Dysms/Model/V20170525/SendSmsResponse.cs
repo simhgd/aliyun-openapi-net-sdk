@@ -19,7 +19,7 @@
 using Aliyun.Acs.Core;
 using System.Collections.Generic;
 
-namespace Aliyun.Acs.Sms.Model.V20170525
+namespace Aliyun.Acs.Dysms.Model.V20170525
 {
     public class SendSmsResponse : AcsResponse
     {

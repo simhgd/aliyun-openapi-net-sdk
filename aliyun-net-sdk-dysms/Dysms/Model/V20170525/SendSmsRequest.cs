@@ -18,9 +18,9 @@
  */
 using Aliyun.Acs.Core;
 using Aliyun.Acs.Core.Utils;
-using Aliyun.Acs.Sms.Transform.V20170525;
+using Aliyun.Acs.Dysms.Transform.V20170525;
 
-namespace Aliyun.Acs.Sms.Model.V20170525
+namespace Aliyun.Acs.Dysms.Model.V20170525
 {
     public class SendSmsRequest : RpcAcsRequest<SendSmsResponse>
     {
