@@ -18,6 +18,7 @@
  */
 using Aliyun.Acs.Core;
 using Aliyun.Acs.Core.Utils;
+using Aliyun.Acs.Sms.Transform.V20170525;
 
 namespace Aliyun.Acs.Sms.Model.V20170525
 {

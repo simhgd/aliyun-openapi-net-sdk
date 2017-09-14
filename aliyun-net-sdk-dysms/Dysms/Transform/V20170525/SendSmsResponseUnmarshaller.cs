@@ -23,7 +23,7 @@ using System.Collections.Generic;
 
 namespace Aliyun.Acs.Sms.Transform.V20170525
 {
-    public class SingleSendSmsResponseUnmarshaller
+    public class SendSmsResponseUnmarshaller
     {
         public static SendSmsResponse Unmarshall(UnmarshallerContext context)
         {
