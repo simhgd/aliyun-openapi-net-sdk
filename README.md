@@ -30,6 +30,7 @@
 - [aliyun-net-sdk-vod](https://www.nuget.org/packages/aliyun-net-sdk-vod/)
 - [aliyun-net-sdk-cloudphoto](https://www.nuget.org/packages/aliyun-net-sdk-cloudphoto/)
 - [aliyun-net-sdk-sas-api](https://www.nuget.org/packages/aliyun-net-sdk-sas-api/)
+- [aliyun-net-sdk-dysms](https://www.nuget.org/packages/aliyun-net-sdk-dysms/)
 
 ### 当前版本
 #### 1.0.6(原Repo未表明版本号)
