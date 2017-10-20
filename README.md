@@ -17,9 +17,7 @@
 - [aliyun-net-sdk-hpc](https://www.nuget.org/packages/aliyun-net-sdk-hpc/)
 - [aliyun-net-sdk-iot](https://www.nuget.org/packages/aliyun-net-sdk-iot/)
 - [aliyun-net-sdk-kms](https://www.nuget.org/packages/aliyun-net-sdk-kms/)
-- [aliyun-net-sdk-mts](https://www.nuget.org/packages/aliyun-net-sdk-mts/)	  ORGIN REMOVED
-- [aliyun-net-sdk-push-openapi1](https://www.nuget.org/packages/aliyun-net-sdk-push-openapi1/) REMOVED
-- [aliyun-net-sdk-push-openapi2](https://www.nuget.org/packages/aliyun-net-sdk-push-openapi2/) REMOVED
+- [aliyun-net-sdk-mts](https://www.nuget.org/packages/aliyun-net-sdk-mts/)
 - [aliyun-net-sdk-push](https://www.nuget.org/packages/aliyun-net-sdk-push/)
 - [aliyun-net-sdk-rds](https://www.nuget.org/packages/aliyun-net-sdk-rds/)
 - [aliyun-net-sdk-slb](https://www.nuget.org/packages/aliyun-net-sdk-slb/)
