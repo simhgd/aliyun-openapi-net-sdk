@@ -31,7 +31,7 @@ namespace Aliyun.Acs.Mts.Transform.V20140618
 
 			categoryTreeResponse.HttpResponse = context.HttpResponse;
 			categoryTreeResponse.RequestId = context.StringValue("CategoryTree.RequestId");
-			//categoryTreeResponse.CategoryTree = context.StringValue("CategoryTree.CategoryTree");
+			categoryTreeResponse.CategoryTree = context.StringValue("CategoryTree.CategoryTree");
         
 			return categoryTreeResponse;
         }

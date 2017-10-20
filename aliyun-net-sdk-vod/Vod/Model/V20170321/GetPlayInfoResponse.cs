@@ -89,6 +89,13 @@ namespace Aliyun.Acs.vod.Model.V20170321
 
 			private long? encrypt;
 
+			private string plaintext;
+
+			private string complexity;
+
+			private string streamType;
+
+			private string rand;
 
 			public long? Width
 			{
@@ -210,6 +217,53 @@ namespace Aliyun.Acs.vod.Model.V20170321
 				}
 			}
 
+			public string Plaintext
+			{
+				get
+				{
+					return plaintext;
+				}
+				set	
+				{
+					plaintext = value;
+				}
+			}
+
+			public string Complexity
+			{
+				get
+				{
+					return complexity;
+				}
+				set	
+				{
+					complexity = value;
+				}
+			}
+
+			public string StreamType
+			{
+				get
+				{
+					return streamType;
+				}
+				set	
+				{
+					streamType = value;
+				}
+			}
+
+			public string Rand
+			{
+				get
+				{
+					return rand;
+				}
+				set	
+				{
+					rand = value;
+				}
+			}
 		}
 
 		public class GetPlayInfo_VideoBase

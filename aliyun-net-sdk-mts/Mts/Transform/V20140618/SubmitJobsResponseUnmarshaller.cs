@@ -203,6 +203,11 @@ namespace Aliyun.Acs.Mts.Transform.V20140618
 
 				SubmitJobsResponse.JobResult.Job_.Output_.TransConfig_ transConfig = new SubmitJobsResponse.JobResult.Job_.Output_.TransConfig_();
 				transConfig.TransMode = context.StringValue("SubmitJobs.JobResultList["+ i +"].Job.Output.TransConfig.TransMode");
+				transConfig.IsCheckReso = context.StringValue("SubmitJobs.JobResultList["+ i +"].Job.Output.TransConfig.IsCheckReso");
+				transConfig.IsCheckResoFail = context.StringValue("SubmitJobs.JobResultList["+ i +"].Job.Output.TransConfig.IsCheckResoFail");
+				transConfig.IsCheckVideoBitrate = context.StringValue("SubmitJobs.JobResultList["+ i +"].Job.Output.TransConfig.IsCheckVideoBitrate");
+				transConfig.IsCheckAudioBitrate = context.StringValue("SubmitJobs.JobResultList["+ i +"].Job.Output.TransConfig.IsCheckAudioBitrate");
+				transConfig.AdjDarMethod = context.StringValue("SubmitJobs.JobResultList["+ i +"].Job.Output.TransConfig.AdjDarMethod");
 				output.TransConfig = transConfig;
 
 				SubmitJobsResponse.JobResult.Job_.Output_.MuxConfig_ muxConfig = new SubmitJobsResponse.JobResult.Job_.Output_.MuxConfig_();
@@ -214,6 +219,8 @@ namespace Aliyun.Acs.Mts.Transform.V20140618
 				SubmitJobsResponse.JobResult.Job_.Output_.MuxConfig_.Gif_ gif = new SubmitJobsResponse.JobResult.Job_.Output_.MuxConfig_.Gif_();
 				gif.Loop = context.StringValue("SubmitJobs.JobResultList["+ i +"].Job.Output.MuxConfig.Gif.Loop");
 				gif.FinalDelay = context.StringValue("SubmitJobs.JobResultList["+ i +"].Job.Output.MuxConfig.Gif.FinalDelay");
+				gif.IsCustomPalette = context.StringValue("SubmitJobs.JobResultList["+ i +"].Job.Output.MuxConfig.Gif.IsCustomPalette");
+				gif.DitherMode = context.StringValue("SubmitJobs.JobResultList["+ i +"].Job.Output.MuxConfig.Gif.DitherMode");
 				muxConfig.Gif = gif;
 				output.MuxConfig = muxConfig;
 
@@ -242,6 +249,9 @@ namespace Aliyun.Acs.Mts.Transform.V20140618
 				video.PixFmt = context.StringValue("SubmitJobs.JobResultList["+ i +"].Job.Output.Video.PixFmt");
 				video.Degrain = context.StringValue("SubmitJobs.JobResultList["+ i +"].Job.Output.Video.Degrain");
 				video.Qscale = context.StringValue("SubmitJobs.JobResultList["+ i +"].Job.Output.Video.Qscale");
+				video.Crop = context.StringValue("SubmitJobs.JobResultList["+ i +"].Job.Output.Video.Crop");
+				video.Pad = context.StringValue("SubmitJobs.JobResultList["+ i +"].Job.Output.Video.Pad");
+				video.MaxFps = context.StringValue("SubmitJobs.JobResultList["+ i +"].Job.Output.Video.MaxFps");
 
 				SubmitJobsResponse.JobResult.Job_.Output_.Video_.BitrateBnd_ bitrateBnd = new SubmitJobsResponse.JobResult.Job_.Output_.Video_.BitrateBnd_();
 				bitrateBnd.Max = context.StringValue("SubmitJobs.JobResultList["+ i +"].Job.Output.Video.BitrateBnd.Max");

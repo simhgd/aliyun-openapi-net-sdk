@@ -58,6 +58,9 @@ namespace Aliyun.Acs.Mts.Transform.V20140618
 			video.Degrain = context.StringValue("AddTemplate.Template.Video.Degrain");
 			video.Qscale = context.StringValue("AddTemplate.Template.Video.Qscale");
 			video.Remove = context.StringValue("AddTemplate.Template.Video.Remove");
+			video.Crop = context.StringValue("AddTemplate.Template.Video.Crop");
+			video.Pad = context.StringValue("AddTemplate.Template.Video.Pad");
+			video.MaxFps = context.StringValue("AddTemplate.Template.Video.MaxFps");
 
 			AddTemplateResponse.Template_.Video_.BitrateBnd_ bitrateBnd = new AddTemplateResponse.Template_.Video_.BitrateBnd_();
 			bitrateBnd.Max = context.StringValue("AddTemplate.Template.Video.BitrateBnd.Max");
@@ -77,6 +80,11 @@ namespace Aliyun.Acs.Mts.Transform.V20140618
 
 			AddTemplateResponse.Template_.TransConfig_ transConfig = new AddTemplateResponse.Template_.TransConfig_();
 			transConfig.TransMode = context.StringValue("AddTemplate.Template.TransConfig.TransMode");
+			transConfig.IsCheckReso = context.StringValue("AddTemplate.Template.TransConfig.IsCheckReso");
+			transConfig.IsCheckResoFail = context.StringValue("AddTemplate.Template.TransConfig.IsCheckResoFail");
+			transConfig.IsCheckVideoBitrate = context.StringValue("AddTemplate.Template.TransConfig.IsCheckVideoBitrate");
+			transConfig.IsCheckAudioBitrate = context.StringValue("AddTemplate.Template.TransConfig.IsCheckAudioBitrate");
+			transConfig.AdjDarMethod = context.StringValue("AddTemplate.Template.TransConfig.AdjDarMethod");
 			template.TransConfig = transConfig;
 
 			AddTemplateResponse.Template_.MuxConfig_ muxConfig = new AddTemplateResponse.Template_.MuxConfig_();
@@ -88,6 +96,8 @@ namespace Aliyun.Acs.Mts.Transform.V20140618
 			AddTemplateResponse.Template_.MuxConfig_.Gif_ gif = new AddTemplateResponse.Template_.MuxConfig_.Gif_();
 			gif.Loop = context.StringValue("AddTemplate.Template.MuxConfig.Gif.Loop");
 			gif.FinalDelay = context.StringValue("AddTemplate.Template.MuxConfig.Gif.FinalDelay");
+			gif.IsCustomPalette = context.StringValue("AddTemplate.Template.MuxConfig.Gif.IsCustomPalette");
+			gif.DitherMode = context.StringValue("AddTemplate.Template.MuxConfig.Gif.DitherMode");
 			muxConfig.Gif = gif;
 			template.MuxConfig = muxConfig;
 			addTemplateResponse.Template = template;

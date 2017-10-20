@@ -26,7 +26,9 @@ namespace Aliyun.Acs.vod.Model.V20170321
 
 		private string requestId;
 
-		private ListAIVideoCoverJob_AIVideoCoverJob aIVideoCoverJob;
+		private List<ListAIVideoCoverJob_AIVideoCoverJob> aIVideoCoverJobList;
+
+		private List<string> nonExistAIVideoCoverJobIds;
 
 		public string RequestId
 		{
@@ -40,22 +42,36 @@ namespace Aliyun.Acs.vod.Model.V20170321
 			}
 		}
 
-		public ListAIVideoCoverJob_AIVideoCoverJob AIVideoCoverJob
+		public List<ListAIVideoCoverJob_AIVideoCoverJob> AIVideoCoverJobList
 		{
 			get
 			{
-				return aIVideoCoverJob;
+				return aIVideoCoverJobList;
 			}
 			set	
 			{
-				aIVideoCoverJob = value;
+				aIVideoCoverJobList = value;
+			}
+		}
+
+		public List<string> NonExistAIVideoCoverJobIds
+		{
+			get
+			{
+				return nonExistAIVideoCoverJobIds;
+			}
+			set	
+			{
+				nonExistAIVideoCoverJobIds = value;
 			}
 		}
 
 		public class ListAIVideoCoverJob_AIVideoCoverJob
 		{
 
-			private string id;
+			private string jobId;
+
+			private string mediaId;
 
 			private string status;
 
@@ -67,15 +83,27 @@ namespace Aliyun.Acs.vod.Model.V20170321
 
 			private string data;
 
-			public string Id
+			public string JobId
 			{
 				get
 				{
-					return id;
+					return jobId;
 				}
 				set	
 				{
-					id = value;
+					jobId = value;
+				}
+			}
+
+			public string MediaId
+			{
+				get
+				{
+					return mediaId;
+				}
+				set	
+				{
+					mediaId = value;
 				}
 			}
 

@@ -31,6 +31,9 @@
 - [aliyun-net-sdk-cloudphoto](https://www.nuget.org/packages/aliyun-net-sdk-cloudphoto/)
 - [aliyun-net-sdk-sas-api](https://www.nuget.org/packages/aliyun-net-sdk-sas-api/)
 - [aliyun-net-sdk-dysms](https://www.nuget.org/packages/aliyun-net-sdk-dysms/)
+- [aliyun-net-sdk-ons](https://www.nuget.org/packages/aliyun-net-sdk-ons/)
+- [aliyun-net-sdk-ram](https://www.nuget.org/packages/aliyun-net-sdk-ram/)
+- [aliyun-net-sdk-r-kvstore](https://www.nuget.org/packages/aliyun-net-sdk-r-kvstore/)
 
 ### 当前版本
 #### 1.0.6(原Repo未表明版本号)

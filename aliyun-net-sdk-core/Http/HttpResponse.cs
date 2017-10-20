@@ -159,6 +159,7 @@ namespace Aliyun.Acs.Core.Http
             //httpWebRequest.ServicePoint.Expect100Continue = false;
             httpWebRequest.Method = request.Method.ToString();
             httpWebRequest.ContinueTimeout = _timeout;
+
             //httpWebRequest.KeepAlive = true;
             //httpWebRequest.Timeout = _timeout;
 
@@ -173,8 +174,31 @@ namespace Aliyun.Acs.Core.Http
 
             foreach (var header in request.Headers)
             {
+                if (header.Key.Equals("Content-Length"))
+                {
+                    httpWebRequest.Headers["ContentLength"] = header.Value;
+                    //httpWebRequest.ContentLength = long.Parse(header.Value);
+                    continue;
+                }
+                if (header.Key.Equals("Content-Type"))
+                {
+                    httpWebRequest.ContentType = header.Value;
+                    continue;
+                }
+
                 httpWebRequest.Headers[header.Key] = header.Value;
             }
+
+            if ((request.Method == MethodType.POST || request.Method == MethodType.PUT) && request.Content != null)
+            {
+                var getRequestStreamTask = httpWebRequest.GetRequestStreamAsync();
+                getRequestStreamTask.Wait();
+                using (Stream stream = getRequestStreamTask.Result)
+                {
+                    stream.Write(request.Content, 0, request.Content.Length);
+                }
+            }
+
 
             return httpWebRequest;
         }

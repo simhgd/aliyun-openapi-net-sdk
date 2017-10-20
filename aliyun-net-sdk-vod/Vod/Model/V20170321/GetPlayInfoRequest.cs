@@ -33,6 +33,7 @@ namespace Aliyun.Acs.vod.Model.V20170321
         {
         }
 
+		private string rand;
 
 		private long? resourceOwnerId;
 
@@ -40,16 +41,34 @@ namespace Aliyun.Acs.vod.Model.V20170321
 
 		private string resourceOwnerAccount;
 
+		private string channel;
+
 		private string action;
 
 		private string videoId;
+
+		private string playerVersion;
 
 		private long? ownerId;
 
 		private long? authTimeout;
 
+		private string authInfo;
+
 		private string accessKeyId;
 
+		public string Rand
+		{
+			get
+			{
+				return rand;
+			}
+			set	
+			{
+				rand = value;
+				DictionaryUtil.Add(QueryParameters, "Rand", value);
+			}
+		}
 
 		public long? ResourceOwnerId
 		{
@@ -90,6 +109,19 @@ namespace Aliyun.Acs.vod.Model.V20170321
 			}
 		}
 
+		public string Channel
+		{
+			get
+			{
+				return channel;
+			}
+			set	
+			{
+				channel = value;
+				DictionaryUtil.Add(QueryParameters, "Channel", value);
+			}
+		}
+
 		public string Action
 		{
 			get
@@ -116,6 +148,19 @@ namespace Aliyun.Acs.vod.Model.V20170321
 			}
 		}
 
+		public string PlayerVersion
+		{
+			get
+			{
+				return playerVersion;
+			}
+			set	
+			{
+				playerVersion = value;
+				DictionaryUtil.Add(QueryParameters, "PlayerVersion", value);
+			}
+		}
+
 		public long? OwnerId
 		{
 			get
@@ -139,6 +184,19 @@ namespace Aliyun.Acs.vod.Model.V20170321
 			{
 				authTimeout = value;
 				DictionaryUtil.Add(QueryParameters, "AuthTimeout", value.ToString());
+			}
+		}
+
+		public string AuthInfo
+		{
+			get
+			{
+				return authInfo;
+			}
+			set	
+			{
+				authInfo = value;
+				DictionaryUtil.Add(QueryParameters, "AuthInfo", value);
 			}
 		}
 
