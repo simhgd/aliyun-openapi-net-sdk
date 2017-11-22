@@ -29,7 +29,7 @@ namespace Aliyun.Acs.Core.Http
     public class HttpResponse : HttpRequest
     {
 
-        private static int _timeout = 100000;
+        private static int _timeout = 100000; // No effect
         private static int bufferLength = 1024;
 
         public int Status { get; set; }
@@ -107,7 +107,10 @@ namespace Aliyun.Acs.Core.Http
         public static HttpResponse GetResponse(HttpRequest request, int? timeout = null)
         {
             HttpWebRequest httpWebRequest = GetWebRequest(request);
-
+            //if (timeout != null)
+            //{
+            //    httpWebRequest.Timeout = (int)timeout;
+            //}
             HttpResponse httpResponse = new HttpResponse(httpWebRequest.RequestUri.AbsoluteUri);
             HttpWebResponse httpWebResponse = null;
             try

@@ -29,7 +29,7 @@ namespace Aliyun.Acs.Ecs.Model.V20140526
     public class CreateInstanceRequest : RpcAcsRequest<CreateInstanceResponse>
     {
         public CreateInstanceRequest()
-            : base("Ecs", "2014-05-26", "CreateInstance")
+            : base("Ecs", "2014-05-26", "CreateInstance", "ecs", "openAPI")
         {
         }
 
@@ -38,6 +38,8 @@ namespace Aliyun.Acs.Ecs.Model.V20140526
 		private long? resourceOwnerId;
 
 		private string tag2Key;
+
+		private string hpcClusterId;
 
 		private string tag3Key;
 
@@ -72,6 +74,8 @@ namespace Aliyun.Acs.Ecs.Model.V20140526
 		private string privateIpAddress;
 
 		private string spotStrategy;
+
+		private string periodUnit;
 
 		private string instanceName;
 
@@ -175,6 +179,19 @@ namespace Aliyun.Acs.Ecs.Model.V20140526
 			{
 				tag2Key = value;
 				DictionaryUtil.Add(QueryParameters, "Tag.2.Key", value);
+			}
+		}
+
+		public string HpcClusterId
+		{
+			get
+			{
+				return hpcClusterId;
+			}
+			set	
+			{
+				hpcClusterId = value;
+				DictionaryUtil.Add(QueryParameters, "HpcClusterId", value);
 			}
 		}
 
@@ -396,6 +413,19 @@ namespace Aliyun.Acs.Ecs.Model.V20140526
 			{
 				spotStrategy = value;
 				DictionaryUtil.Add(QueryParameters, "SpotStrategy", value);
+			}
+		}
+
+		public string PeriodUnit
+		{
+			get
+			{
+				return periodUnit;
+			}
+			set	
+			{
+				periodUnit = value;
+				DictionaryUtil.Add(QueryParameters, "PeriodUnit", value);
 			}
 		}
 

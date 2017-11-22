@@ -32,6 +32,11 @@
 - [aliyun-net-sdk-ons](https://www.nuget.org/packages/aliyun-net-sdk-ons/)
 - [aliyun-net-sdk-ram](https://www.nuget.org/packages/aliyun-net-sdk-ram/)
 - [aliyun-net-sdk-r-kvstore](https://www.nuget.org/packages/aliyun-net-sdk-r-kvstore/)
+- [aliyun-net-sdk-chatbot](https://www.nuget.org/packages/aliyun-net-sdk-chatbot/)
+- [aliyun-net-sdk-dds](https://www.nuget.org/packages/aliyun-net-sdk-dds/)
+- [aliyun-net-sdk-ess](https://www.nuget.org/packages/aliyun-net-sdk-ess/)
+- [aliyun-net-sdk-nas](https://www.nuget.org/packages/aliyun-net-sdk-nas/)
+- [aliyun-net-sdk-vpc](https://www.nuget.org/packages/aliyun-net-sdk-vpc/)
 
 ### 当前版本
 #### 1.0.6(原Repo未表明版本号)

@@ -42,7 +42,7 @@ namespace Aliyun.Acs.CloudPhoto.Model.V20170711
 
 		private string storeName;
 
-		private bool? force;
+		private string force;
 
 		private string md5;
 
@@ -98,7 +98,7 @@ namespace Aliyun.Acs.CloudPhoto.Model.V20170711
 			}
 		}
 
-		public bool? Force
+		public string Force
 		{
 			get
 			{
@@ -107,7 +107,7 @@ namespace Aliyun.Acs.CloudPhoto.Model.V20170711
 			set	
 			{
 				force = value;
-				DictionaryUtil.Add(QueryParameters, "Force", value.ToString());
+				DictionaryUtil.Add(QueryParameters, "Force", value);
 			}
 		}
 

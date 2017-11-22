@@ -37,6 +37,10 @@ namespace Aliyun.Acs.vod.Model.V20170321
 
 		private string resourceOwnerAccount;
 
+		private string reAuthInfo;
+
+		private long? authInfoTimeout;
+
 		private string action;
 
 		private string videoId;
@@ -68,6 +72,32 @@ namespace Aliyun.Acs.vod.Model.V20170321
 			{
 				resourceOwnerAccount = value;
 				DictionaryUtil.Add(QueryParameters, "ResourceOwnerAccount", value);
+			}
+		}
+
+		public string ReAuthInfo
+		{
+			get
+			{
+				return reAuthInfo;
+			}
+			set	
+			{
+				reAuthInfo = value;
+				DictionaryUtil.Add(QueryParameters, "ReAuthInfo", value);
+			}
+		}
+
+		public long? AuthInfoTimeout
+		{
+			get
+			{
+				return authInfoTimeout;
+			}
+			set	
+			{
+				authInfoTimeout = value;
+				DictionaryUtil.Add(QueryParameters, "AuthInfoTimeout", value.ToString());
 			}
 		}
 

@@ -43,6 +43,8 @@ namespace Aliyun.Acs.vod.Model.V20170321
 
 		private long? ownerId;
 
+		private string authInfo;
+
 		private string accessKeyId;
 
 		public long? ResourceOwnerId
@@ -107,6 +109,19 @@ namespace Aliyun.Acs.vod.Model.V20170321
 			{
 				ownerId = value;
 				DictionaryUtil.Add(QueryParameters, "OwnerId", value.ToString());
+			}
+		}
+
+		public string AuthInfo
+		{
+			get
+			{
+				return authInfo;
+			}
+			set	
+			{
+				authInfo = value;
+				DictionaryUtil.Add(QueryParameters, "AuthInfo", value);
 			}
 		}
 

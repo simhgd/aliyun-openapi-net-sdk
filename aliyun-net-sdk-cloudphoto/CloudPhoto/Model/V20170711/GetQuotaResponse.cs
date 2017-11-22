@@ -103,7 +103,7 @@ namespace Aliyun.Acs.CloudPhoto.Model.V20170711
 
 			private int? photosCount;
 
-			private long? usedQutoa;
+			private long? usedQuota;
 
 			private int? videosCount;
 
@@ -143,15 +143,15 @@ namespace Aliyun.Acs.CloudPhoto.Model.V20170711
 				}
 			}
 
-			public long? UsedQutoa
+			public long? UsedQuota
 			{
 				get
 				{
-					return usedQutoa;
+					return usedQuota;
 				}
 				set	
 				{
-					usedQutoa = value;
+					usedQuota = value;
 				}
 			}
 

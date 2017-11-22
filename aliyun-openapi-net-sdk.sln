@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2005
+VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aliyun-net-sdk-core", "aliyun-net-sdk-core\aliyun-net-sdk-core.csproj", "{6E821DA9-18AF-40C4-9798-DD1854D1252E}"
 EndProject
@@ -55,6 +55,16 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aliyun-net-sdk-ram", "aliyun-net-sdk-ram\aliyun-net-sdk-ram.csproj", "{208ACFB1-B079-48FC-BA02-D07D91BA5656}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aliyun-net-sdk-r-kvstore", "aliyun-net-sdk-r-kvstore\aliyun-net-sdk-r-kvstore.csproj", "{54C11033-9AA5-49CE-9294-A4CF7B8AED96}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aliyun-net-sdk-chatbot", "aliyun-net-sdk-chatbot\aliyun-net-sdk-chatbot.csproj", "{EDB03C6F-F231-4BFA-85FA-8B1B64621884}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aliyun-net-sdk-dds", "aliyun-net-sdk-dds\aliyun-net-sdk-dds.csproj", "{C9A62557-7DA3-48F2-AEEC-3BB565E31565}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aliyun-net-sdk-ess", "aliyun-net-sdk-ess\aliyun-net-sdk-ess.csproj", "{92527F85-7E84-4D48-A931-5264F99DCC84}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aliyun-net-sdk-nas", "aliyun-net-sdk-nas\aliyun-net-sdk-nas.csproj", "{1CE7C6DA-45E0-4277-BB6F-4C3A48DE3AEC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aliyun-net-sdk-vpc", "aliyun-net-sdk-vpc\aliyun-net-sdk-vpc.csproj", "{D8C2FBFB-825E-415E-B184-898C5BB1B515}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -158,6 +168,26 @@ Global
 		{54C11033-9AA5-49CE-9294-A4CF7B8AED96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54C11033-9AA5-49CE-9294-A4CF7B8AED96}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{54C11033-9AA5-49CE-9294-A4CF7B8AED96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDB03C6F-F231-4BFA-85FA-8B1B64621884}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDB03C6F-F231-4BFA-85FA-8B1B64621884}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDB03C6F-F231-4BFA-85FA-8B1B64621884}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDB03C6F-F231-4BFA-85FA-8B1B64621884}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9A62557-7DA3-48F2-AEEC-3BB565E31565}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9A62557-7DA3-48F2-AEEC-3BB565E31565}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9A62557-7DA3-48F2-AEEC-3BB565E31565}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9A62557-7DA3-48F2-AEEC-3BB565E31565}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92527F85-7E84-4D48-A931-5264F99DCC84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92527F85-7E84-4D48-A931-5264F99DCC84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92527F85-7E84-4D48-A931-5264F99DCC84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92527F85-7E84-4D48-A931-5264F99DCC84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CE7C6DA-45E0-4277-BB6F-4C3A48DE3AEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CE7C6DA-45E0-4277-BB6F-4C3A48DE3AEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CE7C6DA-45E0-4277-BB6F-4C3A48DE3AEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CE7C6DA-45E0-4277-BB6F-4C3A48DE3AEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8C2FBFB-825E-415E-B184-898C5BB1B515}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8C2FBFB-825E-415E-B184-898C5BB1B515}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8C2FBFB-825E-415E-B184-898C5BB1B515}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8C2FBFB-825E-415E-B184-898C5BB1B515}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

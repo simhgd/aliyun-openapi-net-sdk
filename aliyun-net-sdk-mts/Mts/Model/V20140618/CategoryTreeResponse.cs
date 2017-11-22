@@ -24,7 +24,21 @@ namespace Aliyun.Acs.Mts.Model.V20140618
 	public class CategoryTreeResponse : AcsResponse
 	{
 
+		private string requestId;
+
 		private string categoryTree;
+
+		public string RequestId
+		{
+			get
+			{
+				return requestId;
+			}
+			set	
+			{
+				requestId = value;
+			}
+		}
 
 		public string CategoryTree
 		{

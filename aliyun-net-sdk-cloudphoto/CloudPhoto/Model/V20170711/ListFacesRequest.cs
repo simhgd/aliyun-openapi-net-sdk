@@ -36,6 +36,8 @@ namespace Aliyun.Acs.CloudPhoto.Model.V20170711
 
 		private string cursor;
 
+		private string hasFaceName;
+
 		private int? size;
 
 		private string libraryId;
@@ -56,6 +58,19 @@ namespace Aliyun.Acs.CloudPhoto.Model.V20170711
 			{
 				cursor = value;
 				DictionaryUtil.Add(QueryParameters, "Cursor", value);
+			}
+		}
+
+		public string HasFaceName
+		{
+			get
+			{
+				return hasFaceName;
+			}
+			set	
+			{
+				hasFaceName = value;
+				DictionaryUtil.Add(QueryParameters, "HasFaceName", value);
 			}
 		}
 
