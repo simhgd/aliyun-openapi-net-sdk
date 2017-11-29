@@ -28,7 +28,7 @@
 - [aliyun-net-sdk-vod](https://www.nuget.org/packages/aliyun-net-sdk-vod/)
 - [aliyun-net-sdk-cloudphoto](https://www.nuget.org/packages/aliyun-net-sdk-cloudphoto/)
 - [aliyun-net-sdk-sas-api](https://www.nuget.org/packages/aliyun-net-sdk-sas-api/)
-- [aliyun-net-sdk-dysmsapi](https://www.nuget.org/packages/aliyun-net-sdk-dysmsapi/)
+- [aliyun-net-sdk-dysms](https://www.nuget.org/packages/aliyun-net-sdk-dysms/)
 - [aliyun-net-sdk-ons](https://www.nuget.org/packages/aliyun-net-sdk-ons/)
 - [aliyun-net-sdk-ram](https://www.nuget.org/packages/aliyun-net-sdk-ram/)
 - [aliyun-net-sdk-r-kvstore](https://www.nuget.org/packages/aliyun-net-sdk-r-kvstore/)
