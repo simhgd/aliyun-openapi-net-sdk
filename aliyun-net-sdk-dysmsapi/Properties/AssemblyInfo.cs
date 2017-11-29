@@ -5,9 +5,9 @@ using System.Runtime.InteropServices;
 // 有关程序集的常规信息通过以下
 // 特性集控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("aliyun-net-sdk-dysms")]
-[assembly: AssemblyProduct("Dysms")]
-[assembly: AssemblyDescription("Aliyun Open API SDK Dysms")]
+[assembly: AssemblyTitle("aliyun-net-sdk-dysmsapi")]
+[assembly: AssemblyProduct("Dysmsapi")]
+[assembly: AssemblyDescription("Aliyun Open API SDK Dysmsapi")]
 [assembly: AssemblyCompany("Aliyun")]
 [assembly: AssemblyCopyright("Copyright (C) Alibaba Cloud Computing")]
 [assembly: AssemblyConfiguration("")]

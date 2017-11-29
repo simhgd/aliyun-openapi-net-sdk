@@ -28,7 +28,7 @@
 - [aliyun-net-sdk-vod](https://www.nuget.org/packages/aliyun-net-sdk-vod/)
 - [aliyun-net-sdk-cloudphoto](https://www.nuget.org/packages/aliyun-net-sdk-cloudphoto/)
 - [aliyun-net-sdk-sas-api](https://www.nuget.org/packages/aliyun-net-sdk-sas-api/)
-- [aliyun-net-sdk-dysms](https://www.nuget.org/packages/aliyun-net-sdk-dysms/)
+- [aliyun-net-sdk-dysmsapi](https://www.nuget.org/packages/aliyun-net-sdk-dysmsapi/)
 - [aliyun-net-sdk-ons](https://www.nuget.org/packages/aliyun-net-sdk-ons/)
 - [aliyun-net-sdk-ram](https://www.nuget.org/packages/aliyun-net-sdk-ram/)
 - [aliyun-net-sdk-r-kvstore](https://www.nuget.org/packages/aliyun-net-sdk-r-kvstore/)
@@ -89,7 +89,7 @@
 
 	通过catch异常判断API是否调用成功，当 API 的 http status>=200 且 <300 表示API调用成功；当http status>=300且<500 SDK抛ClientException；当http status >=500 SDK 抛 ServerException
 
-2. IClientProfile clientProfile = DefaultProfile.GetProfile("< your request regionid >", "< your access key id >", "< your access key secret >");
+2. `IClientProfile clientProfile = DefaultProfile.GetProfile("< your request regionid >", "< your access key id >", "< your access key secret >")`;
 
 	此处的regionid参数指你需要操作的region的id，例如要操作杭州region，则regionid=cn-hangzhou；默认填cn-hangzhou.
 

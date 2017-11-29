@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2009
+VisualStudioVersion = 15.0.27004.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aliyun-net-sdk-core", "aliyun-net-sdk-core\aliyun-net-sdk-core.csproj", "{6E821DA9-18AF-40C4-9798-DD1854D1252E}"
 EndProject
@@ -43,8 +43,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aliyun-net-sdk-sas-api", "a
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aliyun-net-sdk-push", "aliyun-net-sdk-push\aliyun-net-sdk-push.csproj", "{AF4790A3-F96A-4B72-B909-E367734D5654}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aliyun-net-sdk-dysms", "aliyun-net-sdk-dysms\aliyun-net-sdk-dysms.csproj", "{1388B633-E187-48F3-8B34-9899CB2B8F26}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E6DEDB68-69DC-4FD9-B831-CA2E5BAFDFFC}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
@@ -65,6 +63,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aliyun-net-sdk-nas", "aliyun-net-sdk-nas\aliyun-net-sdk-nas.csproj", "{1CE7C6DA-45E0-4277-BB6F-4C3A48DE3AEC}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aliyun-net-sdk-vpc", "aliyun-net-sdk-vpc\aliyun-net-sdk-vpc.csproj", "{D8C2FBFB-825E-415E-B184-898C5BB1B515}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aliyun-net-sdk-dysmsapi", "aliyun-net-sdk-dysmsapi\aliyun-net-sdk-dysmsapi.csproj", "{1C4E1AC5-3317-40DF-9B9D-B77B840E0EB8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -152,10 +152,6 @@ Global
 		{AF4790A3-F96A-4B72-B909-E367734D5654}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF4790A3-F96A-4B72-B909-E367734D5654}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF4790A3-F96A-4B72-B909-E367734D5654}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1388B633-E187-48F3-8B34-9899CB2B8F26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1388B633-E187-48F3-8B34-9899CB2B8F26}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1388B633-E187-48F3-8B34-9899CB2B8F26}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1388B633-E187-48F3-8B34-9899CB2B8F26}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F77F4817-5852-4FCF-8559-B8C8B3023FF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F77F4817-5852-4FCF-8559-B8C8B3023FF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F77F4817-5852-4FCF-8559-B8C8B3023FF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -188,6 +184,10 @@ Global
 		{D8C2FBFB-825E-415E-B184-898C5BB1B515}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8C2FBFB-825E-415E-B184-898C5BB1B515}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8C2FBFB-825E-415E-B184-898C5BB1B515}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C4E1AC5-3317-40DF-9B9D-B77B840E0EB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C4E1AC5-3317-40DF-9B9D-B77B840E0EB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C4E1AC5-3317-40DF-9B9D-B77B840E0EB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C4E1AC5-3317-40DF-9B9D-B77B840E0EB8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
