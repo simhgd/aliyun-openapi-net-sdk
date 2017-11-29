@@ -23,19 +23,19 @@ using System.Collections.Generic;
 
 namespace Aliyun.Acs.Dysmsapi.Transform.V20170525
 {
-    public class SendSmsResponseUnmarshaller
+    public class SendInterSmsResponseUnmarshaller
     {
-        public static SendSmsResponse Unmarshall(UnmarshallerContext context)
+        public static SendInterSmsResponse Unmarshall(UnmarshallerContext context)
         {
-			SendSmsResponse sendSmsResponse = new SendSmsResponse();
+			SendInterSmsResponse sendInterSmsResponse = new SendInterSmsResponse();
 
-			sendSmsResponse.HttpResponse = context.HttpResponse;
-			sendSmsResponse.RequestId = context.StringValue("SendSms.RequestId");
-			sendSmsResponse.BizId = context.StringValue("SendSms.BizId");
-			sendSmsResponse.Code = context.StringValue("SendSms.Code");
-			sendSmsResponse.Message = context.StringValue("SendSms.Message");
+			sendInterSmsResponse.HttpResponse = context.HttpResponse;
+			sendInterSmsResponse.RequestId = context.StringValue("SendInterSms.RequestId");
+			sendInterSmsResponse.BizId = context.StringValue("SendInterSms.BizId");
+			sendInterSmsResponse.Code = context.StringValue("SendInterSms.Code");
+			sendInterSmsResponse.Message = context.StringValue("SendInterSms.Message");
         
-			return sendSmsResponse;
+			return sendInterSmsResponse;
         }
     }
 }

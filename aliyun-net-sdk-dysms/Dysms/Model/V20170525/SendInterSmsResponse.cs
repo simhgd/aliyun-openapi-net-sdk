@@ -16,26 +16,68 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-using Aliyun.Acs.Core.Transform;
-using Aliyun.Acs.Dysmsapi.Model.V20170525;
-using System;
+using Aliyun.Acs.Core;
 using System.Collections.Generic;
 
-namespace Aliyun.Acs.Dysmsapi.Transform.V20170525
+namespace Aliyun.Acs.Dysmsapi.Model.V20170525
 {
-    public class SendSmsResponseUnmarshaller
-    {
-        public static SendSmsResponse Unmarshall(UnmarshallerContext context)
-        {
-			SendSmsResponse sendSmsResponse = new SendSmsResponse();
+	public class SendInterSmsResponse : AcsResponse
+	{
 
-			sendSmsResponse.HttpResponse = context.HttpResponse;
-			sendSmsResponse.RequestId = context.StringValue("SendSms.RequestId");
-			sendSmsResponse.BizId = context.StringValue("SendSms.BizId");
-			sendSmsResponse.Code = context.StringValue("SendSms.Code");
-			sendSmsResponse.Message = context.StringValue("SendSms.Message");
-        
-			return sendSmsResponse;
-        }
-    }
+		private string requestId;
+
+		private string bizId;
+
+		private string code;
+
+		private string message;
+
+		public string RequestId
+		{
+			get
+			{
+				return requestId;
+			}
+			set	
+			{
+				requestId = value;
+			}
+		}
+
+		public string BizId
+		{
+			get
+			{
+				return bizId;
+			}
+			set	
+			{
+				bizId = value;
+			}
+		}
+
+		public string Code
+		{
+			get
+			{
+				return code;
+			}
+			set	
+			{
+				code = value;
+			}
+		}
+
+		public string Message
+		{
+			get
+			{
+				return message;
+			}
+			set	
+			{
+				message = value;
+			}
+		}
+	}
 }

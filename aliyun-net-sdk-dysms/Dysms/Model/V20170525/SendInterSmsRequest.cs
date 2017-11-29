@@ -26,16 +26,18 @@ using System.Collections.Generic;
 
 namespace Aliyun.Acs.Dysmsapi.Model.V20170525
 {
-    public class SendSmsRequest : RpcAcsRequest<SendSmsResponse>
+    public class SendInterSmsRequest : RpcAcsRequest<SendInterSmsResponse>
     {
-        public SendSmsRequest()
-            : base("Dysmsapi", "2017-05-25", "SendSms")
+        public SendInterSmsRequest()
+            : base("Dysmsapi", "2017-05-25", "SendInterSms")
         {
         }
 
 		private string templateCode;
 
 		private string phoneNumbers;
+
+		private string countryCode;
 
 		private string accessKeyId;
 
@@ -50,8 +52,6 @@ namespace Aliyun.Acs.Dysmsapi.Model.V20170525
 		private long? resourceOwnerId;
 
 		private long? ownerId;
-
-		private string smsUpExtendCode;
 
 		private string outId;
 
@@ -78,6 +78,19 @@ namespace Aliyun.Acs.Dysmsapi.Model.V20170525
 			{
 				phoneNumbers = value;
 				DictionaryUtil.Add(QueryParameters, "PhoneNumbers", value);
+			}
+		}
+
+		public string CountryCode
+		{
+			get
+			{
+				return countryCode;
+			}
+			set	
+			{
+				countryCode = value;
+				DictionaryUtil.Add(QueryParameters, "CountryCode", value);
 			}
 		}
 
@@ -172,19 +185,6 @@ namespace Aliyun.Acs.Dysmsapi.Model.V20170525
 			}
 		}
 
-		public string SmsUpExtendCode
-		{
-			get
-			{
-				return smsUpExtendCode;
-			}
-			set	
-			{
-				smsUpExtendCode = value;
-				DictionaryUtil.Add(QueryParameters, "SmsUpExtendCode", value);
-			}
-		}
-
 		public string OutId
 		{
 			get
@@ -198,9 +198,9 @@ namespace Aliyun.Acs.Dysmsapi.Model.V20170525
 			}
 		}
 
-        public override SendSmsResponse GetResponse(Core.Transform.UnmarshallerContext unmarshallerContext)
+        public override SendInterSmsResponse GetResponse(Core.Transform.UnmarshallerContext unmarshallerContext)
         {
-            return SendSmsResponseUnmarshaller.Unmarshall(unmarshallerContext);
+            return SendInterSmsResponseUnmarshaller.Unmarshall(unmarshallerContext);
         }
     }
 }

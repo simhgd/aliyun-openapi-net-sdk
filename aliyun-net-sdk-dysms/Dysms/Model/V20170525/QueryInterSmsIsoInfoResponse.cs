@@ -21,16 +21,18 @@ using System.Collections.Generic;
 
 namespace Aliyun.Acs.Dysmsapi.Model.V20170525
 {
-	public class SendSmsResponse : AcsResponse
+	public class QueryInterSmsIsoInfoResponse : AcsResponse
 	{
 
 		private string requestId;
 
-		private string bizId;
-
 		private string code;
 
 		private string message;
+
+		private string totalCount;
+
+		private List<QueryInterSmsIsoInfo_IsoSupportDTO> isoSupportDTOs;
 
 		public string RequestId
 		{
@@ -41,18 +43,6 @@ namespace Aliyun.Acs.Dysmsapi.Model.V20170525
 			set	
 			{
 				requestId = value;
-			}
-		}
-
-		public string BizId
-		{
-			get
-			{
-				return bizId;
-			}
-			set	
-			{
-				bizId = value;
 			}
 		}
 
@@ -77,6 +67,76 @@ namespace Aliyun.Acs.Dysmsapi.Model.V20170525
 			set	
 			{
 				message = value;
+			}
+		}
+
+		public string TotalCount
+		{
+			get
+			{
+				return totalCount;
+			}
+			set	
+			{
+				totalCount = value;
+			}
+		}
+
+		public List<QueryInterSmsIsoInfo_IsoSupportDTO> IsoSupportDTOs
+		{
+			get
+			{
+				return isoSupportDTOs;
+			}
+			set	
+			{
+				isoSupportDTOs = value;
+			}
+		}
+
+		public class QueryInterSmsIsoInfo_IsoSupportDTO
+		{
+
+			private string countryName;
+
+			private string countryCode;
+
+			private string isoCode;
+
+			public string CountryName
+			{
+				get
+				{
+					return countryName;
+				}
+				set	
+				{
+					countryName = value;
+				}
+			}
+
+			public string CountryCode
+			{
+				get
+				{
+					return countryCode;
+				}
+				set	
+				{
+					countryCode = value;
+				}
+			}
+
+			public string IsoCode
+			{
+				get
+				{
+					return isoCode;
+				}
+				set	
+				{
+					isoCode = value;
+				}
 			}
 		}
 	}

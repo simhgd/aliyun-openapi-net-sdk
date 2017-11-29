@@ -26,60 +26,24 @@ using System.Collections.Generic;
 
 namespace Aliyun.Acs.Dysmsapi.Model.V20170525
 {
-    public class SendSmsRequest : RpcAcsRequest<SendSmsResponse>
+    public class QueryInterSmsIsoInfoRequest : RpcAcsRequest<QueryInterSmsIsoInfoResponse>
     {
-        public SendSmsRequest()
-            : base("Dysmsapi", "2017-05-25", "SendSms")
+        public QueryInterSmsIsoInfoRequest()
+            : base("Dysmsapi", "2017-05-25", "QueryInterSmsIsoInfo")
         {
         }
 
-		private string templateCode;
-
-		private string phoneNumbers;
-
 		private string accessKeyId;
-
-		private string signName;
 
 		private string resourceOwnerAccount;
 
-		private string templateParam;
-
 		private string action;
+
+		private string countryName;
 
 		private long? resourceOwnerId;
 
 		private long? ownerId;
-
-		private string smsUpExtendCode;
-
-		private string outId;
-
-		public string TemplateCode
-		{
-			get
-			{
-				return templateCode;
-			}
-			set	
-			{
-				templateCode = value;
-				DictionaryUtil.Add(QueryParameters, "TemplateCode", value);
-			}
-		}
-
-		public string PhoneNumbers
-		{
-			get
-			{
-				return phoneNumbers;
-			}
-			set	
-			{
-				phoneNumbers = value;
-				DictionaryUtil.Add(QueryParameters, "PhoneNumbers", value);
-			}
-		}
 
 		public string AccessKeyId
 		{
@@ -91,19 +55,6 @@ namespace Aliyun.Acs.Dysmsapi.Model.V20170525
 			{
 				accessKeyId = value;
 				DictionaryUtil.Add(QueryParameters, "AccessKeyId", value);
-			}
-		}
-
-		public string SignName
-		{
-			get
-			{
-				return signName;
-			}
-			set	
-			{
-				signName = value;
-				DictionaryUtil.Add(QueryParameters, "SignName", value);
 			}
 		}
 
@@ -120,19 +71,6 @@ namespace Aliyun.Acs.Dysmsapi.Model.V20170525
 			}
 		}
 
-		public string TemplateParam
-		{
-			get
-			{
-				return templateParam;
-			}
-			set	
-			{
-				templateParam = value;
-				DictionaryUtil.Add(QueryParameters, "TemplateParam", value);
-			}
-		}
-
 		public string Action
 		{
 			get
@@ -143,6 +81,19 @@ namespace Aliyun.Acs.Dysmsapi.Model.V20170525
 			{
 				action = value;
 				DictionaryUtil.Add(QueryParameters, "Action", value);
+			}
+		}
+
+		public string CountryName
+		{
+			get
+			{
+				return countryName;
+			}
+			set	
+			{
+				countryName = value;
+				DictionaryUtil.Add(QueryParameters, "CountryName", value);
 			}
 		}
 
@@ -172,35 +123,9 @@ namespace Aliyun.Acs.Dysmsapi.Model.V20170525
 			}
 		}
 
-		public string SmsUpExtendCode
-		{
-			get
-			{
-				return smsUpExtendCode;
-			}
-			set	
-			{
-				smsUpExtendCode = value;
-				DictionaryUtil.Add(QueryParameters, "SmsUpExtendCode", value);
-			}
-		}
-
-		public string OutId
-		{
-			get
-			{
-				return outId;
-			}
-			set	
-			{
-				outId = value;
-				DictionaryUtil.Add(QueryParameters, "OutId", value);
-			}
-		}
-
-        public override SendSmsResponse GetResponse(Core.Transform.UnmarshallerContext unmarshallerContext)
+        public override QueryInterSmsIsoInfoResponse GetResponse(Core.Transform.UnmarshallerContext unmarshallerContext)
         {
-            return SendSmsResponseUnmarshaller.Unmarshall(unmarshallerContext);
+            return QueryInterSmsIsoInfoResponseUnmarshaller.Unmarshall(unmarshallerContext);
         }
     }
 }
