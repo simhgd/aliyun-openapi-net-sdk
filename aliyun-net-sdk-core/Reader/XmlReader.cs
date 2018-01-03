@@ -42,7 +42,7 @@ namespace Aliyun.Acs.Core.Reader
         private void Read(XmlNode element, String path, bool appendPath)
         {
             path = appendPath ? path + "." + element.Name : path;
-            if (element.InnerText.Equals(element.InnerXml))
+            if (element.InnerText.Equals(element.InnerXml) || ("<![CDATA["+ element.InnerText + "]]>").Equals(element.InnerXml))
             {
                 dictionary.Add(path, element.InnerText);
                 return;
