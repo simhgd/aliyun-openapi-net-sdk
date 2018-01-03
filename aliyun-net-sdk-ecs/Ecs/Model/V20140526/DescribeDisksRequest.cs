@@ -77,6 +77,8 @@ namespace Aliyun.Acs.Ecs.Model.V20140526
 
 		private bool? enableAutoSnapshot;
 
+		private bool? dryRun;
+
 		private string tag5Key;
 
 		private string resourceOwnerAccount;
@@ -98,6 +100,8 @@ namespace Aliyun.Acs.Ecs.Model.V20140526
 		private string tag5Value;
 
 		private string tag1Key;
+
+		private List<long?> additionalAttributess;
 
 		private bool? enableShared;
 
@@ -401,6 +405,19 @@ namespace Aliyun.Acs.Ecs.Model.V20140526
 			}
 		}
 
+		public bool? DryRun
+		{
+			get
+			{
+				return dryRun;
+			}
+			set	
+			{
+				dryRun = value;
+				DictionaryUtil.Add(QueryParameters, "DryRun", value.ToString());
+			}
+		}
+
 		public string Tag5Key
 		{
 			get
@@ -541,6 +558,23 @@ namespace Aliyun.Acs.Ecs.Model.V20140526
 			{
 				tag1Key = value;
 				DictionaryUtil.Add(QueryParameters, "Tag.1.Key", value);
+			}
+		}
+
+		public List<long?> AdditionalAttributess
+		{
+			get
+			{
+				return additionalAttributess;
+			}
+
+			set
+			{
+				additionalAttributess = value;
+				for (int i = 0; i < additionalAttributess.Count; i++)
+				{
+					DictionaryUtil.Add(QueryParameters,"AdditionalAttributes." + (i + 1) , additionalAttributess[i]);
+				}
 			}
 		}
 

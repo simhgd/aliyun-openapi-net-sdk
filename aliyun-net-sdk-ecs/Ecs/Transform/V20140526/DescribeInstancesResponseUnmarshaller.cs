@@ -58,6 +58,7 @@ namespace Aliyun.Acs.Ecs.Transform.V20140526
 				instance.InternetMaxBandwidthOut = context.IntegerValue("DescribeInstances.Instances["+ i +"].InternetMaxBandwidthOut");
 				instance.VlanId = context.StringValue("DescribeInstances.Instances["+ i +"].VlanId");
 				instance.CreationTime = context.StringValue("DescribeInstances.Instances["+ i +"].CreationTime");
+				instance.StartTime = context.StringValue("DescribeInstances.Instances["+ i +"].StartTime");
 				instance.InstanceNetworkType = context.StringValue("DescribeInstances.Instances["+ i +"].InstanceNetworkType");
 				instance.InstanceChargeType = context.StringValue("DescribeInstances.Instances["+ i +"].InstanceChargeType");
 				instance.SaleCycle = context.StringValue("DescribeInstances.Instances["+ i +"].SaleCycle");
@@ -76,6 +77,7 @@ namespace Aliyun.Acs.Ecs.Transform.V20140526
 				instance.KeyPairName = context.StringValue("DescribeInstances.Instances["+ i +"].KeyPairName");
 				instance.Recyclable = context.BooleanValue("DescribeInstances.Instances["+ i +"].Recyclable");
 				instance.HpcClusterId = context.StringValue("DescribeInstances.Instances["+ i +"].HpcClusterId");
+				instance.StoppedMode = context.StringValue("DescribeInstances.Instances["+ i +"].StoppedMode");
 
 				List<string> instance_securityGroupIds = new List<string>();
 				for (int j = 0; j < context.Length("DescribeInstances.Instances["+ i +"].SecurityGroupIds.Length"); j++) {

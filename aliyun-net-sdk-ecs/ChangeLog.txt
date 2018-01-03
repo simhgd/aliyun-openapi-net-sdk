@@ -1,3 +1,15 @@
+2017-12-25 Version: 4.5.1
+1, Add disk category mapping and mount information for DescribeDisks
+
+2017-12-19 Version: 4.6.0
+1, Offline volume API .
+
+2017-12-14 Version: 4.5.0
+1, Add three interfaces  DescribeInstancesFullStatus DescribeInstanceHistoryEvents DescribeDisksFullStatus
+
+2017-12-05 Version: 4.4.3
+1, RenewInstance add parameter PeriodUnit
+
 2017-11-03 Version: 4.4.1
 1, CreateInstance支持周期单位，periodUnit 其可填值（Month/月，Week/周）
 

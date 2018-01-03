@@ -29,7 +29,7 @@ namespace Aliyun.Acs.vod.Model.V20170321
     public class GetPlayInfoRequest : RpcAcsRequest<GetPlayInfoResponse>
     {
         public GetPlayInfoRequest()
-            : base("vod", "2017-03-21", "GetPlayInfo", "vod", "openAPI")
+            : base("vod", "2017-03-21", "GetPlayInfo")
         {
         }
 
@@ -56,6 +56,8 @@ namespace Aliyun.Acs.vod.Model.V20170321
 		private string reAuthInfo;
 
 		private string action;
+
+		private string definition;
 
 		private long? authTimeout;
 
@@ -214,6 +216,19 @@ namespace Aliyun.Acs.vod.Model.V20170321
 			{
 				action = value;
 				DictionaryUtil.Add(QueryParameters, "Action", value);
+			}
+		}
+
+		public string Definition
+		{
+			get
+			{
+				return definition;
+			}
+			set	
+			{
+				definition = value;
+				DictionaryUtil.Add(QueryParameters, "Definition", value);
 			}
 		}
 

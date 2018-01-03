@@ -151,7 +151,17 @@ namespace Aliyun.Acs.Ecs.Model.V20140526
 
 			private bool? encrypted;
 
+			private int? mountInstanceNum;
+
+			private int? iOPS;
+
+			private int? iOPSRead;
+
+			private int? iOPSWrite;
+
 			private List<DescribeDisks_OperationLock> operationLocks;
+
+			private List<DescribeDisks_MountInstance> mountInstances;
 
 			private List<DescribeDisks_Tag> tags;
 
@@ -479,6 +489,54 @@ namespace Aliyun.Acs.Ecs.Model.V20140526
 				}
 			}
 
+			public int? MountInstanceNum
+			{
+				get
+				{
+					return mountInstanceNum;
+				}
+				set	
+				{
+					mountInstanceNum = value;
+				}
+			}
+
+			public int? IOPS
+			{
+				get
+				{
+					return iOPS;
+				}
+				set	
+				{
+					iOPS = value;
+				}
+			}
+
+			public int? IOPSRead
+			{
+				get
+				{
+					return iOPSRead;
+				}
+				set	
+				{
+					iOPSRead = value;
+				}
+			}
+
+			public int? IOPSWrite
+			{
+				get
+				{
+					return iOPSWrite;
+				}
+				set	
+				{
+					iOPSWrite = value;
+				}
+			}
+
 			public List<DescribeDisks_OperationLock> OperationLocks
 			{
 				get
@@ -488,6 +546,18 @@ namespace Aliyun.Acs.Ecs.Model.V20140526
 				set	
 				{
 					operationLocks = value;
+				}
+			}
+
+			public List<DescribeDisks_MountInstance> MountInstances
+			{
+				get
+				{
+					return mountInstances;
+				}
+				set	
+				{
+					mountInstances = value;
 				}
 			}
 
@@ -517,6 +587,52 @@ namespace Aliyun.Acs.Ecs.Model.V20140526
 					set	
 					{
 						lockReason = value;
+					}
+				}
+			}
+
+			public class DescribeDisks_MountInstance
+			{
+
+				private string instanceId;
+
+				private string device;
+
+				private string attachedTime;
+
+				public string InstanceId
+				{
+					get
+					{
+						return instanceId;
+					}
+					set	
+					{
+						instanceId = value;
+					}
+				}
+
+				public string Device
+				{
+					get
+					{
+						return device;
+					}
+					set	
+					{
+						device = value;
+					}
+				}
+
+				public string AttachedTime
+				{
+					get
+					{
+						return attachedTime;
+					}
+					set	
+					{
+						attachedTime = value;
 					}
 				}
 			}

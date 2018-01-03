@@ -29,7 +29,7 @@ namespace Aliyun.Acs.vod.Model.V20170321
     public class CreateUploadVideoRequest : RpcAcsRequest<CreateUploadVideoResponse>
     {
         public CreateUploadVideoRequest()
-            : base("vod", "2017-03-21", "CreateUploadVideo", "vod", "openAPI")
+            : base("vod", "2017-03-21", "CreateUploadVideo")
         {
         }
 
@@ -58,6 +58,8 @@ namespace Aliyun.Acs.vod.Model.V20170321
 		private string userData;
 
 		private string fileName;
+
+		private string templateGroupId;
 
 		private int? cateId;
 
@@ -229,6 +231,19 @@ namespace Aliyun.Acs.vod.Model.V20170321
 			{
 				fileName = value;
 				DictionaryUtil.Add(QueryParameters, "FileName", value);
+			}
+		}
+
+		public string TemplateGroupId
+		{
+			get
+			{
+				return templateGroupId;
+			}
+			set	
+			{
+				templateGroupId = value;
+				DictionaryUtil.Add(QueryParameters, "TemplateGroupId", value);
 			}
 		}
 

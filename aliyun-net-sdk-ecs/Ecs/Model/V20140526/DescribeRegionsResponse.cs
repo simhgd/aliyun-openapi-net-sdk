@@ -59,6 +59,8 @@ namespace Aliyun.Acs.Ecs.Model.V20140526
 
 			private string localName;
 
+			private string status;
+
 			public string RegionId
 			{
 				get
@@ -80,6 +82,18 @@ namespace Aliyun.Acs.Ecs.Model.V20140526
 				set	
 				{
 					localName = value;
+				}
+			}
+
+			public string Status
+			{
+				get
+				{
+					return status;
+				}
+				set	
+				{
+					status = value;
 				}
 			}
 		}

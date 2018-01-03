@@ -137,6 +137,8 @@ namespace Aliyun.Acs.Ecs.Model.V20140526
 
 			private string creationTime;
 
+			private string startTime;
+
 			private string instanceNetworkType;
 
 			private string instanceChargeType;
@@ -172,6 +174,8 @@ namespace Aliyun.Acs.Ecs.Model.V20140526
 			private bool? recyclable;
 
 			private string hpcClusterId;
+
+			private string stoppedMode;
 
 			private List<DescribeInstances_NetworkInterface> networkInterfaces;
 
@@ -431,6 +435,18 @@ namespace Aliyun.Acs.Ecs.Model.V20140526
 				}
 			}
 
+			public string StartTime
+			{
+				get
+				{
+					return startTime;
+				}
+				set	
+				{
+					startTime = value;
+				}
+			}
+
 			public string InstanceNetworkType
 			{
 				get
@@ -644,6 +660,18 @@ namespace Aliyun.Acs.Ecs.Model.V20140526
 				set	
 				{
 					hpcClusterId = value;
+				}
+			}
+
+			public string StoppedMode
+			{
+				get
+				{
+					return stoppedMode;
+				}
+				set	
+				{
+					stoppedMode = value;
 				}
 			}
 

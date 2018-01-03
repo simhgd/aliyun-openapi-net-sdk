@@ -79,6 +79,8 @@ namespace Aliyun.Acs.live.Model.V20161101
 
 			private string createTime;
 
+			private string startTime;
+
 			private int? period;
 
 			private string chargeType;
@@ -142,6 +144,18 @@ namespace Aliyun.Acs.live.Model.V20161101
 				set	
 				{
 					createTime = value;
+				}
+			}
+
+			public string StartTime
+			{
+				get
+				{
+					return startTime;
+				}
+				set	
+				{
+					startTime = value;
 				}
 			}
 

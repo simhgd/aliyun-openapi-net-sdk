@@ -26,11 +26,13 @@ namespace Aliyun.Acs.vod.Model.V20170321
 
 		private string requestId;
 
+		private string imageId;
+
+		private string imageURL;
+
 		private string uploadAddress;
 
 		private string uploadAuth;
-
-		private string imageURL;
 
 		public string RequestId
 		{
@@ -41,6 +43,30 @@ namespace Aliyun.Acs.vod.Model.V20170321
 			set	
 			{
 				requestId = value;
+			}
+		}
+
+		public string ImageId
+		{
+			get
+			{
+				return imageId;
+			}
+			set	
+			{
+				imageId = value;
+			}
+		}
+
+		public string ImageURL
+		{
+			get
+			{
+				return imageURL;
+			}
+			set	
+			{
+				imageURL = value;
 			}
 		}
 
@@ -65,18 +91,6 @@ namespace Aliyun.Acs.vod.Model.V20170321
 			set	
 			{
 				uploadAuth = value;
-			}
-		}
-
-		public string ImageURL
-		{
-			get
-			{
-				return imageURL;
-			}
-			set	
-			{
-				imageURL = value;
 			}
 		}
 	}

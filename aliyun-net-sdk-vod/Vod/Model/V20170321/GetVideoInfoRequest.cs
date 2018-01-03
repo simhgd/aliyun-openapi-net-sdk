@@ -29,7 +29,7 @@ namespace Aliyun.Acs.vod.Model.V20170321
     public class GetVideoInfoRequest : RpcAcsRequest<GetVideoInfoResponse>
     {
         public GetVideoInfoRequest()
-            : base("vod", "2017-03-21", "GetVideoInfo", "vod", "openAPI")
+            : base("vod", "2017-03-21", "GetVideoInfo")
         {
         }
 
@@ -40,6 +40,8 @@ namespace Aliyun.Acs.vod.Model.V20170321
 		private string action;
 
 		private string videoId;
+
+		private string resultTypes;
 
 		private long? ownerId;
 
@@ -94,6 +96,19 @@ namespace Aliyun.Acs.vod.Model.V20170321
 			{
 				videoId = value;
 				DictionaryUtil.Add(QueryParameters, "VideoId", value);
+			}
+		}
+
+		public string ResultTypes
+		{
+			get
+			{
+				return resultTypes;
+			}
+			set	
+			{
+				resultTypes = value;
+				DictionaryUtil.Add(QueryParameters, "ResultTypes", value);
 			}
 		}
 

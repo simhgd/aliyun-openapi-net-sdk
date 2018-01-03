@@ -42,8 +42,6 @@ namespace Aliyun.Acs.CloudPhoto.Model.V20170711
 
 		private string zoomType;
 
-		private string accessMode;
-
 		public string LibraryId
 		{
 			get
@@ -97,19 +95,6 @@ namespace Aliyun.Acs.CloudPhoto.Model.V20170711
 			{
 				zoomType = value;
 				DictionaryUtil.Add(QueryParameters, "ZoomType", value);
-			}
-		}
-
-		public string AccessMode
-		{
-			get
-			{
-				return accessMode;
-			}
-			set	
-			{
-				accessMode = value;
-				DictionaryUtil.Add(QueryParameters, "AccessMode", value);
 			}
 		}
 

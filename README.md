@@ -37,9 +37,16 @@
 - [aliyun-net-sdk-ess](https://www.nuget.org/packages/aliyun-net-sdk-ess/)
 - [aliyun-net-sdk-nas](https://www.nuget.org/packages/aliyun-net-sdk-nas/)
 - [aliyun-net-sdk-vpc](https://www.nuget.org/packages/aliyun-net-sdk-vpc/)
+- [aliyun-net-sdk-arms](https://www.nuget.org/packages/aliyun-net-sdk-arms/)
+- [aliyun-net-sdk-arms4finance](https://www.nuget.org/packages/aliyun-net-sdk-arms4finance/)
+- [aliyun-net-sdk-ccc](https://www.nuget.org/packages/aliyun-net-sdk-ccc/)
+- [aliyun-net-sdk-cloudauth](https://www.nuget.org/packages/aliyun-net-sdk-cloudauth/)
+- [aliyun-net-sdk-cms](https://www.nuget.org/packages/aliyun-net-sdk-cms/)
+- [aliyun-net-sdk-domain-intl](https://www.nuget.org/packages/aliyun-net-sdk-domain-intl/)
+- [aliyun-net-sdk-teslamaxcompute](https://www.nuget.org/packages/aliyun-net-sdk-teslamaxcompute/)
 
 ### 当前版本
-#### 1.0.6(原Repo未表明版本号)
+#### 1.0.6(原Repo未标明版本号)
 #### 其余版本号使用原Repo中ChangeLog中的版本
 
 ## Example
