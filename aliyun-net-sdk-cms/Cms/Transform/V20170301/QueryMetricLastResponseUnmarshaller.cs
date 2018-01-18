@@ -35,7 +35,7 @@ namespace Aliyun.Acs.Cms.Transform.V20170301
 			queryMetricLastResponse.Success = context.BooleanValue("QueryMetricLast.Success");
 			queryMetricLastResponse.RequestId = context.StringValue("QueryMetricLast.RequestId");
 			queryMetricLastResponse.Cursor = context.StringValue("QueryMetricLast.Cursor");
-            String datapoints = System.Text.Encoding.Default.GetString(context.HttpResponse.Content);
+            String datapoints = System.Text.Encoding.UTF8.GetString(context.HttpResponse.Content);
             queryMetricLastResponse.Datapoints = Regex.Match(datapoints, @"\[.*\]").Value;
             queryMetricLastResponse.Period = context.StringValue("QueryMetricLast.Period");
         
