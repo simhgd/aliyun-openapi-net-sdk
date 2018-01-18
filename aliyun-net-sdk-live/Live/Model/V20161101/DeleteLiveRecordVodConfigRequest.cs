@@ -43,7 +43,7 @@ namespace Aliyun.Acs.live.Model.V20161101
 
 		private long? ownerId;
 
-		private string version;
+		private string streamName;
 
 		private string accessKeyId;
 
@@ -112,16 +112,16 @@ namespace Aliyun.Acs.live.Model.V20161101
 			}
 		}
 
-		public string Version
+		public string StreamName
 		{
 			get
 			{
-				return version;
+				return streamName;
 			}
 			set	
 			{
-				version = value;
-				DictionaryUtil.Add(QueryParameters, "Version", value);
+				streamName = value;
+				DictionaryUtil.Add(QueryParameters, "StreamName", value);
 			}
 		}
 

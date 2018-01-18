@@ -36,6 +36,8 @@ namespace Aliyun.Acs.CloudPhoto.Model.V20170711
 
 		private string autoCleanEnabled;
 
+		private long? defaultTrashQuota;
+
 		private string storeName;
 
 		private string remark;
@@ -54,6 +56,19 @@ namespace Aliyun.Acs.CloudPhoto.Model.V20170711
 			{
 				autoCleanEnabled = value;
 				DictionaryUtil.Add(QueryParameters, "AutoCleanEnabled", value);
+			}
+		}
+
+		public long? DefaultTrashQuota
+		{
+			get
+			{
+				return defaultTrashQuota;
+			}
+			set	
+			{
+				defaultTrashQuota = value;
+				DictionaryUtil.Add(QueryParameters, "DefaultTrashQuota", value.ToString());
 			}
 		}
 

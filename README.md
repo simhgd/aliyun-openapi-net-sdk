@@ -4,7 +4,6 @@
 ## Requirements
 
 - 支持 .Net Standard 1.6 版本；
-- 使用引用Project方式引入aliyun-net-sdk-core 和相应的产品Project；
 - 使用nuget包引用方式；
 
 ## 已支持的产品列表
@@ -44,6 +43,7 @@
 - [aliyun-net-sdk-cms](https://www.nuget.org/packages/aliyun-net-sdk-cms/)
 - [aliyun-net-sdk-domain-intl](https://www.nuget.org/packages/aliyun-net-sdk-domain-intl/)
 - [aliyun-net-sdk-teslamaxcompute](https://www.nuget.org/packages/aliyun-net-sdk-teslamaxcompute/)
+- [aliyun-net-sdk-cloudwf](https://www.nuget.org/packages/aliyun-net-sdk-cloudwf/)
 
 ### 当前版本
 #### 1.0.6(原Repo未标明版本号)

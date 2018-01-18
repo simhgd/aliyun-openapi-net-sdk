@@ -33,6 +33,10 @@ namespace Aliyun.Acs.Ecs.Model.V20140526
         {
         }
 
+		private string actionType;
+
+		private List<Filter> filters;
+
 		private long? resourceOwnerId;
 
 		private string imageId;
@@ -44,6 +48,37 @@ namespace Aliyun.Acs.Ecs.Model.V20140526
 		private string action;
 
 		private long? ownerId;
+
+		public string ActionType
+		{
+			get
+			{
+				return actionType;
+			}
+			set	
+			{
+				actionType = value;
+				DictionaryUtil.Add(QueryParameters, "ActionType", value);
+			}
+		}
+
+		public List<Filter> Filters
+		{
+			get
+			{
+				return filters;
+			}
+
+			set
+			{
+				filters = value;
+				for (int i = 0; i < filters.Count; i++)
+				{
+					DictionaryUtil.Add(QueryParameters,"Filter." + (i + 1) + ".Key", filters[i].Key);
+					DictionaryUtil.Add(QueryParameters,"Filter." + (i + 1) + ".Value", filters[i].Value);
+				}
+			}
+		}
 
 		public long? ResourceOwnerId
 		{
@@ -120,6 +155,38 @@ namespace Aliyun.Acs.Ecs.Model.V20140526
 			{
 				ownerId = value;
 				DictionaryUtil.Add(QueryParameters, "OwnerId", value.ToString());
+			}
+		}
+
+		public class Filter
+		{
+
+			private string key;
+
+			private string value_;
+
+			public string Key
+			{
+				get
+				{
+					return key;
+				}
+				set	
+				{
+					key = value;
+				}
+			}
+
+			public string Value
+			{
+				get
+				{
+					return value_;
+				}
+				set	
+				{
+					value_ = value;
+				}
 			}
 		}
 

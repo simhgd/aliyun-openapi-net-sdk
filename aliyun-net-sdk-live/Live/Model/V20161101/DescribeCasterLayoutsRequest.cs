@@ -43,6 +43,8 @@ namespace Aliyun.Acs.live.Model.V20161101
 
 		private string version;
 
+		private string layoutId;
+
 		private string accessKeyId;
 
 		public string SecurityToken
@@ -107,6 +109,19 @@ namespace Aliyun.Acs.live.Model.V20161101
 			{
 				version = value;
 				DictionaryUtil.Add(QueryParameters, "Version", value);
+			}
+		}
+
+		public string LayoutId
+		{
+			get
+			{
+				return layoutId;
+			}
+			set	
+			{
+				layoutId = value;
+				DictionaryUtil.Add(QueryParameters, "LayoutId", value);
 			}
 		}
 
