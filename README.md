@@ -1,4 +1,4 @@
-![hope](https://github.com/simhgd/aliyun-openapi-net-sdk/hope.png)
+![hope](https://github.com/simhgd/aliyun-openapi-net-sdk/blob/master/hope.png?raw=true)
 
 # 阿里云官方即将支持nuget版的aliyunsdk, 希望他们可以直接支持,net standard, 此项目不会再更新了。以前的nuget包也将被删除。希望大家支持官方 :smiley:
 
